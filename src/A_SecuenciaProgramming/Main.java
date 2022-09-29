@@ -1,4 +1,4 @@
-package SecuenciaProgramming;
+package A_SecuenciaProgramming;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package DataSimpleCompound;
+package B_DataSimpleCompound;
 
 public class HelloWorldASCII {
     public static void main(String[] args) {

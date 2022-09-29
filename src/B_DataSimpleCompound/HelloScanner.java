@@ -1,4 +1,4 @@
-package DataSimpleCompound;
+package B_DataSimpleCompound;
 
 import java.util.Scanner;
 

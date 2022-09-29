@@ -1,4 +1,4 @@
-#script to automate my respository update with MAKRFILE
+#script to automate my respository update with MAKEFILE
 run:
 	git status
 	git add .
