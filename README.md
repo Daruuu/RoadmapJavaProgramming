@@ -1,5 +1,4 @@
 # RoadmapJavaProgramming
-___
 
 In this repository I'll share my programming development in the different topics of __Java__ language.
 If you're interested in improve your skills you can do it too.
