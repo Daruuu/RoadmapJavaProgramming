@@ -11,6 +11,7 @@ public class QuadratPleWhile {
         if (n < 0) {
             System.out.println("N ha de ser NO negatiu");
         } else {
+
             int filas = 0;
             while (filas < n) {
                 int columnas = 0;
