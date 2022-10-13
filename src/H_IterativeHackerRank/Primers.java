@@ -7,15 +7,17 @@ public class Primers {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        if (n == 0 || n == 1) {
+        int contador = 0;   //contar valores
+        if (n <= 1) {
             System.out.println("FALSE");
-        } else {
-            for (int i = 2; i <= n/2; i++) {
-                if (n % i == 0) {
-
-                }
-            }
-            System.out.println("TRUE");
         }
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0)
+                contador++;
+        }
+        if (contador >= 1)
+            System.out.println("FALSE");
+        else
+            System.out.println("TRUE");
     }
 }
