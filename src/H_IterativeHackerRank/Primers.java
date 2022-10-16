@@ -1,23 +1,22 @@
 package H_IterativeHackerRank;
 
+import java.util.EventListener;
 import java.util.Scanner;
 
 public class Primers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        int contador = 0;   //contar valores
-        if (n <= 1) {
-            System.out.println("FALSE");
+        int num = sc.nextInt();
+        int i = 2;
+        boolean esPrimo = true;
+        while (i < num / 2 && esPrimo) {
+            if (num % i == 0) esPrimo = false;
+            i++;
         }
-        for (int i = 2; i <= n / 2; i++) {
-            if (n % i == 0)
-                contador++;
-        }
-        if (contador >= 1)
+        if (!esPrimo)
             System.out.println("FALSE");
-        else
+        else {
             System.out.println("TRUE");
+        }
     }
 }

@@ -5,19 +5,19 @@ import java.util.Scanner;
 public class DesnivelCiclista {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        /*
-         calcular desnivell acumulado
-         */
-        int numeros = sc.nextInt();
         int alturaActual = sc.nextInt();
         int alturaAnterior = alturaActual;
-
-        while (numeros != -1) {
-
-            if (numeros < 400) {
-
+        int resultat = 0;
+        while (alturaActual != -1) {
+            if (alturaActual > alturaAnterior) {
+                resultat = resultat + (alturaActual - alturaAnterior);
             }
-            numeros = sc.nextInt();
+            alturaAnterior = alturaActual;
+            alturaActual = sc.nextInt();
         }
+        if (resultat > 400)
+            System.out.println("ETAPA MUNTANYA");
+        else
+            System.out.println("ETAPA PLANA");
     }
 }
