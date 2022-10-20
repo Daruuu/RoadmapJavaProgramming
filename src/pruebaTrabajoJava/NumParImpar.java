@@ -2,11 +2,11 @@ package pruebaTrabajoJava;
 
 import java.util.Scanner;
 
-public class TestBasicoAlgoritmia {
+public class NumParImpar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        TestBasicoAlgoritmia test = new TestBasicoAlgoritmia();
+        NumParImpar test = new NumParImpar();
         test.parImparFor(num);
         test.parImparWhile(num);
     }
@@ -34,4 +34,5 @@ public class TestBasicoAlgoritmia {
             }
         }
     }
+
 }
