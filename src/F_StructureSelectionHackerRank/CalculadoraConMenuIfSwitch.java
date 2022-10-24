@@ -7,8 +7,8 @@ public class CalculadoraConMenuIfSwitch {
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt();
         int n2 = sc.nextInt();
+        System.out.println("MENU:\n1.-SUMAR\n2.-RESTAR\n3.-MULTIPLICAR\n4.-DIVIDIR\nEsculli una opcio:");
         int op = sc.nextInt();
-        System.out.println("MENU:\n 1.-SUMAR \n 2.-RESTAR\n 3.-MULTIPLICAR\n 4.- DIVIDIR\n Esculli una opcio:");
 
         if (op == 1)
             System.out.println(n1 + n2);
@@ -18,6 +18,5 @@ public class CalculadoraConMenuIfSwitch {
             System.out.println(n1 * n2);
         if (op == 4)
             System.out.println(n1 / n2);
-
     }
 }

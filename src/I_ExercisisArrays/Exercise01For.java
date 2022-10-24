@@ -1,8 +1,6 @@
 package I_ExercisisArrays;
 
-import java.util.Scanner;
-
-public class Exercise01 {
+public class Exercise01For {
     //1. Llegeix 10 enters i guarda'ls a un array i quan acabis els imprimeixes per pantalla amb un for.
     public static void main(String[] args) {
 
