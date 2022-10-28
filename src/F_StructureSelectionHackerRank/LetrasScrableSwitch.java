@@ -18,7 +18,6 @@ public class LetrasScrableSwitch {
             case 'T':
                 System.out.println(1);
                 break;
-
         }
     }
 }
