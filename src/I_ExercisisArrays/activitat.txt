@@ -1,0 +1,50 @@
+Exercicis Arrays
+1. Llegeix 10 enters i guarda'ls a un array i quan acabis els imprimeixes per pantalla amb un for.
+
+2. Genera 10 nombres positius aleatoris i guarda'ls a un array. Després busca el màxim i el mínim dels valors continguts dins aquest Array.
+
+3. Donat un array de 5 elements digues sí és creixent o decreixent. Ex: creixent {0,3, 5, 6, 9}, decreixent {34, 23, 19, 18, 3}
+
+4. Fes la suma de dos arrays posició a posició. Això significa que has d'introduir dos arrays d'igual tamany i en un tercer hi has de posar la suma element a element.
+
+5. Introdueix un Array d'enters i calcula el % d'elements que són més grans que la mitjana aritmètica dels elements de la taula. Escriu els elements de l'Array, la mitjana i el nombre d'elements més grans que la mitjana.
+
+6. Donat un vector de nombres enters, determina si algun element està repetit.
+
+7. Escriu un programa anomenat Fusio que, donats dos vectors de nombres enters ordenats, en crei un de nou amb el contingut dels dos originals també ordenat. Defineix la longitud dels dos vectors originals amb dos constants definides a l'inici del codi, de manera que canviant només els valors de les constants el programa ha de seguir funcionant bé.
+
+8. Escriu un programa que donat un vector que guarda els pesos de 20 persones (valors enters positius entre 50 i 100), escrigui per pantalla un histograma que representi el nombre de persones per cada pes especificat.
+Consideracions:
+
+- A l'histograma només apareixeran els pesos amb una o més persones.
+
+- El vector de pesos s'ha de definir en el codi, NO cal preguntar-los a l'usuari.
+
+- Els vector de pesos no està ordenat. PISTA: usar el mètode Arrays.sort(...) per ordenar-lo.
+
+Exemple:
+
+pesos[20]={55,61,65,70,55,61,65,70,61,70,61,70,70,65,65,65,65,65,65,65}
+
+Histograma
+
+--------------------------------------
+
+55 **
+
+61 ****
+
+65 *********
+
+70 *****
+
+... ...
+
+9. Implementa l'algorisme de la búsqueda binària o dicotòmica:
+S'utilitza quan el vector en el qual volem determinar l'existència d'un element està prèviament ordenat. Aquest algoritme redueix el temps de cerca considerablement, ja que disminueix exponencialment el nombre d'iteracions necessàries.
+
+Està altament recomanat per buscar a un vector de grans dimensions. Per exemple, en un contenint 50.000.000 elements, realitza com a màxim 26 comparacions (en el pitjor dels casos).
+
+Per implementar aquest algorisme es compara l'element a buscar amb un element qualsevol de l'array (normalment l'element central): si el valor d'aquest és més gran que el de l'element buscat es repeteix el procediment a la part de l'array que va des de l'inici de aquest fins l'element pres, en cas contrari es pren la part de l'array que va des de l'element pres fins al final. D'aquesta manera obtenim intervals cada vegada més petits, fins que s'obtingui un interval indivisible. Si l'element no es troba dins d'aquest últim llavors es dedueix que l'element buscat no es troba en tot l'array.
+
+10. Implementar l'algorisme d'ordenació Bubble Sort (ordenació de bombolla, en anglès): funciona revisant cada element de la llista a ordenar amb el següent, intercanviant-de posició si estan en l'ordre equivocat. Cal revisar diverses vegades tota la llista fins que no es necessitin més intercanvis, la qual cosa significa que la llista està ordenada. Per exemple:

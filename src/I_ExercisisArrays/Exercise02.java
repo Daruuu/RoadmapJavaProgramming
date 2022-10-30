@@ -1,5 +1,6 @@
 package I_ExercisisArrays;
 
+//2. Genera 10 nombres positius aleatoris i guarda'ls a un array. Després busca el màxim i el mínim dels valors continguts dins aquest Array.
 public class Exercise02 {
     public static void main(String[] args) {
         int maxValor = Integer.MIN_VALUE;
