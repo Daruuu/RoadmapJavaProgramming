@@ -13,18 +13,21 @@ public class Exercise08 {
             if (pesosPersonas[i] >= 50 || pesosPersonas[i] <= 100) {
                 pesosPersonas[i] = sc.nextInt();
             }
-            sc.close();
         }
         System.out.println(Arrays.toString(pesosPersonas));
         Arrays.sort(pesosPersonas);
         System.out.println("array ordenado:" + Arrays.toString(pesosPersonas));
 
 
-        for (int i = 1; i < pesosPersonas.length; i++) {
-            if (pesosPersonas[i] != pesosPersonas[i -1]){
-                System.out.println("");
-                System.out.println(pesosPersonas[i] + " *");
+        for (int i = 0; i < pesosPersonas.length; i++) {
+            if (pesosPersonas[i] > 0) {
+                System.out.print(i + " ");
+                for (int j = 0; j < pesosPersonas[i]; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
             }
         }
+        sc.close();
     }
 }

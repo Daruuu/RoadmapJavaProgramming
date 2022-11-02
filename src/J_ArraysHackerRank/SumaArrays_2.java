@@ -14,5 +14,6 @@ public class SumaArrays_2 {
             array[i] = array[i] + array[array.length -1];
             System.out.print(array[i] + " ");
         }
+
     }
 }

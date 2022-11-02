@@ -10,6 +10,14 @@ public class ReduimValorArray_3 {
         for (int i = 0; i < array.length; i++) {
             array[i] = sc.nextInt();
         }
+        int valorMinimo = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < valorMinimo)
+                valorMinimo = array[i];
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] - valorMinimo + " ");
+        }
 
 
     }
