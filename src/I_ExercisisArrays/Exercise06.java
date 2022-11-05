@@ -25,6 +25,12 @@ public class Exercise06 {
                 }
             }
         }
+        for (int j = 0; j < array.length - 1 && !seRepite; j++) {
+            if (array[j] == array[j + 1]) {
+                seRepite = true;
+            }
+        }
+
         if (!seRepite)
             System.out.println("ningun numero se repite");
     }
