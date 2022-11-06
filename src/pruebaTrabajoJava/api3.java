@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class api3 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        double nota = sc.nextDouble();
-
+        //Scanner sc = new Scanner(System.in);
+        //double nota = sc.nextDouble();
+        char[] miarray = {'A','V','I','L','A'};
+        System.out.println(String.valueOf(miarray));
+/*
         while(nota != -1){
 
 
@@ -21,5 +23,7 @@ public class api3 {
             }
             nota++;
         }
+
+ */
     }
 }

@@ -1,9 +1,8 @@
 package J_ArraysHackerRank;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class SeleccionatsProgramame_6 {
+public class SeleccionatsProgramame_06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();   //tamano de alumnos y notas

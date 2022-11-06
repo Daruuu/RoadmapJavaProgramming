@@ -2,7 +2,7 @@ package J_ArraysHackerRank;
 
 import java.util.Scanner;
 
-public class FusionArrays_4 {
+public class FusionArrays_04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -43,26 +43,5 @@ public class FusionArrays_4 {
         for (int newArray: fusionArr) {
             System.out.print(newArray + " ");
         }
-        /*
-        while (i < array1.length && j < array2.length) {
-            if (array1[i] < array2[j]){
-                fusionArr[k] = array1[i];
-                i++;
-                k++;
-            } else if (array1[i]> array2[j]) {
-                fusionArr[k] = array2[j];
-                j++;
-                k++;
-            }else{
-                fusionArr[k] = array1[i];
-                k++;
-                fusionArr[k] = array2[j];
-                i++;
-                j++;
-            }
-            k++;
-        }
-         */
-
     }
 }

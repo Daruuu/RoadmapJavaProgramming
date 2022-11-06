@@ -1,9 +1,8 @@
 package J_ArraysHackerRank;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class RotacionVector_5 {
+public class RotacionVector_05 {
 
     public static void selectionSort(int[] v) {
         for (int i = 0; i < v.length; i++) {
@@ -43,7 +42,7 @@ public class RotacionVector_5 {
             }
         } else {
             for (int i = 0; i < posicion; i++) {
-                //guardamos el ultima posicion -1
+                //guardamos la ultima posicion -1
                 int arrTemporal2 = vector[vector.length - 1];
                 for (int j = vector.length - 1; j > 0; j--) {
                     //desplazamos el array una posicion a la derecha

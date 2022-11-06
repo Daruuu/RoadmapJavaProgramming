@@ -2,7 +2,7 @@ package J_ArraysHackerRank;
 
 import java.util.Scanner;
 
-public class ReduimValorArray_3 {
+public class ArrayInvers_01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -10,15 +10,8 @@ public class ReduimValorArray_3 {
         for (int i = 0; i < array.length; i++) {
             array[i] = sc.nextInt();
         }
-        int valorMinimo = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < valorMinimo)
-                valorMinimo = array[i];
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
         }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] - valorMinimo + " ");
-        }
-
-
     }
 }
