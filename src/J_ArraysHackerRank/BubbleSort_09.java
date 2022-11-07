@@ -12,18 +12,22 @@ public class BubbleSort_09 {
             nomsEquips[i] = sc.next();
             puntosEquipo[i] = sc.nextInt();
         }
-        int temporal = 0;
         for (int i = 0; i < nomsEquips.length - 1; i++) {
+            int temporal = 0;
             boolean swapped = false;
             for (int j = 0; j < n - i - 1; j++) {
-                if (puntosEquipo[j] > puntosEquipo[j + 1] && !swapped) {
+                if (puntosEquipo[j] <= puntosEquipo[j + 1]) {
                     temporal = puntosEquipo[j];
                     puntosEquipo[j] = puntosEquipo[j + 1];
-                    swapped = true;
+                    puntosEquipo[j + 1] = temporal;
+                    String tempEquip = nomsEquips[j];
+                    nomsEquips[j] = nomsEquips[j + 1];
+                    nomsEquips[j + 1] = tempEquip;
                 }
             }
-            if (!swapped)
-                break;
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(nomsEquips[i] + " " + puntosEquipo[i]);
         }
     }
 }

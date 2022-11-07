@@ -9,12 +9,11 @@ public class Pangrama_10 {
         String alfabet = "abcdefghijklmnopqrstuvwxyz";
         boolean pangrama = false;
         for (int i = 0; i < input.length(); i++) {
-            if (!input.contains(Character.toString(alfabet.charAt(i)))) {
+            if (input.contains(Character.toString(alfabet.charAt(i)))) {
                 pangrama = true;
-                break;
             }
         }
-        if (pangrama) System.out.println("TRUE");
-        else System.out.println("FALSE");
+        String resultado = pangrama ? "TRUE" : "FALSE";
+        System.out.println(resultado);
     }
 }
