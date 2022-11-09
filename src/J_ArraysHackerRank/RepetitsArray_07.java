@@ -42,8 +42,10 @@ public class RepetitsArray_07 {
             }
         }
         System.out.println(numMasRepetido);
+        /*
         RepetitsArray_07 repetitsArray_7 = new RepetitsArray_07();
         System.out.println(repetitsArray_7.partitMesVotat(partidos, partidos.length));
+         */
     }
 
 }

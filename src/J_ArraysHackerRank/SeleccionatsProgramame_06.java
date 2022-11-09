@@ -8,6 +8,7 @@ public class SeleccionatsProgramame_06 {
         int n = sc.nextInt();   //tamano de alumnos y notas
         String[] nombres = new String[n];
         float[] notas = new float[n];
+
         for (int i = 0; i < n; i++) {
             nombres[i] = sc.next();
             notas[i] = sc.nextFloat();
