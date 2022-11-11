@@ -2,7 +2,7 @@ package J_ArraysHackerRank;
 
 import java.util.Scanner;
 
-public class DistanciasMatriz_13 {
+public class DistanciasMatriz_14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String ciudad1 = sc.nextLine();
