@@ -1,63 +1,34 @@
 package M_Constest4Arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Apunts_02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();   //numero de paginas
-        //int[] numPagina = new int[n];
-        String[] paginas = new String[n+1];
-        for (int i = 0; i <= n; i++) {
-            //numPagina[i] = sc.nextInt();
+        int n = sc.nextInt();
+        sc.nextLine();
+        int[] numero = new int[n];
+        String[] paginas = new String[n];
+        for (int i = 0; i < n; i++) {
+            numero[i] = sc.nextInt();
             paginas[i] = sc.nextLine();
         }
-        Arrays.sort(paginas);
-
-        for (String array : paginas) {
-            System.out.println(array + " ");
-        }
-        /*
-        String [] nuevo = new String[paginas.length];
-        int i = 0; int j =0;
-        for (int k = 0; k < numPagina.length; k++) {
-            if (i == numPagina.length){
-//                nuevo[k] =
+        int valorTemporal = 0;
+        for (int i = 0; i < numero.length; i++) {
+            for (int j = i + 1; j < numero.length; j++) {
+                if (numero[i] > numero[j]) {
+                    valorTemporal = numero[i];
+                    numero[i] = numero[j];
+                    numero[j] = valorTemporal;
+                    String valorTemporalPagina = paginas[i];
+                    paginas[i] = paginas[j];
+                    paginas[j] = valorTemporalPagina;
+                }
             }
         }
-
-         */
-
-
-
-
-
-
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < n; j++) {
-//                if (numPagina[i] < numPagina[i+1]){
-//                    numPagina[i] =
-//                }
-//            }
-//        }
-
-
-
-        /*
-        String[] nuevoArray = new String[n];
-        for (int i = 0; i < n; i++) {
-            int k = 0;
-            for (int j = 1; j <= n; j++) {
-                if (paginas[i].charAt(0) == j){
-                    nuevoArray[k] = paginas[i];
-                    k++;
-                }else if (paginas[i].charAt(0) == ){
-            }
+        for (int i = 0; i < numero.length; i++) {
+            System.out.print(numero[i] + " " + paginas[i]);
+            System.out.println();
         }
-         */
-
-
     }
-
 }

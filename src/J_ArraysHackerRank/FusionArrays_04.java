@@ -15,9 +15,6 @@ public class FusionArrays_04 {
         for (int i = 0; i < array2.length; i++) {
             array2[i] = sc.nextInt();
         }
-        //System.out.println(Arrays.toString(array1));
-        //System.out.println(Arrays.toString(array2));
-        //System.out.print("fusion arrays:");
         int[] fusionArr = new int[n + m];
         int i = 0;
         int j = 0;

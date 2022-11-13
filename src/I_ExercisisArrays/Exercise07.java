@@ -33,6 +33,7 @@ public class Exercise07 {
             }
             k++;
         }
+
         if (i == array1.length) {
             while (j < array2.length) {
                 sumaArrays[k] = array2[j];

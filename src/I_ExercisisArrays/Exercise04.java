@@ -1,6 +1,5 @@
 package I_ExercisisArrays;
 
-import java.util.Arrays;
 
 //4. Fes la suma de dos arrays posició a posició. Això significa que has d'introduir dos arrays d'igual tamany i en un tercer hi has de posar la suma element a element.
 public class Exercise04 {

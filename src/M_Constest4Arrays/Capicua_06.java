@@ -1,5 +1,6 @@
 package M_Constest4Arrays;
 
+import java.util.EventListener;
 import java.util.Scanner;
 
 public class Capicua_06 {
@@ -8,9 +9,18 @@ public class Capicua_06 {
         int n = sc.nextInt();
         int[] array = new int[n];
         for (int i = 0; i < array.length; i++) {
-            if (array.length % 2 == 0){
-                boolean b = array[i] == array[array.length - 1];
+            array[i] = sc.nextInt();
+        }
+        boolean capicua = true;
+        for (int i = 0; i < array.length / 2; i++) {
+            if (array[i] != array[array.length - 1 - i]) {
+                capicua = false;
+                break;
             }
         }
+        String result = capicua ? "SI" : "NO";
+        System.out.println(result);
+//        if (capicua) System.out.println("SI");
+//        else System.out.println("NO");
     }
 }

@@ -59,14 +59,5 @@ public class DistanciasMatriz_14 {
                 break;
         }
         System.out.println(taulaDistancias[fila][columna]);
-        /*
-        String [] cuidades = {"Barcelona", "Girona", "Lleida", "Tarragona","Saragossa", "Terol"};
-
-        for (int i = 0; i < cuidades.length; i++) {
-            if (ciudad1.equals("Barcelona")){
-
-            }
-        }
-         */
     }
 }
