@@ -1,6 +1,5 @@
 package L_StringsHackerRank;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class VegadesSubString_04 {
@@ -11,10 +10,10 @@ public class VegadesSubString_04 {
         sc.close();
         str = str.toLowerCase();
         int contador = 0;
-        int indiceStr = str.indexOf(subcadena, 0);
-        while (indiceStr >= 0) {
+        int palabraBusqueda = str.indexOf(subcadena, 0);
+        while (palabraBusqueda >= 0) {
             contador++;
-            indiceStr = str.indexOf(subcadena,indiceStr + subcadena.length());
+            palabraBusqueda = str.indexOf(subcadena,palabraBusqueda + subcadena.length());
         }
         System.out.println(contador);
     }
