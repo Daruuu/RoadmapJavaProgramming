@@ -1,0 +1,36 @@
+Exercicis matrius
+1. Crea una matriu d'enters de 10x10 i omple-la amb números aleatoris. Després demana un número per teclat i busca si apareix a la matriu.
+
+2. Fer un programa que llegeixi dos números n i m per teclat, crei una matriu d'enters de tamany n files i m columnes, la ompli de números aleatoris i l'escrigui per pantalla.
+
+3. Fer un programa que llegeixi una taula bidimensional quadrada numèrica real i escrigui la seva traça. La traça és la suma dels elements de la diagonal principal.
+
+4. Fer un programa que llegeixi una taula numèrica real i escrigui la taula transposada. La taula transposada s'obté canviant les files per les columnes.
+
+5 .Donat un nombre enter major que zero, crea la matriu identitat de dimensió el nombre enter donat. (http://ca.wikipedia.org/wiki/Matriu_identitat)
+
+6. Donades dues taules quadrades numèriques enteres de dimensió n, calcula la seva suma. La suma de les taules s'efectua assignant a cada element de la nova taula la suma dels elements que ocupen la mateix fila i la mateixa columna.
+
+7. Donada una taula quadrada numèrica d'enters de dimensió n, determina si és simètrica. Una taula quadrada és simètrica si el elements simètrics respecte de la diagonal principal són iguals.
+
+8. L'objectiu d'aquest exercici és convertir una matriu (array de dos dimensions) en un vector (array d'una dimensió). Per fer-ho hem de recórrer la matriu d'esquerra a dreta i de dalt a baix i anar omplint el vector, de la següent manera:
+Matriu = {{1,2,3},{7,8,9},{15,12,45}}
+
+Passarà a ser el següent vector: {1,2,3,7,8,9,15,12,45}
+
+9. Escriu un programa que llegeixi un nombre N i que creï una matriu quadrada d'enters aleatoris entre 0 i 9, i que imprimeixi la matriu original i tot seguit, les posicions de la matriu que formen una N (primera i última columnes i diagonal principal).
+Per exemple, donada la matriu:
+
+3 5 6 7
+2 4 5 7
+1 4 0 7
+2 5 6 8
+
+El programa escriuria per pantalla:
+
+3      7
+2 4   7
+1   0 7
+2      8
+
+Tingueu en compte que després de cada nombre hi ha un espai.
