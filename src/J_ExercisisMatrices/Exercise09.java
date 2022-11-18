@@ -13,8 +13,8 @@ import java.util.Scanner;
 //El programa escriuria per pantalla:
 //
 //3      7
-//2 4   7
-//1   0 7
+//2 4    7
+//1   0  7
 //2      8
 //
 //Tingueu en compte que després de cada nombre hi ha un espai.
@@ -22,17 +22,29 @@ public class Exercise09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [][] matriz = new int[n][n];
+        int[][] matriz = new int[n][n];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (int) (Math.random()*10);
+                matriz[i][j] = (int) (Math.random() * 10);
             }
         }
         for (int[] filas : matriz) {
             for (int columnas : filas) {
-                System.out.print(columnas+ " ");
+                System.out.print(columnas + " ");
             }
             System.out.println();
         }
+        System.out.println("--------");
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (j == 0 || j == matriz.length - 1 || j == i) {
+                    System.out.print(matriz[i][j] + " ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+
     }
 }
