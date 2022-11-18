@@ -7,25 +7,41 @@ import java.util.Scanner;
 public class Exercise04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[][] matriz = new int[n][n];
+        int filas = sc.nextInt();
+        int columnas = sc.nextInt();
+        int[][] matriz = new int[filas][columnas];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (int) (Math.random() * 100);
+                matriz[i][j] = (int) (Math.random() * 10);
             }
         }
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.print(matriz[i][j] +" ");
-            }
-            System.out.println(" ");
-        }
-        System.out.println();
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.print(matriz[j][i] +" ");
+        int[][] traspuesta = new int[columnas][filas];
+        for (int i = 0; i < traspuesta.length; i++) {
+            for (int j = 0; j < traspuesta[i].length; j++) {
+                System.out.print(traspuesta[i][j] + " ");
             }
             System.out.println(" ");
         }
+
+//        for (int i = 0; i < matriz.length; i++) {
+//            for (int j = 0; j < matriz[i].length; j++) {
+//                System.out.print(matriz[i][j] +" ");
+//            }
+//            System.out.println(" ");
+//        }
+//        System.out.println();
+//        for (int i = 0; i < matriz.length; i++) {
+//            for (int j = 0; j < matriz[i].length; j++) {
+//                System.out.print(matriz[j][i] + " ");
+//            }
+//            System.out.println(" ");
+//        }
+//        System.out.println("---------------------");
+//        for (int[] col : traspuesta) {
+//            for (int fi : col) {
+//                System.out.print(fi + " ");
+//            }
+//            System.out.println("");
+//        }
     }
 }

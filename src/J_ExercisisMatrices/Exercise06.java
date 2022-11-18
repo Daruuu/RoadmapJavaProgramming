@@ -7,6 +7,7 @@ public class Exercise06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+
         int[][] matriz1 = new int[n][n];
         for (int i = 0; i < matriz1.length; i++) {
             for (int j = 0; j < matriz1[i].length; j++) {
@@ -29,6 +30,20 @@ public class Exercise06 {
         for (int[] filas : matriz2) {
             for (int columnas : filas) {
                 System.out.print(columnas + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("suma matrices");
+        int[][] sumaMatrices = new int[n][n];
+        for (int i = 0; i < sumaMatrices.length; i++) {
+            for (int j = 0; j < sumaMatrices[i].length; j++) {
+                sumaMatrices[i][j] = matriz1[i][j] + matriz2[i][j];
+            }
+        }
+        for (int[] x : sumaMatrices) {
+            for (int y : x) {
+                System.out.print(y + " ");
             }
             System.out.println();
         }
