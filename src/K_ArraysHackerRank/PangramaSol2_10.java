@@ -20,8 +20,6 @@ public class PangramaSol2_10 {
                 break;
             }
         }
-        if (pangrama) {
-            System.out.println("TRUE");
-        }
+        if (pangrama)System.out.println("TRUE");
     }
 }
