@@ -22,7 +22,7 @@ public class RotacionVector_05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int posicion = sc.nextInt();
-        char direccion = sc.next().charAt(0);
+        char direccion = sc.next().charAt(0);   //'a'
         int n = sc.nextInt();
         int[] vector = new int[n];
 
