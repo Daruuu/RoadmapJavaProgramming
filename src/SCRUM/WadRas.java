@@ -1,9 +1,8 @@
 package SCRUM;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TiposGradoCarcel {
+public class WadRas {
     public static void main(String[] args) {
 
         // MENU PROGRAMA
@@ -39,13 +38,26 @@ public class TiposGradoCarcel {
             }
         }
 
+
         //FICHA TECNICA PRESAS
 
         //                              nombre,             edad, sentencia, condena restante, tipo grado
-        String[] fichaTecnicaPresa1 = {"Juana Nascimento", "29", "20", "11", "2"};
-        String[] fichaTecnicaPresa2 = {"Giovana Libert", "42", "10", "5", "1"};
-        String[] fichaTecnicaPresa3 = {"Maria Lisa", "33", "14", "3", "3"};
-        String[] fichaTecnicaPresa4 = {"Maria Lisa", "33", "4", "7", "2"};
+//        String[] fichaTecnicaPresa1 = {"Juana Nascimento", "29", "20", "11", "2"};
+//        String[] fichaTecnicaPresa2 = {"Giovana Libert", "42", "10", "5", "1"};
+//        String[] fichaTecnicaPresa3 = {"Maria Lisa", "33", "14", "3", "3"};
+//        String[] fichaTecnicaPresa4 = {"Marta", "39", "4", "7", "2"};
+
+        //filas = 4
+        //columnas = 5
+        String[][] fichasTecnicas = {
+                {"Juana Nascimento", "29", "20", "11", "2"},
+                {"Giovana Libert", "42", "10", "5", "1"},
+                {"Maria Lisa", "33", "14", "3", "3"},
+                {"Marta", "39", "4", "7", "2"}
+        };
+
+        // GRADOS DE CADA PRESA
+        //presas que tienen 3er GRADO y que tienen menos de 9 ANYOS de prision o no
 
 
 
@@ -87,18 +99,6 @@ public class TiposGradoCarcel {
 
          */
 
-        //***************GRADOS*******************
-        //String grado = "";
 
-        /*
-
-        if(infoPresaGrade.contains(3)){
-           System.out.println("pueden salir");
-        }else{
-            System.out.println("no pueden salir");
-        }
-
-
-         */
     }
 }
