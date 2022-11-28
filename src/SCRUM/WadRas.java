@@ -1,8 +1,5 @@
 package SCRUM;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class WadRas {
@@ -11,11 +8,7 @@ public class WadRas {
         Scanner sc = new Scanner(System.in);
         boolean sortir = false;
 
-        System.out.println("Escull una opcio:");
-        System.out.println("1. FITXES PRESES");
-        System.out.println("2. PRESES de 3R GRAU QUE PODEN SORTIR");
-        System.out.println("3. TEMPS ENTRADA I SORTIDA PRESES");
-        System.out.println("4. SORTIR");
+        System.out.println("Escull una opcio:\n1.FITXES PRESES\n2.PRESES de 3R GRAU QUE PODEN SORTIR\n3.TEMPS ENTRADA I SORTIDA PRESES\n4.SORTIR");
 
         while (!sortir) {
             System.out.print("SELECCIONA UNA OPCIÓ: ");
