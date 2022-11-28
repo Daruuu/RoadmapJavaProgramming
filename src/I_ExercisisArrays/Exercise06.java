@@ -30,7 +30,6 @@ public class Exercise06 {
                 seRepite = true;
             }
         }
-
         if (!seRepite)
             System.out.println("ningun numero se repite");
     }

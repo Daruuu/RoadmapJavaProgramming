@@ -12,9 +12,14 @@ public class Exercise02 {
         int[][] matriz = new int[filas][columnas];
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
-                matriz[i][j] = (int) (Math.random()*100);
+                matriz[i][j] = (int) (Math.random()*10);
             }
         }
-        System.out.print(Arrays.deepToString(matriz));
+        for (int[] x : matriz) {
+            for (int y: x) {
+                System.out.print(y +" ");
+            }
+            System.out.println();
+        }
     }
 }

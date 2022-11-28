@@ -17,10 +17,11 @@ public class Exercise05 {
         System.out.println("suma elementos array: " + sumaArr);
         mediaAritmeticaArr = sumaArr/array1.length;
         System.out.println("media aritmetica del array: " + mediaAritmeticaArr);
+        System.out.println("elementos mas grandes q la media del array: ");
         for (int i = 0; i < array1.length; i++) {
             if (array1[i] > mediaAritmeticaArr){
 //                mediaSuperiorArr++;
-                System.out.println("elementos mas grandes q la media del array: " + mediaAritmeticaArr++);
+                System.out.println(mediaAritmeticaArr++);
             }
         }
 

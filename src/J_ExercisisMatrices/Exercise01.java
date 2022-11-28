@@ -10,7 +10,7 @@ public class Exercise01 {
         int[][] matriu = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matriu[i][j] = (int) (Math.random() * 100);
+                matriu[i][j] = (int) (Math.random() * 10);
             }
         }
 

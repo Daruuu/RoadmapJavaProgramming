@@ -16,18 +16,19 @@ public class Exercise08 {
         }
         System.out.println(Arrays.toString(pesosPersonas));
         Arrays.sort(pesosPersonas);
-        System.out.println("array ordenado:" + Arrays.toString(pesosPersonas));
-
-
+        int[] cantidadPesos = new int[100];
         for (int i = 0; i < pesosPersonas.length; i++) {
-            if (pesosPersonas[i] > 0) {
+            cantidadPesos[pesosPersonas[i]] = cantidadPesos[pesosPersonas[i] + 1];
+        }
+        System.out.println();
+        for (int i = 0; i < cantidadPesos.length; i++) {
+            if (cantidadPesos[i] > 0) {
                 System.out.print(i + " ");
-                for (int j = 0; j < pesosPersonas[i]; j++) {
+                for (int j = 0; j < cantidadPesos[i]; j++) {
                     System.out.print("*");
                 }
                 System.out.println();
             }
         }
-        sc.close();
     }
 }
