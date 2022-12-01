@@ -27,7 +27,7 @@ git commit -m "$COMMITMESSAGE"
     echo "Insert the name of the branch (main):"
       read -r BRANCH
     git push origin $BRANCH
-    read -r
+#    read -r
     echo "<<<<<<<<<<REPOSITORY UPDATED SUCCESSFUL>>>>>>>>>>"
-    git log -n 3
+    git log -n 2
   fi
