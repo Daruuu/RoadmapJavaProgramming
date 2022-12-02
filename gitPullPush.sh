@@ -17,7 +17,7 @@ git commit -m "$COMMITMESSAGE"
     if [[ $PUSHINPUT == "y" ]]; then
         echo "Insert the name of the branch (main):"
         read -r BRANCH
-        git push origin $BRANCH
+        git push origin "$BRANCH"
         echo "<<<<<<<<<<REPOSITORY UPDATED SUCCESSFUL>>>>>>>>>>"
         git log -n 2
     else
@@ -26,7 +26,7 @@ git commit -m "$COMMITMESSAGE"
   elif [[ $RESPUESTA == "push" ]]; then
     echo "Insert the name of the branch (main):"
       read -r BRANCH
-    git push origin $BRANCH
+    git push origin "$BRANCH"
 #    read -r
     echo "<<<<<<<<<<REPOSITORY UPDATED SUCCESSFUL>>>>>>>>>>"
     git log -n 2

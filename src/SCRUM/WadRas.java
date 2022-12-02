@@ -37,6 +37,8 @@ public class WadRas {
                 case 2:
                     System.out.println("HAS SEL·LECCIONAT L'OPCIÓ 2\n-------------------------------\nPresas con tipo grado 3 que pueden salir:");
                     String grado = "3";
+
+//        sc.close();
                     for (int i = 0; i < fichasTecnicas.length; i++) {
                         boolean encontrado = false;
                         boolean salir = false;

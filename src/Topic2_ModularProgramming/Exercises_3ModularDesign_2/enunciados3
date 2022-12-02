@@ -1,0 +1,37 @@
+Fes el disseny (aplicant anàlisi top-down) i implementació dels següents problemes en més d'una Classe.
+
+1. Calculadora. Anem a definir el problema clàssic de la calculadora en més d'una classe.
+En una classe que definirem com a Calculadora, per tant el nom del fitxer s'ha de dir Calculadora.java, hi haurà un mètode main que contindrà un menú amb diferents opcions d'operacions: suma, resta, multiplicació, divisió i residu (mod).
+Tindrem una segona classe Operacions, per tant el nom del fitxer serà Operacions.java, que no contindrà cap main, sinó que contindrà els mètodes que necessita Calculadora per a realitzar les operacions.
+
+
+2. Comandament a distància. Crearem una classe Comandament.java que farà la funció d'un comandament a distància. Aquesta classe tindrà un menú amb diferents funcionalitats:
+- Tindrà botons numèrics que seran els canals de l'1 al 6.
+- Tindrà una opció que serà el volum (valor numèric) que es pot pujar o baixar
+- Tindrà una opció per habilitar els subtítols.
+- Tindrem també una variable numèrica que serà l'hora.
+- Tindrà una altra opció per canviar d'idioma.
+En el nostre programa tindrem una altra classe que es dirà Canals.java, i el que farà aquesta classe serà mostrar el programa que fan en cada canal quan es cliqui el seu número.
+Dissenya i implementa el comandament a distància, primer només amb les dues classes, i després amb atributs de classe: numCanal, nomPrograma, volum, subtitol i idioma.
+
+
+3. Gestió de peatge. Mitjançant un petit programa ens han demanat que portem la gestió d'un peatge. El peatge està compost per 4 cues diferents per on poden passar els cotxes, es tracta de portar el control numèric d'aquestes cues. Un cotxe quan arriba a un peatge escull per defecte la cua que va menys carregada, en cas d'empat escull en ordre incremental de la primera a la quarta. El valor màxim d'una cua és 5.
+El programa principal, situat a Peatge.java, tindrà un menú que permet: visualitzar l'estat de cada cua amb els cotxes que hi ha, donar l'avís de l'arribada d'un nou cotxe, donar l'avís de la sortida d'un cotxe d'una de les cues (indicant la cua).
+També disposem d'una altra classe Cua.java que conté una variable de classe per a cada cua i que contindrà el nombre de cotxes en aquella cua. A part, contindrà els mètodes per saber quants cotxes hi ha en una cua, incrementar el valor de la cua, decrementar el valor de la cua, preguntar si una cua està plena i preguntar si una cua està buida.
+Pista: vigilar amb els màxims i mínims.
+
+
+4. Formem part d'un projecte de gestió de matrícules. Ens han demanat que implementem pel projecte una classe estudiant, ha de ser una classe que guardi la següent informació: DNI de l'estudiant, un nom, una adreça, una data de naixament i un telèfon. I que sigui capaç de tenir les següents funcionalitats:
+- Donar d'alta un estudiant (amb els paràmetres adients).
+- Borrar les dades d'un estudiant.
+- Ordenar un conjunt d'estudiants per DNI.
+- Ordenar un conjunt d'estudiants per edat.
+Realitza la classe. Fes una altra classe que es digui Test.java, que serveixi per provar totes les funcionalitats que ha de realitzar Estudiant.java.
+
+
+5. El fitxer Submari.java implementa el joc anomenat La Caça del Submarí. Analitza el codi i fes el següent:
+- Explica com funciona el joc, i per tant el programa.
+- Escriu els comentaris javadoc de tots els mètodes, descrivint la seva funcionalitat i el significat dels seus arguments i resultats.
+- Modifica el codi de manera que quan no s'encerti el submarí es doni una pista d'on està situat. La pista s'ha de donar abans de moure el submarí:
+Si el tret no destrueix el submarí però cau en algun dels punts situats just a l'entorn de la posició del submarí, s'informarà sobre la proximitat de l'impacte donant les dues coordenades de posició del submarí.
+Si la càrrega no destrueix el submarí ni cau en algun dels punts situats just a l'entorn de la posició del submarí, el sònar informarà del fet tot mostrant a l'usuari el valor de la coordenada x del submarí.
