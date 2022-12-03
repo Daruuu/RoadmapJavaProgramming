@@ -1,5 +1,4 @@
 package Topic2_ModularProgramming.Exercises_1ModularBasic;
-
 /*
 9. (maximMatriu) Fer una funció que retorni el valor màxim d'una matriu.
  */
