@@ -1,6 +1,5 @@
 package Topic2_ModularProgramming.Exercises_1ModularBasic;
 
-
 /*
 4. (max,min) Fer dues funcions que donats tres nombres ens retornin el màxim i el mínim, respectivament.
  */

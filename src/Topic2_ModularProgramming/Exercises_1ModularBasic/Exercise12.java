@@ -21,11 +21,16 @@ permetrà convertir a les altres dues... sinó ens ha de donar error.
 Ex: si entrem la magnitud inicial amb Celsius, no podrem convertir de Farenheit a Celsius ja que ja ho tenim en Celsius.
  */
 public class Exercise12 {
+
+    public static double celsius;
+    public static double fahrenheit;
+    public static double kelvin;
+    public static double resultado;
+    public static int opcion;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        listaOpciones();
         menuPrograma();
-
     }
 
     public static void listaOpciones() {
@@ -40,28 +45,115 @@ public class Exercise12 {
     }
 
     public static void menuPrograma() {
-        Scanner sc  =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean salir = false;
+        magnitudTemperatura();
         while (!salir) {
+            int tipoTemperatura = sc.nextInt();
+            switch (tipoTemperatura) {
+                case 1:
+                    System.out.println("[1]. Celsius a Fahrenheit\n[2]. Celsius a Kelvin");
+                    opcion = sc.nextInt();
+                    switch (opcion) {
+                        case 1:
+                            System.out.print("Convertir de Celsius a Fahrenheit\nintroduce temperatura: ");
+                            celsius = sc.nextDouble();
+                            resultado = celsiusAFahrenheit(celsius);
+                            System.out.println(resultado + "ºF");
+                            break;
+                        case 2:
+                            System.out.println("Convertir de Celsius a Kelvin");
+                            celsius = sc.nextDouble();
+                            resultado = celsiusAKelvin(celsius);
+                            System.out.println(resultado + "°C");
+                            break;
+                    }
+                    break;
+                case 2:
+                    System.out.println("[3]. Fahrenheit a Celsius\n[4]. Fahrenheit a Kelvin");
+                    opcion = sc.nextInt();
+                    switch (opcion) {
+                        case 3:
+                            System.out.println("Convertir de Fahrenheit a Celsius");
+                            fahrenheit = sc.nextDouble();
+                            resultado = fahrenheitACelsius(fahrenheit);
+                            System.out.println(resultado + "°C");
+                            break;
+                        case 4:
+                            System.out.println("Convertir de Fahrenheit a Kelvin");
+                            fahrenheit = sc.nextDouble();
+                            resultado = fahrenheitAKelvin(fahrenheit);
+                            System.out.println(resultado + "K");
+                            break;
+                    }
+                    break;
+                case 3:
+                    System.out.println("[5]. Kelvin a Celsius\n[6]. Kelvin a Fahrenheit");
+                    opcion = sc.nextInt();
+                    switch (opcion) {
+                        case 5:
+                            System.out.println("Convertir de kelvin a celsius");
+                            kelvin = sc.nextDouble();
+                            resultado = kelvinACelsius(kelvin);
+                            System.out.println(resultado + "K");
+                            break;
+                        case 6:
+                            System.out.println("Convertir de kelvin a Fahrenheit");
+                            kelvin = sc.nextDouble();
+                            resultado = kelvinAFahrenheit(kelvin);
+                            System.out.println(resultado + "K");
+                            break;
+                        case 7:
+                            System.out.println("FIN PROGRAMA");
+                            salir = true;
+                            break;
+                        default:
+                            System.out.println("introduce una opcion valida:");
+                    }
+                    break;
+            }
+        }
+
+        /*
+        while (!salir) {
+            listaOpciones();
             int opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    System.out.println("Convertir de Celsius a Fahrenheit");
+                    System.out.print("Convertir de Celsius a Fahrenheit\nintroduce temperatura: ");
+                    celsius = sc.nextDouble();
+                    resultado = celsiusAFahrenheit(celsius);
+                    System.out.println(resultado + "ºF");
                     break;
                 case 2:
                     System.out.println("Convertir de Celsius a Kelvin");
+                    celsius = sc.nextDouble();
+                    resultado = celsiusAKelvin(celsius);
+                    System.out.println(resultado + "°C");
                     break;
                 case 3:
                     System.out.println("Convertir de Fahrenheit a Celsius");
+                    fahrenheit = sc.nextDouble();
+                    resultado = fahrenheitACelsius(fahrenheit);
+                    System.out.println(resultado + "°C");
                     break;
                 case 4:
                     System.out.println("Convertir de Fahrenheit a Kelvin");
+                    fahrenheit = sc.nextDouble();
+                    resultado = fahrenheitAKelvin(fahrenheit);
+                    System.out.println(resultado + "K");
                     break;
                 case 5:
                     System.out.println("Convertir de kelvin a celsius");
+                    kelvin = sc.nextDouble();
+                    resultado = kelvinACelsius(kelvin);
+                    System.out.println(resultado + "K");
                     break;
                 case 6:
                     System.out.println("Convertir de kelvin a Fahrenheit");
+                    kelvin = sc.nextDouble();
+                    resultado = kelvinAFahrenheit(kelvin);
+                    System.out.println(resultado + "K");
                     break;
                 case 7:
                     System.out.println("FIN PROGRAMA");
@@ -71,9 +163,36 @@ public class Exercise12 {
                     System.out.println("introduce una opcion valida:");
             }
         }
+         */
     }
-    public static void convertirCelsiusAFahrenheit(){
 
+    public static void magnitudTemperatura() {
+        //El programa ha de demanar en quina magnitud entrem la temperatura (celsius, farenheit o kelvin),
+            System.out.print("[1]. Introduce temperatura en CELSIUS\n[2]. Introduce temperatura en FAHRENHEIT\n[3]. Introduce temperatura en KELVIN\nopcion: ");
+    }
+
+    public static double celsiusAFahrenheit(double celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+
+    public static double celsiusAKelvin(double celsius) {
+        return celsius + 273.15;
+    }
+
+    public static double fahrenheitACelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5 / 9;
+    }
+
+    public static double fahrenheitAKelvin(double celsius) {
+        return (celsius - 32) * 5 / 9 + 273.15;
+    }
+
+    public static double kelvinACelsius(double kelvin) {
+        return kelvin - 273.15;
+    }
+
+    public static double kelvinAFahrenheit(double kelvin) {
+        return (kelvin - 273.15) * 9 / 5 + 32;
     }
 
 }

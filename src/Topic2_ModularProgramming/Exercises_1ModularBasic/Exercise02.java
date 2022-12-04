@@ -9,11 +9,14 @@ public class Exercise02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        esPrimo(n);
+        System.out.println(esPrimo(n));
     }
 
-    public static void esPrimo(int numero){
-        if (numero % 3 == 0) System.out.println("true");
-        else System.out.println("false");
+    public static boolean esPrimo(int numero) {
+        for (int i = 2; i < numero / 2; i++) {
+            if (numero % i == 0)
+                return false;
+        }
+        return true;
     }
 }

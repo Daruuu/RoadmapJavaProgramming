@@ -10,12 +10,12 @@ public class Exercise01 {
         Scanner sc = new Scanner(System.in);
         System.out.print("introduce un numero: ");
         int n = sc.nextInt();
-        signe(n);
+        System.out.println(signe(n));
     }
 
-    public static void signe(int num) {
-        if (num < 0) System.out.println("negativo");
-        else if (num == 0) System.out.println("zero");
-        else System.out.println("positivo");
+    public static String signe(int num) {
+        if (num > 0) return "positivo";
+        else if (num < 0) return "negativo";
+        else return "zero";
     }
 }
