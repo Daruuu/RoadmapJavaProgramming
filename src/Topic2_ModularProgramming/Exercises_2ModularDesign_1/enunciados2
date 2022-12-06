@@ -1,14 +1,19 @@
-Fes el disseny (aplicant anàlisi top-down) i implementació dels següents problemes. Defineix tants mètodes com creguis necessari a cada exercici.
+Fes el disseny (aplicant anàlisi top-down) i implementació dels següents problemes.
+Defineix tants mètodes com creguis necessari a cada exercici.
 
 
-1) Feu un programa anomenat OrdenarPerZeros que, donat un array de números enters inicialitzat amb valors concrets, primer el mostri per pantalla i després el mostri ordenat de manera ascendent d'acord al nombre de 0 de cada valor. Declareu l'array com a variable dins el mètode principal.
+1) Feu un programa anomenat OrdenarPerZeros que, donat un array de números enters inicialitzat amb valors concrets,
+primer el mostri per pantalla i després el mostri ordenat de manera ascendent d'acord al nombre de 0 de cada valor.
+Declareu l'array com a variable dins el mètode principal.
 A mode d'exemple, el comportament del programa podria ser el següent:
 [ 100 2014 12 30 302 40020 7009 500000 ]
 [ 500000 40020 7009 100 2014 30 302 12 ]
 
 
 
-2) Feu un programa anomenat MesVocals que llegeixi una frase i, tot seguit, mostri per pantalla quina és la paraula amb més vocals (sense importar majúscules i minúscules). A mode d'exemple, el comportament del programa podria ser el següent:
+2) Feu un programa anomenat MesVocals que llegeixi una frase i, tot seguit,
+mostri per pantalla quina és la paraula amb més vocals (sense importar majúscules i minúscules).
+A mode d'exemple, el comportament del programa podria ser el següent:
 Escriu una frase:
 Hi havia una vegada una noia anomenada Caputxeta Vermella
 La paraula amb mes vocals és "anomenada".
@@ -37,18 +42,23 @@ on X és la diferència entre ingressos i despeses.
 En cas que les despeses siguin més grans que els ingressos la frase a mostrar és:
 «L'empresa ha tingut un dèficit de X euros», on X és la diferència entre les despeses i els ingressos.
 
-Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i despeses realitzats respectivament, així com la data exacte de la seva realització.
+Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i despeses realitzats respectivament,
+així com la data exacte de la seva realització.
 L'opció 'fi' fa que acabi el programa.
-Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates. Usar la classe LocalDateTime per a representar les dates.
+Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates.
+Usar la classe LocalDateTime per a representar les dates.
 
 
 
-4) Als Estats Units és molt popular un joc de daus amb apostes: un jugador llença simultàniament dos daus i suma la puntuació obtinguda entre ells, el valor resultant de la suma és la puntuació obtinguda en el llançament.
+4) Als Estats Units és molt popular un joc de daus amb apostes:
+un jugador llença simultàniament dos daus i suma la puntuació obtinguda entre ells,
+el valor resultant de la suma és la puntuació obtinguda en el llançament.
 Regles del joc.
 La puntuació obtinguda en el primer llançament s’anomena punt, que es memoritza.
 Si el punt és 7 o 11 es guanya i s'acaba la partida.
 Si el el punt és 2, 3 o 12 es perd i s'acaba la partida.
-Pels altres valors del punt es seguix llançant els daus fins que es treu de nou el punt obtingut al primer llançament, llavors es guanya i s'acaba la partida, o es treu un 7, llavors es perd i s'acaba la partida.
+Pels altres valors del punt es seguix llançant els daus fins que es treu de nou el punt obtingut al primer llançament,
+ llavors es guanya i s'acaba la partida, o es treu un 7, llavors es perd i s'acaba la partida.
 Exemples de partides:
 
 7 (és el punt) Es guanya
@@ -59,24 +69,39 @@ Exemples de partides:
 8 (és el punt), 9, 6, 5, 8 Es guanya
 8 (és el punt), 9, 6, 5, 7 Es perd
 
+Dissenyar i implementar una aplicació emprant la metodologia de disseny descendent (top-down)
+i el paradigma de la programació estructurada i modular que permeti:
+1. Jugar una partida:
+l'usuari llença els daus apretant la tecla espai i l'aplicació va informant del resultat i dels següents passos.
 
-Dissenyar i implementar una aplicació emprant la metodologia de disseny descendent (top-down) i el paradigma de la programació estructurada i modular que permeti:
-Jugar una partida: l'usuari llença els daus apretant la tecla espai i l'aplicació va informant del resultat i dels següents passos.
-Obtenir ajuda en línia.
-Sortir de l'aplicació.
+2. Determinar l'equitat del joc:
+l'aplicació juga automàticament el nombre de partides que li entra l'usuari per teclat,
+comptant el nombre de partides guanyades i perdudes i calculant la probabilitat de guanyar en %.
+L'única diferència amb la partida interactiva (opció anterior) és que l'usuari no ha d'apretar l'espai per llançar els daus,
+la resta de missatges per pantalla són els mateixos.
+
+3. Obtenir ajuda en línia.
+4. Sortir de l'aplicació.
 
 
 
 5) Ens han demanat que fem una gestió molt simple de reserves d'un cinema. El programa ha de complir els següents requisits:
 
 S'ha d'iniciar amb un nombre total d'entrades lliures.
-Ha d'anar preguntant el nombre d'entrades que volem reservar. En cada reserva ha de comprovar si hi suficients localitats lliures. En cas afirmatiu, ha de calcular el preu total de la reserva a raó de 6 euros l'entrada.
-El programa ha d'acabar quan li demanem un nombre d'entrades que sobrepassa l'aforament disponible. Quan això passi s'ha de mostrar el nombre total d'entrades venudes per aquella sessió i la recaudació total que s'ha realitzat.
+Ha d'anar preguntant el nombre d'entrades que volem reservar. En cada reserva ha de comprovar si hi suficients localitats lliures.
+En cas afirmatiu, ha de calcular el preu total de la reserva a raó de 6 euros l'entrada.
+El programa ha d'acabar quan li demanem un nombre d'entrades que sobrepassa l'aforament disponible.
+Quan això passi s'ha de mostrar el nombre total d'entrades venudes per aquella sessió i la recaudació total que s'ha realitzat.
 
 
-6) Donada una frase on apareixen una llista de paraules digues amb quina freqüència apareix una paraula X. Per exemple: "cinc boles serveixen per cinc jocs i per cinc nens" la paraula "cinc" apareix amb una freqüència de 3/10.
+6) Donada una frase on apareixen una llista de paraules digues amb quina freqüència apareix una paraula X. Per exemple:
+ "cinc boles serveixen per cinc jocs i per cinc nens" la paraula "cinc" apareix amb una freqüència de 3/10.
 
 
-
-7) Haurem de fer la gestió d'una rentadora. Tenim dos cubells, un per roba blanca i un altre per roba d'altres colors. Hem de dissenyar un programa modular on anem introduint la roba i especifiquem el pes i el color. Si és de color blanc el dispositem en el cubell blanc i sinó al de color. Quan un dels dos cubells traspassa els 2 kg de pes s'ha d'enviar a rentar, és llavors quan acaba el programa i ens ha d'anunciar quin dels dos cubells ha rentat i amb quin pes.
+7) Haurem de fer la gestió d'una rentadora.
+Tenim dos cubells, un per roba blanca i un altre per roba d'altres colors.
+Hem de dissenyar un programa modular on anem introduint la roba i especifiquem el pes i el color.
+Si és de color blanc el dispositem en el cubell blanc i sinó al de color.
+Quan un dels dos cubells traspassa els 2 kg de pes s'ha d'enviar a rentar,
+és llavors quan acaba el programa i ens ha d'anunciar quin dels dos cubells ha rentat i amb quin pes.
 

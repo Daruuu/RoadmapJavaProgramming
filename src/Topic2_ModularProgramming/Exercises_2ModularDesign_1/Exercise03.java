@@ -20,57 +20,110 @@ Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i
 L'opció 'fi' fa que acabi el programa.
 
 Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates. Usar la classe LocalDateTime per a representar les dates.
-
  */
 public class Exercise03 {
 
-    private static int[] ingresos;
-    private static int[] despeses;
+    private static final List<Double> ingresos = new ArrayList<>();
+    private static final List<Double> despeses = new ArrayList<>();
 
     public static void main(String[] args) {
         contabilidadEmpresa();
-
     }
 
-
-    public static void contabilidadEmpresa(){
+    public static void contabilidadEmpresa() {
         Scanner sc = new Scanner(System.in);
         opciones();
         int opcion = sc.nextInt();
-        switch (opcion){
-            case 1:
-                //l'usuari introdueixi una nova partida per a l'ingrés.
-                System.out.println("Alta ingreso:");
+        while (opcion != 6){
 
-                break;
-            case 2:
-                //l'usuari introdueixi una nova partida per a la despesa.
-                System.out.println("Alta despesa:");
-
-                break;
-            case 3:
-                //ens mostra un informe on apareix el total d'ingressos i el total de despeses.
-                System.out.println("Muestra resumen:");
-
+            switch (opcion) {
+                case 1:
+                    //l'usuari introdueixi una nova partida per a l'ingrés.
+                    System.out.println("Alta nuevo ingreso:");
+                    altaIngresos();
+                    break;
+                case 2:
+                    //l'usuari introdueixi una nova partida per a la despesa.
+                    System.out.println("Alta despesa:");
+                    altaDespesa();
+                    break;
+                case 3:
+                    //ens mostra un informe on apareix el total d'ingressos i el total de despeses.
+                    System.out.println("Muestra resumen:");
+                    String resumen = mostrarResumen();
+                    System.out.println(resumen);
+                    break;
+                case 4:
+                    System.out.println("Historic Ingresos:");
+                    double histoIngresos = historicIngresos();
+                    System.out.println(histoIngresos);
+                    break;
+                case 5:
+                    System.out.println("Historic Despeses:");
+                    double histoDespeses = historicDespeses();
+                    System.out.println(histoDespeses);
+                    break;
+                default:
+                    System.out.println("opcion introducida incorrecta");
+            }
+            opciones();
+            opcion = sc.nextInt();
         }
     }
-    public static void opciones(){
-        System.out.print("1. Alta d'ingrés\n" +
+
+    public static void opciones() {
+        System.out.print("\n1. Alta d'ingrés\n" +
                 "2. Alta de despesa\n" +
                 "3. Mostra resum\n" +
                 "4. Històric ingressos\n" +
                 "5. Històric despeses\n" +
-                "6. Fi");
+                "6. Fi\n" +
+                "Introduce una opcion: ");
     }
-    public static void altaIngresos(){
 
-
+    public static void altaIngresos() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce una cantidad: ");
+        double nuevoIngreso = sc.nextDouble();
+        ingresos.add(nuevoIngreso);
     }
-    public static void altaDespesa(){
 
+    public static void altaDespesa() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce un nuevo gasto: ");
+        double nuevoGasto = sc.nextDouble();
+        despeses.add(nuevoGasto);
     }
-    public static void mostrarResumen(){
 
+    public static String mostrarResumen() {
+        double totalIngresos = 0.0;
+        double totalDespeses = 0.0;
+        for (Double ingreso : ingresos) {
+            totalIngresos += ingreso;
+        }
+        for (Double gasto : despeses) {
+            totalDespeses += gasto;
+        }
+        double diferenciaIngresosDespeses = totalIngresos - totalDespeses;
+        if (totalIngresos > totalDespeses)
+            return "L'empresa ha tingut uns beneficis de " + diferenciaIngresosDespeses + " euros";
+        else return "L'empresa ha tingut un dèficit de" + diferenciaIngresosDespeses + " euros";
+    }
+
+    public static double historicIngresos() {
+        double historial = 0.0;
+        for (Double in : ingresos) {
+            historial += in;
+        }
+        return historial;
+    }
+
+    public static double historicDespeses() {
+        double historial = 0.0;
+        for (Double des : despeses) {
+            historial += des;
+        }
+        return historial;
     }
 
 }
