@@ -1,7 +1,6 @@
 package Topic2_ModularProgramming.Exercises_2ModularDesign_1;
 
-import java.util.Map;
-import java.util.Random;
+import java.util.Scanner;
 
 /*
 4) Als Estats Units és molt popular un joc de daus amb apostes:
@@ -41,19 +40,72 @@ public class Exercise04 {
     private static final int[] arrayDados = {1, 2, 3, 4, 5, 6};
 
     public static void main(String[] args) {
-        juego();
+        programa();
     }
 
     public static int lanzarDados() {
-        return arrayDados[(int) (Math.random() * arrayDados.length)];
+        Scanner sc = new Scanner(System.in);
+        int lanzarDado = 0;
+        String input = sc.next();
+        if (input.equals(" ")) {
+            lanzarDado = arrayDados[(int) (Math.random() * arrayDados.length)];
+        }
+        sc.close();
+        return lanzarDado;
+    }
+
+    public static void programa() {
+        Scanner sc = new Scanner(System.in);
+        menu();
+        int opcion = sc.nextInt();
+        while (opcion != 6) {
+            switch (opcion) {
+                case 1:
+                    System.out.print("Elige numero de partidas: ");
+                    int n = sc.nextInt();
+                    System.out.println("Jugar nueva partida:");
+                    jugarNPartidas(n);
+                    break;
+                case 2:
+                    System.out.println("Determinar la equidad del juego");
+
+                    break;
+                case 3:
+                    System.out.println("Obtenir ajuda en linia");
+                    break;
+                case 4:
+                    System.out.println("Sortir de l'aplicacio");
+                    break;
+                default:
+                    System.out.println("introduce una opcion valida");
+            }
+            opcion = sc.nextInt();
+        }
+    }
+
+    public static void menu(){
+        System.out.print("1. Jugar una partida\n" +
+                "2. Determinar equidad del juego\n" +
+                "3. Obtenir ajuda en linia\n" +
+                "4. Sortir de la application\n" +
+                "Elige una opcion: ");
+    }
+
+    public static void jugarNPartidas(int n) {
+        while (n > 0){
+            // Mostrar texto, aquí se lanzan dados.
+            System.out.println(lanzarDados());
+//            lanzarDados();
+            n--;
+        }
     }
 
     public static void juego() {
         int lanzamiento1 = lanzarDados();
         int lanzamiento2 = lanzarDados();
         int punto = lanzamiento1 + lanzamiento2;
-        System.out.println("lan 1: "+ lanzamiento1);
-        System.out.println("lan 2: "+ lanzamiento2);
+        System.out.println("lan 1: " + lanzamiento1);
+        System.out.println("lan 2: " + lanzamiento2);
         System.out.println(punto);
         if (punto == 7 || punto == 11) {
             System.out.println(punto + "(es el punto) Es guanya");

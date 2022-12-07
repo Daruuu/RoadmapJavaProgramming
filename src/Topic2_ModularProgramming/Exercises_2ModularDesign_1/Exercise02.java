@@ -57,5 +57,4 @@ public class Exercise02 {
         }
         return nuevoStr[posPalabraMasVocales];
     }
-
 }
