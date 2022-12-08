@@ -41,7 +41,6 @@ public class Exercise01 {
             array1[i+1] = key;
         }
     }
-
     // 123 mod 10 = 3
     // 123 / 10 = 12
     // 12 mod 10 = 2

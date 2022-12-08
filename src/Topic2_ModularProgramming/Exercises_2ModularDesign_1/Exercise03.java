@@ -1,5 +1,7 @@
 package Topic2_ModularProgramming.Exercises_2ModularDesign_1;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,16 +17,25 @@ Fes el disseny modular i la seva posterior implementació en Java d'un programa 
 
 L'opció 'Alta d'ingrés': l'usuari introdueixi una nova partida per a l'ingrés.
 L'opció 'Alta de despesa': l'usuari introdueixi una nova partida per a la despesa.
-L'opció 'Mostra resum': ens mostra un informe on apareix el total d'ingressos i el total de despeses. A més, en cas que hi hagi més ingressos que despeses ens mostrarà també la següent frase:«L'empresa ha tingut uns beneficis de X euros», on X és la diferència entre ingressos i despeses. En cas que les despeses siguin més grans que els ingressos la frase a mostrar és: «L'empresa ha tingut un dèficit de X euros», on X és la diferència entre les despeses i els ingressos.
-Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i despeses realitzats respectivament, així com la data exacte de la seva realització.
+L'opció 'Mostra resum': ens mostra un informe on apareix el total d'ingressos i el total de despeses.
+A més, en cas que hi hagi més ingressos que despeses ens mostrarà també la següent frase:
+«L'empresa ha tingut uns beneficis de X euros», on X és la diferència entre ingressos i despeses.
+En cas que les despeses siguin més grans que els ingressos la frase a mostrar és:
+«L'empresa ha tingut un dèficit de X euros», on X és la diferència entre les despeses i els ingressos.
+
+Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i despeses realitzats respectivament, així com la data
+exacte de la seva realització.
+
 L'opció 'fi' fa que acabi el programa.
 
-Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates. Usar la classe LocalDateTime per a representar les dates.
+Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates.
+Usar la classe LocalDateTime per a representar les dates.
  */
 public class Exercise03 {
 
     private static final List<Double> ingresos = new ArrayList<>();
     private static final List<Double> despeses = new ArrayList<>();
+    private static final List<String> fechas = new ArrayList<>();
 
     public static void main(String[] args) {
         contabilidadEmpresa();
@@ -34,18 +45,21 @@ public class Exercise03 {
         Scanner sc = new Scanner(System.in);
         opciones();
         int opcion = sc.nextInt();
-        while (opcion != 6){
-
+        while (opcion != 6) {
             switch (opcion) {
                 case 1:
                     //l'usuari introdueixi una nova partida per a l'ingrés.
                     System.out.println("Alta nuevo ingreso:");
+                    String inicio = startTimer();
                     altaIngresos();
+                    System.out.println(inicio);
                     break;
                 case 2:
                     //l'usuari introdueixi una nova partida per a la despesa.
                     System.out.println("Alta despesa:");
                     altaDespesa();
+                    String fin =finishTimer();
+                    System.out.println(fin);
                     break;
                 case 3:
                     //ens mostra un informe on apareix el total d'ingressos i el total de despeses.
@@ -126,4 +140,19 @@ public class Exercise03 {
         return historial;
     }
 
+    public static String startTimer() {
+        LocalDateTime ahora = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = ahora.format(formatter);
+        fechas.add(formatDateTime);
+        return formatDateTime;
+    }
+
+    public static String finishTimer() {
+        LocalDateTime fin = LocalDateTime.now();
+        DateTimeFormatter fechaFormato = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDateTime = fin.format(fechaFormato);
+        fechas.add(formatDateTime);
+        return formatDateTime;
+    }
 }
