@@ -1,21 +1,20 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo2;
 
+import PracticeNewThings.Lambda.Persona;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-
-public class Persona implements Comparable<Persona>{
+public class PersonaE2 implements Comparable<PersonaE2> {
     private String nombre;
     private String apellidos;
     private int edad;
 
-    public Persona(String nombre, String apellidos, int edad) {
+    public PersonaE2(String nombre, String apellidos, int edad) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
     }
 
-    public Persona() {
+    public PersonaE2() {
     }
 
     public String getNombre() {
@@ -52,10 +51,9 @@ public class Persona implements Comparable<Persona>{
     }
 
     @Override
-    public int compareTo(@NotNull Persona o) {
+    public int compareTo(@NotNull PersonaE2 o) {
         return this.getNombre().compareTo(o.getNombre());
     }
 
-    public boolean estaJubilado() {
-    }
+
 }
