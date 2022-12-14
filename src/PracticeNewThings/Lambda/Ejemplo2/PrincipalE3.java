@@ -14,11 +14,11 @@ public class PrincipalE3 {
         listaPersona.add(new Persona("antonio", "perez", 70));
 
         //un metodo de referencia que es como una expresion lamba pero en una clase
-        List<Persona> nueva = buscarPersonaConFiltro((PersonaE2::estaJubilado), listaPersona);
+//        List<Persona> nueva = buscarPersonaConFiltro((PersonaE2::estaJubilado), listaPersona);
 
-        for (Persona p : nueva) {
-            System.out.printf("persona: %s %s %s %n", p.getNombre(), p.getApellidos(), p.getEdad());
-        }
+//        for (Persona p : nueva) {
+//            System.out.printf("persona: %s %s %s %n", p.getNombre(), p.getApellidos(), p.getEdad());
+//        }
         //metodo para ordenar
 //        Collections.sort(listaPersona);
     }

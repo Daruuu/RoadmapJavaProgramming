@@ -26,6 +26,9 @@ public class Exercise01 {
         for (int a : array1) {
             System.out.print(a + " ");
         }
+
+
+        int [] array1 = new
     }
 
     public static void ordenarPorZeros() {
@@ -41,6 +44,14 @@ public class Exercise01 {
             array1[i+1] = key;
         }
     }
+    public static int[][] ordenar(int[] arr){
+        for (int i = 0; i < ; i++) {
+
+        }
+
+        return arr[i][j];
+    }
+
     // 123 mod 10 = 3
     // 123 / 10 = 12
     // 12 mod 10 = 2

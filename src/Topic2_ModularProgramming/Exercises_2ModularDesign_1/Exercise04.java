@@ -38,6 +38,7 @@ la resta de missatges per pantalla són els mateixos.
  */
 public class Exercise04 {
     private static final int[] arrayDados = {1, 2, 3, 4, 5, 6};
+    private int punto = 0;
 
     public static void main(String[] args) {
         programa();
@@ -47,10 +48,10 @@ public class Exercise04 {
         Scanner sc = new Scanner(System.in);
         int lanzarDado = 0;
         String input = sc.next();
-        if (input.equals(" ")) {
+        if (input.contains(" ")) {
             lanzarDado = arrayDados[(int) (Math.random() * arrayDados.length)];
         }
-        sc.close();
+//        sc.close();
         return lanzarDado;
     }
 
@@ -68,7 +69,6 @@ public class Exercise04 {
                     break;
                 case 2:
                     System.out.println("Determinar la equidad del juego");
-
                     break;
                 case 3:
                     System.out.println("Obtenir ajuda en linia");
@@ -113,6 +113,5 @@ public class Exercise04 {
             System.out.println(punto + "(es el punt)Es perd");
         }
     }
-
 
 }
