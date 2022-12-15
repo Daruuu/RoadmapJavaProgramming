@@ -1,8 +1,10 @@
 package PracticeNewThings.Lambda.Ejemplo2;
 
-import PracticeNewThings.Lambda.Persona;
+import PracticeNewThings.Lambda.Ejemplo1.Persona;
 
-public class FiltroPersonaApellido implements FiltroPersona {
+import java.util.function.Predicate;
+
+public class FiltroPersonaApellido implements Predicate<Persona> {
 
     String apellidos;
 

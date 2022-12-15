@@ -1,7 +1,6 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Principal {

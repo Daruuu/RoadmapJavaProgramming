@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
 /*
 Completeu la classe Forecast.java per a que retorni la
 temperatura,
@@ -55,13 +56,14 @@ public class Exercise13 {
             return "error";
         }
     }
-    public static String getTemperature(String str){
-        String [] temp = str.split("<temperature", '\n');
+
+    public static String getTemperature(String str) {
+        String[] temp = str.split("<temperature", '\n');
         int pos = str.indexOf("temperature");
         int posValue = str.indexOf("value");
         System.out.println("pos: " + pos);
         System.out.println(str.charAt(pos));
-        System.out.println(str.charAt(pos+1));
+        System.out.println(str.charAt(pos + 1));
         return "";
     }
 }

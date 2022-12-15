@@ -25,14 +25,11 @@ public class Exercise05 {
     private static int numButacas;
 
     public static void main(String[] args) {
-        menuPrograma();
+        reserva();
     }
 
     public static void menuPrograma() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce el numero de entradas libres:\n");
-        entradasLibres = sc.nextInt();
-
+        reserva();
     }
 
     /*
@@ -41,8 +38,19 @@ public class Exercise05 {
     En cas afirmatiu, ha de calcular el preu
     total de la reserva a raó de 6 euros l'entrada.
      */
-    public static void reserva(int entradasLibres) {
-//        if (entradasLibres > )
+    //entradasAReservar 20;
+    //enrtadaslibres = 100;
+    public static int reserva() {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Introduce el numero total de entradas libres:");
+        numeroEntradasAReservar = sc.nextInt();
+        int precioPorEntrada;
+        if (numeroEntradasAReservar> 0 && numeroEntradasAReservar > entradasLibres ){
+            return numeroEntradasAReservar =sc.nextInt();
+        }else {
+            precioPorEntrada = numeroEntradasAReservar * entrada;
+        }
+        return precioPorEntrada;
     }
 
 

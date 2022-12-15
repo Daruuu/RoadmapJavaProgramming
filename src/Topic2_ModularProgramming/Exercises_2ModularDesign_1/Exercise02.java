@@ -38,6 +38,22 @@ public class Exercise02 {
         }
         return palabraMasVocales;
     }
+/*
+    public static String retornaVocalesPalabra(String palabra){
+        for (String s : nuevoStr) {
+            int contador = 0;
+            for (int k = 0; k < s.length(); k++) {
+                if (s.charAt(k) == 'a' || s.charAt(k) == 'e' || s.charAt(k) == 'i' || s.charAt(k) == 'o' || s.charAt(k) == 'u') {
+                    contador++;
+                }
+            }
+            if (contador > contadorTotal) {
+                contadorTotal = contador;
+                palabraMasVocales = s;
+            }
+        }
+    }
+ */
 
     public static String mesVocales2(String str) {
         String[] nuevoStr = str.toLowerCase().split(" ");

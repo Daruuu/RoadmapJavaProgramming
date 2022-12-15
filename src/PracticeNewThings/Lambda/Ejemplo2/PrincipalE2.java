@@ -1,9 +1,10 @@
 package PracticeNewThings.Lambda.Ejemplo2;
 
-import PracticeNewThings.Lambda.Persona;
+import PracticeNewThings.Lambda.Ejemplo1.Persona;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class PrincipalE2 {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class PrincipalE2 {
 //        List<Persona> nuevaB = buscarPersonaConFiltro(new FiltroPersonaNombre("pedro"),listaPersona);
 //        List<Persona> nuevoA = buscarPersonaConFiltro(new FiltroPersonaApellido("blanco"), listaPersona);
 
-        List<Persona> nueva = buscarPersonaConFiltro((Persona p)-> p.getApellidos().equals("blanco"), listaPersona);
+        Predicate<Persona> filtroPedro = new FiltroPersonaNombre("pedro");
         for (Persona p : listaPersona) {
             System.out.printf("persona: %s %s %s %n", p.getNombre(), p.getApellidos(), p.getEdad());
         }
@@ -24,7 +25,7 @@ public class PrincipalE2 {
 
     }
 
-    public static List<Persona> buscarPersonaConFiltro(FiltroPersona filtro, List<Persona> miLista) {
+    public static List<Persona> buscarPersonaConFiltro(Predicate filtro, List<Persona> miLista) {
         List<Persona> listaFiltro = new ArrayList<Persona>();
         for (Persona p : listaFiltro) {
             if (filtro.test(p)) {

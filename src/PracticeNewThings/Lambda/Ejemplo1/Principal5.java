@@ -1,10 +1,8 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo1;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
-public class Principal4 {
+public class Principal5 {
     public static void main(String[] args) {
         ArrayList<Persona> listaPersona = new ArrayList<Persona>();
         listaPersona.add(new Persona("pedro", "gomez", 19));
@@ -12,19 +10,11 @@ public class Principal4 {
         listaPersona.add(new Persona("gema", "blanco", 30));
 
 //        listaPersona.sort(new ComparadorNombre());
-        listaPersona.sort((Persona p1, Persona p2) -> {
-            if (p1.getEdad() == p2.getEdad()) {
-                return 0;
-            } else if (p1.getEdad() > p2.getEdad()) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
+        listaPersona.sort((p1,p2)->p1.getNombre().compareTo(p2.getNombre()));
         for (Persona p : listaPersona) {
             System.out.printf("persona: %s %s %s %n", p.getNombre(), p.getApellidos(), p.getEdad());
         }
-        Collections.sort(listaPersona);
+//        Collections.sort(listaPersona);
 
     }
 }

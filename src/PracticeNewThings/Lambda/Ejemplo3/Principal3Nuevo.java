@@ -1,29 +1,21 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo3;
+
+import PracticeNewThings.Lambda.Ejemplo1.Persona;
+import PracticeNewThings.Lambda.Ejemplo2.FiltroPersonaNombre;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
-public class Principal3 {
+public class Principal3Nuevo {
     public static void main(String[] args) {
         ArrayList<Persona> listaPersona = new ArrayList<Persona>();
         listaPersona.add(new Persona("pedro", "gomez", 19));
         listaPersona.add(new Persona("ana", "sanchez", 39));
         listaPersona.add(new Persona("gema", "blanco", 30));
 
-        listaPersona.sort(new ComparadorNombre());
-        listaPersona.sort(new Comparator<Persona>() {
-            @Override
-            public int compare(Persona p1, Persona p2) {
-                if (p1.getEdad() == p2.getEdad()) {
-                    return 0;
-                } else if (p1.getEdad() > p2.getEdad()) {
-                    return 1;
-                } else {
-                    return -1;
-                }
-            }
-        });
+        //un method de referencia que es como una expresion lambda pero en una clase
+        FiltroPersona3 filtroP3 = (FiltroPersona3) new FiltroPersonaNombre("pedro");
+        FiltroPersona3 filtroPerezORPedro = filtroP3.or(Persona::estaJubilado);
         for (Persona p : listaPersona) {
             System.out.printf("persona: %s %s %s %n",p.getNombre(), p.getApellidos(),p.getEdad());
         }

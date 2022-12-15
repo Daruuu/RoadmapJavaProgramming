@@ -1,6 +1,5 @@
 package PracticeNewThings.Lambda.Ejemplo2;
 
-import PracticeNewThings.Lambda.Persona;
 import org.jetbrains.annotations.NotNull;
 
 public class PersonaE2 implements Comparable<PersonaE2> {

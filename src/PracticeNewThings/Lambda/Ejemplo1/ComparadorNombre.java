@@ -1,4 +1,4 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo1;
 
 import java.util.Comparator;
 

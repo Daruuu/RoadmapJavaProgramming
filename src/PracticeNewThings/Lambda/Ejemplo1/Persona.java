@@ -1,10 +1,8 @@
-package PracticeNewThings.Lambda;
+package PracticeNewThings.Lambda.Ejemplo1;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-
-public class Persona implements Comparable<Persona>{
+public class Persona implements Comparable<Persona> {
     private String nombre;
     private String apellidos;
     private int edad;
@@ -56,7 +54,9 @@ public class Persona implements Comparable<Persona>{
         return this.getNombre().compareTo(o.getNombre());
     }
 
+    //methodo de una instancia
     public boolean estaJubilado() {
-        return true;
+        return this.getEdad() < 65;
+
     }
 }

@@ -1,6 +1,6 @@
 package PracticeNewThings.Lambda.Ejemplo2;
 
-import PracticeNewThings.Lambda.Persona;
+import PracticeNewThings.Lambda.Ejemplo1.Persona;
 
 import java.util.ArrayList;
 import java.util.List;

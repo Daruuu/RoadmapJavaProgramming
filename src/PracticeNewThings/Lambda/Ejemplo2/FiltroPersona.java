@@ -1,9 +1,17 @@
 package PracticeNewThings.Lambda.Ejemplo2;
 
-import PracticeNewThings.Lambda.Persona;
+import PracticeNewThings.Lambda.Ejemplo1.Persona;
 
-public interface FiltroPersona {
+import java.util.function.Predicate;
 
-    public boolean test(Persona persona);
+public interface FiltroPersona extends Predicate<Persona> {
 
+    // es la posibilidad de psar multiples parametros del mismo tipo
+    public static Predicate<Persona> orMultiple(Predicate<Persona>... predicates) {
+        Predicate<Persona> combinarPredicador = predicates[0];
+        for (Predicate<Persona> predicado : predicates) {
+            combinarPredicador = combinarPredicador.or(predicado);
+        }
+        return combinarPredicador;
+    }
 }
