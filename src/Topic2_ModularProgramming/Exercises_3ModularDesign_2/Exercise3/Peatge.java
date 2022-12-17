@@ -33,7 +33,6 @@ public class Peatge {
 
 
     }
-
     /*
     Un cotxe quan arriba a un peatge escull per defecte la cua que va menys carregada, en cas
     d'empat escull en ordre incremental de la primera a la quarta. El valor màxim d'una cua és 5.
@@ -67,6 +66,10 @@ public class Peatge {
             }
             opcion = sc.nextInt();
         }
+    }
+
+    public static void opciones(){
+
     }
 
 

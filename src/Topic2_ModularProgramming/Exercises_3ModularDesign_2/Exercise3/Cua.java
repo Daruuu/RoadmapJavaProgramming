@@ -18,11 +18,15 @@ public class Cua {
     }
 
     //incrementar el valor de la cua, decrementar el valor de la cua,
-    //preguntar si una cua està plena i preguntar si una cua està buida.
     public static void incrementarValorCola(){
         
     }
     public static void decrementarValorCola(){
+
+    }
+
+    //preguntar si una cua està plena i preguntar si una cua està buida.
+    public static void colaPeajeLlena(){
 
     }
 
