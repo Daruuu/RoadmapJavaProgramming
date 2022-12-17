@@ -24,33 +24,40 @@ public class Calculadora {
         System.out.println("introduce 2 numeros:");
         int a = sc.nextInt();
         int b = sc.nextInt();
+        System.out.println("Introduce una de las opciones:");
         int opcion = sc.nextInt();
         while (opcion != -1) {
             switch (opcion) {
                 case 1:
+                    System.out.println("suma:");
                     System.out.println(Operaciones.suma(a,b));
                     break;
                 case 2:
+                    System.out.println("resta:");
                     System.out.println(Operaciones.resta(a,b));
                     break;
                 case 3:
+                    System.out.println("multiplicacion:");
                     System.out.println(Operaciones.multiplicacion(a,b));
                     break;
                 case 4:
+                    System.out.println("division:");
                     System.out.println(Operaciones.division(a,b));
                     break;
                 case 5:
+                    System.out.println("modulo:");
                     System.out.println(Operaciones.modulo(a,b));
                     break;
                 default:
                     System.out.println("introduce una opcion correcta:");
             }
+            menuOpciones();
             opcion = sc.nextInt();
         }
     }
 
     public static void menuOpciones(){
-        System.out.println("1. Suma:\n" +
+        System.out.println("\n1. Suma:\n" +
                 "2. Resta:\n" +
                 "3. Multiplicacion:\n" +
                 "4. Division:\n" +

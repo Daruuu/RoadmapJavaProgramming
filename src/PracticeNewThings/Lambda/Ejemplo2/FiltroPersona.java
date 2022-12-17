@@ -13,5 +13,6 @@ public interface FiltroPersona extends Predicate<Persona> {
             combinarPredicador = combinarPredicador.or(predicado);
         }
         return combinarPredicador;
+
     }
 }

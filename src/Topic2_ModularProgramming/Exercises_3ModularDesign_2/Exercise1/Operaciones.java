@@ -1,6 +1,5 @@
 package Topic2_ModularProgramming.Exercises_3ModularDesign_2.Exercise1;
 
-
 public class Operaciones {
 
     public static double suma(double numero1, double numero2){
