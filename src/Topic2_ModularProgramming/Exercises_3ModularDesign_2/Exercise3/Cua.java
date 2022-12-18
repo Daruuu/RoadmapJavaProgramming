@@ -11,6 +11,7 @@ Pista: vigilar amb els màxims i mínims.
  */
 public class Cua {
     public static int numeroCochesCola;
+    public static int[] cua = new int[];
 
     //A part, contindrà els mètodes per saber quants cotxes hi ha en una cua,
     public static void visualizarEstadoColaDeCoches(int numeroCochesCola){

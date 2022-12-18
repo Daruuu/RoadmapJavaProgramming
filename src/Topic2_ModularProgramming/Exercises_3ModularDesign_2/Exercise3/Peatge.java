@@ -26,13 +26,17 @@ Pista: vigilar amb els màxims i mínims.
 import java.util.Scanner;
 
 public class Peatge {
+    static int numColas = 4;
     static int cotxes;
-    static int[][] matrizPeaje = new int[4][5];
+    static int[] arrayPeaje = new int[cotxes];
+    static int[][] matrizPeaje = new int[numColas][cotxes];
 
+//    static Cua[] arrayPeaje = new Cua[numColas];
     public static void main(String[] args) {
 
 
     }
+
     /*
     Un cotxe quan arriba a un peatge escull per defecte la cua que va menys carregada, en cas
     d'empat escull en ordre incremental de la primera a la quarta. El valor màxim d'una cua és 5.
@@ -57,20 +61,21 @@ public class Peatge {
 
                     break;
                 case 3:
+                    //avisar cuando sale un coche de una de las colas
                     break;
                 case 4:
+                    //donar l'avís de la sortida d'un cotxe d'una de les cues (indicant la cua).
                     break;
                 case 5:
                     break;
-
             }
             opcion = sc.nextInt();
         }
     }
 
-    public static void opciones(){
-
+    public static void opciones() {
+        System.out.println("[1]. Visualizar estado de cada cola del peaje\n" +
+                "[2]. Avisar cuando llega un nuevo coche a la cola.\n" +
+                "[3]. Avisar cuando sale un coche de una de las colas.\n");
     }
-
-
 }
