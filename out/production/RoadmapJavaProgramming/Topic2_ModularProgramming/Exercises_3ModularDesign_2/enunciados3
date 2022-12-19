@@ -21,7 +21,14 @@ També disposem d'una altra classe Cua.java que conté una variable de classe pe
 Pista: vigilar amb els màxims i mínims.
 
 
-4. Formem part d'un projecte de gestió de matrícules. Ens han demanat que implementem pel projecte una classe estudiant, ha de ser una classe que guardi la següent informació: DNI de l'estudiant, un nom, una adreça, una data de naixament i un telèfon. I que sigui capaç de tenir les següents funcionalitats:
+4. Formem part d'un projecte de gestió de matrícules.
+Ens han demanat que implementem pel projecte una classe estudiant, ha de ser una classe que guardi la següent informació:
+DNI de l'estudiant,
+un nom,
+una adreça,
+una data de naixament
+i un telèfon.
+I que sigui capaç de tenir les següents funcionalitats:
 - Donar d'alta un estudiant (amb els paràmetres adients).
 - Borrar les dades d'un estudiant.
 - Ordenar un conjunt d'estudiants per DNI.
