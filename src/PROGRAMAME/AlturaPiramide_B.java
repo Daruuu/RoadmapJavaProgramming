@@ -16,19 +16,20 @@ public class AlturaPiramide_B {
     // nivel 3: cuadrado 5 x 5
     // nivel 4: cuadrado 7 x 7
     public static void main(String[] args) {
-//        alturaPiramide();
+        nivelesPiramide();
     }
 
-    public static void nivelesPiramide(){
+    public static void nivelesPiramide() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int numeroNivel = 0;    //niveles de la piramide
-        List<Integer> integerList = new ArrayList<>();
-        while (n != 0){
-            integerList.add(n);
-            for (int i = 0; i < 2.000000000; i++) {
-                if (i % 2 == 0){
-                    numeroNivel = i*i;
+        int sumaBloquesNiveles = 0;
+        while (n != 0) {
+            int numeroNivel;
+            for (numeroNivel = 1; numeroNivel < 2.000000000; numeroNivel += 2) {
+                sumaBloquesNiveles += numeroNivel * numeroNivel;
+                if (n <= sumaBloquesNiveles) {
+                    System.out.println(numeroNivel);
+                    break;
                 }
             }
             n = sc.nextInt();

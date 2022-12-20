@@ -1,10 +1,26 @@
 package PROGRAMAME;
 
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 public class Champollin_D {
+    // n == numero de casos a procesar
+    // cada caso es una linea (alfabeto ingles , mayuscula-minusculas- espacios)
+    // cada linea no tiene mas de 100 palabras
+    // maximo palabras por linea == 10 silabas
+
     public static void main(String[] args) {
-        Champollin();
+        contarLetrasPorLinea();
+    }
+
+    public static void contarLetrasPorLinea(){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String linea = "";
+        while (sc.hasNextLine()){
+            System.out.println(linea);
+            linea = sc.nextLine();
+        }
     }
 
 
