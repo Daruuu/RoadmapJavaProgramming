@@ -22,44 +22,18 @@ public class AlturaPiramide_B {
     public static void nivelesPiramide() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int sumaBloquesNiveles = 0;
         while (n != 0) {
-            int numeroNivel;
-            for (numeroNivel = 1; numeroNivel < 2.000000000; numeroNivel += 2) {
-                sumaBloquesNiveles += numeroNivel * numeroNivel;
-                if (n <= sumaBloquesNiveles) {
-                    System.out.println(numeroNivel);
+            int sumaBloquesPorAltura = 0;
+            int contadorAltura = 0;
+            for (int altura = 1; altura < 2000000000; altura += 2) {
+                ++contadorAltura;
+                sumaBloquesPorAltura += altura * altura;
+                if (n <= sumaBloquesPorAltura) {
+                    System.out.println(contadorAltura);
                     break;
                 }
             }
             n = sc.nextInt();
         }
     }
-
-    public static void alturaPiramide() {
-        Scanner sc = new Scanner(System.in);
-        int numero = sc.nextInt();
-        int numBloques = 1;
-        boolean par = false;
-        int nivel;
-        int resultadoBloquePorNivel = 0;
-
-        while (numero != 0 && !par) {
-            for (nivel = 1; nivel < 2.000000000; nivel++) {
-                resultadoBloquePorNivel = numBloques;
-            }
-
-
-            numero = sc.nextInt();
-        }
-    }
-
-    public static void numeroImpares() {
-        for (int i = 0; i < 100; i++) {
-            if (i % 2 != 0) {
-                System.out.print(i + " ");
-            }
-        }
-    }
-
 }

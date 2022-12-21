@@ -20,7 +20,7 @@ Aquí teniu més informació de la API REST que estem usant per a recuperar la i
 La informació l'heu d'extreure de la cadena XML que retorna la API,
 usant els mètodes de la classe String (per exemple split()).
  */
-public class Exercise13 {
+public class Forecast {
 
     public static String temperature;
     public static String humidity;
@@ -28,7 +28,7 @@ public class Exercise13 {
     public static String pressure;
 
     public static void main(String[] args) {
-        String current = Topic2_ModularProgramming.Exercises_1ModularBasic.Exercise13.getHTML("https://api.openweathermap.org/data/2.5/weather?q=Barcelona&units=metric&mode=xml&appid=644da4f2a1231c6611d2e2d8abb1fc90");
+        String current = Forecast.getHTML("https://api.openweathermap.org/data/2.5/weather?q=Barcelona&units=metric&mode=xml&appid=644da4f2a1231c6611d2e2d8abb1fc90");
         System.out.println(current);
         getTemperature(current);
     }
@@ -66,4 +66,5 @@ public class Exercise13 {
         System.out.println(str.charAt(pos + 1));
         return "";
     }
+
 }

@@ -1,5 +1,8 @@
 package PROGRAMAME;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -8,18 +11,34 @@ public class Champollin_D {
     // cada caso es una linea (alfabeto ingles , mayuscula-minusculas- espacios)
     // cada linea no tiene mas de 100 palabras
     // maximo palabras por linea == 10 silabas
+    // contar las silabas que hay en la frase.
 
     public static void main(String[] args) {
         contarLetrasPorLinea();
     }
-
-    public static void contarLetrasPorLinea(){
+    //IMPUT
+    /*
+    3
+    Mi mama me mima
+    Ramses amaba a Nefertari
+    Egipto depende del Nilo para beber
+     */
+    public static void contarLetrasPorLinea() {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        String linea = "";
-        while (sc.hasNextLine()){
-            System.out.println(linea);
-            linea = sc.nextLine();
+        String[] inputLineas = new String[n];
+        sc.nextLine();
+        for (int i = 0; i < inputLineas.length; i++) {
+            inputLineas[i] = sc.nextLine();
+        }
+        String[] linea;
+        for (int i = 0; i < inputLineas.length; i++) {
+            linea = inputLineas[i].split("");
+        }
+
+        System.out.println("input:");
+        for (String s: inputLineas){
+            System.out.println(s);
         }
     }
 
