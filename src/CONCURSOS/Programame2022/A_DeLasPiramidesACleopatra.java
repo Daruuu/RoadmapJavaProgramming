@@ -1,8 +1,8 @@
-package PROGRAMAME;
+package CONCURSOS.Programame2022;
 
 import java.util.Scanner;
 
-public class DeLasPiramidesACleopatra_A {
+public class A_DeLasPiramidesACleopatra {
     public static void main(String[] args) {
         piramideMatriz();
     }

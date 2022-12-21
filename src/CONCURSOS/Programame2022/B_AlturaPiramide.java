@@ -1,10 +1,8 @@
-package PROGRAMAME;
+package CONCURSOS.Programame2022;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class AlturaPiramide_B {
+public class B_AlturaPiramide {
 
     // n casos prueba mientra != 0
     // numero entre 1 y 2.000.000.000

@@ -1,12 +1,8 @@
-package PROGRAMAME;
+package CONCURSOS.Programame2022;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
-public class Champollin_D {
+public class D_Champollin {
     // n == numero de casos a procesar
     // cada caso es una linea (alfabeto ingles , mayuscula-minusculas- espacios)
     // cada linea no tiene mas de 100 palabras
