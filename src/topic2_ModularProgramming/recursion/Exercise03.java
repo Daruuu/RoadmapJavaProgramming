@@ -10,11 +10,11 @@ public class Exercise03 {
         numNaturales(5);
     }
 
-    public static void numNaturales(int n){
-        if (n == 0){
+    public static void numNaturales(int n) {
+        if (n == 0) {
             return;
         }
-        numNaturales(n -1);
+        numNaturales(n - 1);
         System.out.print(n + " ");
     }
 

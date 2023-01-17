@@ -1,0 +1,9 @@
+1. Programar un algoritmo recursivo que permita multiplicar los elementos de un vector.
+2. Programar un algoritmo recursivo que calcule el Máximo común divisor de dos números.
+3. Programar un método recursivo que transforme un número entero positivo a notación binaria.
+4. Programar un método recursivo que transforme un número binario en un número decimal.
+5. Escribir un programa que encuentre la suma de los enteros positivos pares desde N hasta 2. Si el número es impar que imprima un mensaje de error.
+6. Programa un método recursivo que invierta los caracteres de un array.
+7. Implementa una función recursiva que nos diga si una cadena es palíndromo.
+8. Buscar un elemento en un array de forma recursiva.
+9.Calcula la potencia de un número tanto por exponentes positivos como negativos.

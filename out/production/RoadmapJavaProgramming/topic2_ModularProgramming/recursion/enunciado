@@ -1,25 +1,18 @@
 1. Implementa el siguiente programa recursivo con Java y cuando adivines lo que hace, haz el equivalente de forma secuencial (utilizando un bucle):
 
 Funcion NoSeQueFa (entero a, entr b): entero
-
             Si (b==0) entonces devuelve 0
-
             Sino vuelve a + NoSeQueFa(a,b-1)
-
 Fin Función
 
 2. Haz un programa que escriba la suma de los N primeros números:
-
       Ej: N=5 5+4+3+2+1+0=15
-
       suma(N) = N + suma(N-1);
 
 3. Escribe un programa que visualice los N primeros números naturales:
-
       Dado un N que muestre-> 1 2 3 4 5 ... N
 
 4. Escribe un programa que visualice los N primeros números naturales en sentido inverso:
-
       Dado un N que muestre-> N N-1 ... 3 2 1
 
 5. Programa un algoritmo recursivo capaz de sumar las cifras de un número.
