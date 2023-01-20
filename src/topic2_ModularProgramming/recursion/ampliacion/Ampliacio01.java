@@ -9,8 +9,6 @@ public class Ampliacio01 {
     public static int m(int i, int[] a) {
         if (i == a.length)
             return 1;
-        return a[i] * m(i+1, a);
+        return a[i] * m(i + 1, a);
     }
-
-
 }

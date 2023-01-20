@@ -17,9 +17,11 @@ Fin Función
 
 5. Programa un algoritmo recursivo capaz de sumar las cifras de un número.
 
-6. Calcula el número de fibonnacción a partir de un número dado. (Serie de Fibonnacci)
+6. Calcula el número de fibonnacci a partir de un número dado. (Serie de Fibonnacci)
 
-7. Programa un algoritmo recursivo capaz de invertir un número. Ej: dado el 123 queremos conseguir el 321. (Pista, es necesario pasar dos parámetros a la función)
+7. Programa un algoritmo recursivo capaz de invertir un número.
+Ej: dado el 123 queremos conseguir el 321. (Pista, es necesario pasar dos
+parámetros a la función)
 
 8. Implementa un programa que permita realizar la división por restos sucesivos.
 
