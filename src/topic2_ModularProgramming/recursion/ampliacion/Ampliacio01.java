@@ -1,5 +1,6 @@
 package topic2_ModularProgramming.recursion.ampliacion;
 
+//  1. Programar un algoritmo recursivo que permita multiplicar los elementos de un vector.
 public class Ampliacio01 {
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4};
