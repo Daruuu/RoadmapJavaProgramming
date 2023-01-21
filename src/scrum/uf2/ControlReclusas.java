@@ -7,20 +7,21 @@ public class ControlReclusas {
 
     public static boolean[] visitas = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
 
-    //id presa, dni, hora salida a patio, hora llegada a celda, hora real de llegada de presa
     public static String[][] controlReclusas = {
-            {"0001", "23890755X", "09:00", "12:00", "12:15"},
-            {"0002", "65229087S", "09:00", "12:00", "13:00"},
-            {"0003", "24234789D", "09:00", "12:00", "13:20"},
-            {"0004", "41229789A", "09:00", "12:00", "12:00"},
-            {"0005", "41516889F", "09:00", "12:00", "14:40"},
-            {"0006", "41516889A", "09:00", "12:00", "13:18"},
-            {"0007", "31726979G", "09:00", "12:00", "12:00"},
-            {"0008", "34031429B", "09:00", "12:00", "12:00"},
-            {"0009", "54436451A", "09:00", "12:00", "12:00"},
-            {"0010", "94136911E", "09:00", "12:00", "16:05"},
+            //id presa, dni, hora salida a patio, hora real de llegada de presa
+            {"0001", "23890755X", "09:00", "12:15"},
+            {"0002", "65229087S", "09:00", "13:00"},
+            {"0003", "24234789D", "09:00", "13:20"},
+            {"0004", "41229789A", "09:00", "12:00"},
+            {"0005", "41516889F", "09:00", "14:40"},
+            {"0006", "41516889A", "09:00", "13:18"},
+            {"0007", "31726979G", "09:00", "12:00"},
+            {"0008", "34031429B", "09:00", "12:00"},
+            {"0009", "54436451A", "09:00", "12:00"},
+            {"0010", "94136911E", "09:00", "16:05"},
             //4,7,8,9
     };
+
     public static final String[][] listaVisitasReclusas = {
             //id, nombre, dia semana  boolean visita? si : no
             {"0001", "Juana Nascimento", "3"},
@@ -35,20 +36,32 @@ public class ControlReclusas {
             {"0010", "Laura Ochoa", "5"}
     };
 
+    //crear una funcion en la cual poder comparar controlReclusas[i][3] con la variable horaRegresoPatio
+    //y poder saber si una reclusa ha llegado a tiempo del patio
+    public static void mirarPuntualidadReclusas() {
+        for (int i = 0; i < controlReclusas.length; i++) {
+            String[] horaMinuto = controlReclusas[i][3].split(":");
+            int hora = Integer.parseInt(horaMinuto[0]);
+            int minuto = Integer.parseInt(horaMinuto[1]);
+        }
+    }
+
+    // esta funcion hay que divirla en 2 partes
     public static void comprobarHorarioRecluta() {
         for (int i = 0; i < controlReclusas.length; i++) {
-            System.out.println("RECLUSA CON ID " + controlReclusas[i][0] + "\nCON DNI " + controlReclusas[i][1]);
+            System.out.println("RECLUSA CON ID: " + controlReclusas[i][0] + " Y DNI " + controlReclusas[i][1]);
+
             if (horaRegresoPatio.equals(controlReclusas[i][3])) {
-                System.out.println("REGRESO DE RECLUSA CORRECTO");
+                System.out.println("\033[34mREGRESO HORA CORRECTA\033[0m");
                 System.out.println();
             } else {
-                System.out.println("RECLUSA FUERA DE HORARIO");
+                System.out.println("\033[31mREGRESO FUERA DE HORARIO\033[0m");
                 System.out.println();
             }
         }
     }
 
-    //funcion en proceso : Daruny
+    //funcion en proceso
     public static void visitasPresasV1() {
         Scanner sc = new Scanner(System.in);
         System.out.println("¿ID DE RECLUSA QUE QUIERAS VISITAR?");
@@ -63,7 +76,6 @@ public class ControlReclusas {
             }
             reclusaVisitada = sc.nextInt();
         }
-
         int posicion = reclusaVisitada - 1;
         if ((posicion > -1 && posicion < 18) && !visitas[posicion]) {
             visitas[posicion] = true;
@@ -79,7 +91,7 @@ public class ControlReclusas {
 
     // Control de visites amb familiars.
     // (Determinar que només tenim un familiar a cada presa disponible)
-    public static void visitasPresas() {
+    public static void visitasReclusas() {
         Scanner sc = new Scanner(System.in);
         System.out.println("¿CODIGO DE RECLUSA QUE QUIERAS VISITAR?");
         for (int i = 0; i < 10; i++) {

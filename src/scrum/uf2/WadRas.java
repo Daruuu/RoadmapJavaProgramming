@@ -11,7 +11,7 @@ public class WadRas {
     public static void menuWadRas() {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
-
+        Reclusas.establecerEstadoSalidaPatioReclusas();
         while (!salir) {
             int opcion = opcionesMenuWadRas(sc);
             switch (opcion) {
@@ -29,21 +29,20 @@ public class WadRas {
                 case 3:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 3:\033[0m");
                     linea();
-                    Reclusas.reclusasGradoTresMenorCondena();
-                    Reclusas.reclusasGradoTresMayorCondena();
+                    Reclusas.mostrarReclusasPatioDisponible();
+                    Reclusas.mostrarReclusasPatioProhibido();
                     linea();
                     break;
                 case 4:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 4:\033[0m");
                     linea();
-//                    ControlReclusas.comprobarHorarioPresaV1();
                     ControlReclusas.comprobarHorarioRecluta();
                     linea();
                     break;
                 case 5:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 5:\033[0m");
                     linea();
-                    ControlReclusas.visitasPresas();
+                    ControlReclusas.visitasReclusas();
                     linea();
                     break;
                 case 6:
@@ -69,6 +68,6 @@ public class WadRas {
     }
 
     public static void linea() {
-        System.out.println("\033[36m" + "--------------------------------" + "\033[0m");
+        System.out.println("\033[36m--------------------------------\033[0m");
     }
 }

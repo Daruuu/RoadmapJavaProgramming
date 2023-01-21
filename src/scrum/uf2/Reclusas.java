@@ -2,23 +2,21 @@ package scrum.uf2;
 
 public class Reclusas {
     public static final String tipoGradoCondena = "3";
-    public static int reclusasSalidaPatio;
-    public static String[][] reclusasMenorNueveAnyos;
-    public static final String[][] fichasTecnicasReclusas = {
-            {"0001", "Juana Nascimento", "29", "20", "11", "3"},    //no pueden
-            {"0002", "Giovana Libert", "42", "10", "5", "1"},
-            {"0003", "Maria Lisa", "33", "8", "5", "3"},    // si pueden
-            {"0004", "Marta Eulalia", "39", "4", "2", "2"},
-            {"0005", "Carmen ", "65", "5", "1", "2"},
-            {"0006", "Ana Beltran", "32", "10", "7", "3"},  // si pueden
-            {"0007", "Andrew Gil", "40", "10", "10", "2"},
-            {"0008", "Camila Jimenez", "37", "20", "17", "2"},
-            {"0009", "Andrea Linares", "42", "5", "9", "3"},    //no pueden
-            {"0010", "Laura Ochoa", "25", "15", "7", "3"}   // si pueden
+    public static String[][] fichasTecnicasReclusas = {
+            {"0001", "Juana Nascimento", "29", "20", "11", "3", ""},
+            {"0002", "Giovana Libert", "42", "10", "5", "1", ""},
+            {"0003", "Maria Lisa", "33", "8", "5", "3", ""},
+            {"0004", "Marta Eulalia", "39", "4", "2", "2", ""},
+            {"0005", "Carmen ", "65", "5", "1", "2", ""},
+            {"0006", "Ana Beltran", "32", "10", "7", "3", ""},
+            {"0007", "Andrew Gil", "40", "10", "10", "2", ""},
+            {"0008", "Camila Jimenez", "37", "20", "17", "2", ""},
+            {"0009", "Andrea Linares", "42", "5", "9", "3", ""},
+            {"0010", "Laura Ochoa", "25", "15", "7", "3", ""},
     };
 
     public static void mostrarFichaTecnica() {
-        System.out.println("id, nombre, dni, edad, sentencia, condena restante, tipo grado");
+        System.out.println("id, nombre, dni, edad, sentencia, condena restante, tipo grado, salida patio");
         for (String[] filas : fichasTecnicasReclusas) {
             for (String colum : filas) {
                 System.out.print(colum + " ");
@@ -27,50 +25,36 @@ public class Reclusas {
         }
     }
 
-    public static void reclusasGradoTresMenorCondena() {
-        System.out.println("\033[34mRECLUSAS DE TERCER GRADO QUE PUEDEN SALIR AL PATIO:\033[0m");
+    public static void establecerEstadoSalidaPatioReclusas() {
         for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
             if (fichasTecnicasReclusas[i][5].equals(tipoGradoCondena) && Integer.parseInt(fichasTecnicasReclusas[i][4]) < 9) {
+                fichasTecnicasReclusas[i][6] = "1";
+            } else {
+                fichasTecnicasReclusas[i][6] = "0";
+            }
+        }
+    }
+
+    public static void mostrarReclusasPatioDisponible() {
+        System.out.println("\033[34mRECLUSAS DE TERCER GRADO QUE PUEDEN SALIR AL PATIO:\033[0m");
+        for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
+            if (fichasTecnicasReclusas[i][6].equals("1")) {
                 System.out.println(fichasTecnicasReclusas[i][0] + " " + fichasTecnicasReclusas[i][1]);
             }
         }
     }
 
-    public static void reclusasGradoTresMayorCondena() {
+    public static void mostrarReclusasPatioProhibido() {
         System.out.println("\033[31mRECLUSAS DE TERCER GRADO QUE NO PUEDEN SALIR AL PATIO:\033[0m");
-        for (String[] fichasTecnicasReclusa : fichasTecnicasReclusas) {
-            if (fichasTecnicasReclusa[5].equals(tipoGradoCondena) && Integer.parseInt(fichasTecnicasReclusa[4]) >= 9) {
-                System.out.println(fichasTecnicasReclusa[0] + " " + fichasTecnicasReclusa[1]);
+        for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
+            if (fichasTecnicasReclusas[i][6].equals("0")) {
+                System.out.println(fichasTecnicasReclusas[i][0] + " " + fichasTecnicasReclusas[i][1]);
             }
         }
     }
 
-    public static void agregarReclutas(int numero) {
+    public static void agregarReclusas(int numero) {
         String[][] nuevasReclusas = new String[numero][5];
     }
 
-    //guardar en una matriz nueva el id y el nombre de las reclusas que pueden salir al patio
-    public static void mostrarReclusasGradoTresMenosCondena() {
-        System.out.println("\033[34m" + "RECLUSAS QUE SI PUEDEN SALIR AL PATIO:" + "\033[0m");
-
-        //{"0001", "Juana Nascimento", "29", "20", "11", "3"},
-        int contadorReclusas = 0;
-        for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
-            for (int j = 0; j < fichasTecnicasReclusas[i].length; j++) {
-                if (fichasTecnicasReclusas[j][5].equals(tipoGradoCondena) && Integer.parseInt(fichasTecnicasReclusas[j][4]) < 9) {
-                    System.out.println("Id " + fichasTecnicasReclusas[j][0] + " con nombre " + fichasTecnicasReclusas[j][1]);
-                    contadorReclusas++;
-                    reclusasMenorNueveAnyos = new String[contadorReclusas][2];
-                }
-                reclusasMenorNueveAnyos[i][j] = fichasTecnicasReclusas[i][0];
-            }
-        }
-        System.out.println("reclusas array");
-        for (String[] reclusas : reclusasMenorNueveAnyos) {
-            for (String col : reclusas) {
-                System.out.print(col);
-            }
-            System.out.println();
-        }
-    }
 }
