@@ -4,17 +4,16 @@ public class Ampliacio03 {
 
     //3. Programar un método recursivo que transforme un número entero positivo a notación binaria.
     public static void main(String[] args) {
-        System.out.println(numEnteroABinario(12));
+//        System.out.println(numEnteroABinario(12));
+        numEnteroABinario(12);
     }
 
-    public static int numEnteroABinario( int n) {
-//        int remainder = ;
-        if (n == 0)
-            return 0;
-        else if (n == 1) {
-            return 1;
+    public static void numEnteroABinario(int n) {
+        if (n == 1) {
+            System.out.print(n % 2);
+            return;
         }
-//        System.out.println(n/2);
-        return numEnteroABinario(n/2 + (n%2));
+        numEnteroABinario(n / 2);
+        System.out.print(n % 2);
     }
 }
