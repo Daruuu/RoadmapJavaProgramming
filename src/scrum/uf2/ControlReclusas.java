@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class ControlReclusas {
     public static final String horaRegresoPatio = "12:00";
-
     public static boolean[] visitas = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
 
     public static String[][] controlReclusas = {
@@ -21,10 +20,9 @@ public class ControlReclusas {
             {"0010", "94136911E", "09:00", "16:05"},
             //4,7,8,9
     };
-
     public static final String[][] listaVisitasReclusas = {
             //id, nombre, dia semana  boolean visita? si : no
-            {"0001", "Juana Nascimento", "3"},
+            {"0001", "Juana Nascimento", "3", ""},
             {"0002", "Giovana Libert", "5"},
             {"0003", "Maria Lisa", "4"},
             {"0004", "Marta Eulalia", "2"},
@@ -38,13 +36,13 @@ public class ControlReclusas {
 
     //crear una funcion en la cual poder comparar controlReclusas[i][3] con la variable horaRegresoPatio
     //y poder saber si una reclusa ha llegado a tiempo del patio
-    public static void mirarPuntualidadReclusas() {
-        for (int i = 0; i < controlReclusas.length; i++) {
-            String[] horaMinuto = controlReclusas[i][3].split(":");
-            int hora = Integer.parseInt(horaMinuto[0]);
-            int minuto = Integer.parseInt(horaMinuto[1]);
-        }
-    }
+//    public static void mirarPuntualidadReclusas() {
+//        for (int i = 0; i < controlReclusas.length; i++) {
+//            String[] horaMinuto = controlReclusas[i][3].split(":");
+//            int hora = Integer.parseInt(horaMinuto[0]);
+//            int minuto = Integer.parseInt(horaMinuto[1]);
+//        }
+//    }
 
     // esta funcion hay que divirla en 2 partes
     public static void comprobarHorarioRecluta() {
@@ -88,7 +86,6 @@ public class ControlReclusas {
     }
 
     //FUNCION A MEJORAR
-
     // Control de visites amb familiars.
     // (Determinar que només tenim un familiar a cada presa disponible)
     public static void visitasReclusas() {

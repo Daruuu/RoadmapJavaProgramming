@@ -1,9 +1,8 @@
-package scrum.uf2;
+package scrum.uf2Final;
 
 import java.util.Scanner;
 
 public class WadRas {
-
     public static void main(String[] args) {
         menuWadRas();
     }
@@ -12,6 +11,7 @@ public class WadRas {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
         Reclusas.establecerEstadoSalidaPatioReclusas();
+
         while (!salir) {
             int opcion = opcionesMenuWadRas(sc);
             switch (opcion) {
@@ -24,14 +24,17 @@ public class WadRas {
                 case 2:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 2:\033[0m");
                     linea();
-
+                    System.out.print("Introduce numero de reclusas nuevas: ");
+                    int numReclusas = sc.nextInt();
+                    Reclusas.agregarReclusasNuevas(numReclusas);
+                    Reclusas.mostrarReclusasNuevas();
                     linea();
                     break;
                 case 3:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 3:\033[0m");
                     linea();
                     Reclusas.mostrarReclusasPatioDisponible();
-                    Reclusas.mostrarReclusasPatioProhibido();
+//                    Reclusas.mostrarReclusasPatioProhibido();
                     linea();
                     break;
                 case 4:
@@ -43,7 +46,7 @@ public class WadRas {
                 case 5:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 5:\033[0m");
                     linea();
-                    ControlReclusas.visitasReclusas();
+                    ControlReclusas.crearVisitasReclusas();
                     linea();
                     break;
                 case 6:
