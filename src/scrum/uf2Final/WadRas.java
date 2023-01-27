@@ -11,7 +11,6 @@ public class WadRas {
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
         Reclusas.establecerEstadoSalidaPatioReclusas();
-
         while (!salir) {
             int opcion = opcionesMenuWadRas(sc);
             switch (opcion) {
@@ -27,20 +26,21 @@ public class WadRas {
                     System.out.print("Introduce numero de reclusas nuevas: ");
                     int numReclusas = sc.nextInt();
                     Reclusas.agregarReclusasNuevas(numReclusas);
-                    Reclusas.mostrarReclusasNuevas();
+                    Reclusas.listarReclusasNuevas();
                     linea();
                     break;
                 case 3:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 3:\033[0m");
                     linea();
                     Reclusas.mostrarReclusasPatioDisponible();
-//                    Reclusas.mostrarReclusasPatioProhibido();
                     linea();
                     break;
                 case 4:
                     System.out.println("\033[36mSELECCIONASTE LA OPCION 4:\033[0m");
                     linea();
-                    ControlReclusas.comprobarHorarioRecluta();
+                    ControlReclusas.listarReclusasHorarioCorrecto();
+                    linea();
+                    ControlReclusas.listarReclusasHorarioIncorrecto();
                     linea();
                     break;
                 case 5:

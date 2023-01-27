@@ -3,12 +3,9 @@ package scrum.uf2Final;
 import java.util.Scanner;
 
 public class Reclusas {
-    public static final String tipoGradoCondena = "3";
-    public static int reclusasSalirPatio;
-    public static boolean permiso;
+    public static final String TIPO_GRADO_CONDENA = "3";
     public static String[][] nuevasReclusas;
     public static String[][] fichasTecnicasReclusas = {
-            //id, nombre, edad, sentencia, condena restante, tipo grado, salida patio
             {"0001", "Juana Nascimento", "29", "20", "11", "3", ""},
             {"0002", "Giovana Libert", "42", "10", "5", "1", ""},
             {"0003", "Maria Lisa", "33", "8", "5", "3", ""},
@@ -26,9 +23,8 @@ public class Reclusas {
             {"0015", "Daru Garviria", "25", "14", "9", "3", ""},
     };
 
-    //OPCION 1
     public static void mostrarFichaTecnica() {
-        System.out.println("id, nombre, dni, edad, sentencia, condena restante, tipo grado, salida patio");
+        System.out.println("id, nombre, edad, sentencia, condena restante, tipo grado, salida patio");
         for (String[] filas : fichasTecnicasReclusas) {
             for (String colum : filas) {
                 System.out.print(colum + " ");
@@ -39,7 +35,7 @@ public class Reclusas {
 
     public static void establecerEstadoSalidaPatioReclusas() {
         for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
-            if (fichasTecnicasReclusas[i][5].equals(tipoGradoCondena) && Integer.parseInt(fichasTecnicasReclusas[i][4]) < 9) {
+            if (fichasTecnicasReclusas[i][5].equals(TIPO_GRADO_CONDENA) && Integer.parseInt(fichasTecnicasReclusas[i][4]) < 9) {
                 fichasTecnicasReclusas[i][6] = "1";
             } else {
                 fichasTecnicasReclusas[i][6] = "0";
@@ -47,49 +43,18 @@ public class Reclusas {
         }
     }
 
-    //  OPCION 3
-    public static int mostrarReclusasPatioDisponible() {
+    public static void mostrarReclusasPatioDisponible() {
+        System.out.println("\033[34mRECLUSAS DE TERCER GRADO QUE PUEDEN SALIR AL PATIO:\033[0m");
         for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
             if (fichasTecnicasReclusas[i][6].equals("1")) {
-                reclusasSalirPatio = i;
-            }
-        }
-        return reclusasSalirPatio;
-    }
-
-    public static void mostrarReclusasPatioProhibido() {
-        System.out.println("\033[31mRECLUSAS DE TERCER GRADO QUE NO PUEDEN SALIR AL PATIO:\033[0m");
-        for (int i = 0; i < fichasTecnicasReclusas.length; i++) {
-            if (fichasTecnicasReclusas[i][6].equals("0") && fichasTecnicasReclusas[i][5].equals(tipoGradoCondena) && Integer.parseInt(fichasTecnicasReclusas[i][4]) >= 9) {
                 System.out.println(fichasTecnicasReclusas[i][0] + " " + fichasTecnicasReclusas[i][1]);
-            }
-        }
-    }
-
-    public static boolean reclusasPermisoBoolean() {
-        permiso = false;
-        for (int i = 0; i < ControlReclusas.controlReclusas.length; i++) {
-            int indiceFichaPresas = mostrarReclusasPatioDisponible();
-            if (ControlReclusas.controlReclusas[i].equals(indiceFichaPresas)) {
-                permiso = true;
-                return permiso;
-            }
-        }
-//        permiso = false;
-        return false;
-    }
-
-    public static void presasConPermiso() {
-        for (int i = 0; i < mostrarReclusasPatioDisponible(); i++) {
-            if (Integer.parseInt(ControlReclusas.controlReclusas[i][0]) == mostrarReclusasPatioDisponible()) {
-                System.out.println(ControlReclusas.controlReclusas[i][0]);
             }
         }
     }
 
     public static void agregarReclusasNuevas(int numero) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("id, nombre, edad, sentencia, condena restante, tipo grado, salida patio");
+        System.out.println("id, nombre, edad, sentencia, condena restante, tipo grado");
         nuevasReclusas = new String[numero][fichasTecnicasReclusas[0].length];
         for (int i = 0; i < numero; i++) {
             for (int j = 0; j < nuevasReclusas[0].length; j++) {
@@ -159,7 +124,7 @@ public class Reclusas {
         }
     }
 
-    public static void mostrarReclusasNuevas() {
+    public static void listarReclusasNuevas() {
         System.out.println("Nuevas Reclusas:");
         for (int i = 0; i < nuevasReclusas.length; i++) {
             System.out.println("RECLUSA NUMERO " + i);
