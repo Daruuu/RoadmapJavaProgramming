@@ -1,7 +1,7 @@
 #!/bin/bash
 #script to automate my git push in every git repository
 # read -r is because don't let the backslash \() act as an scape character and broke the script
-# before execute this script, change the permission using: chmod +x gitpushV1.sh|| chmod 755 gitpushV1.sh
+# before execute this script, change the permission using: chmod +x gitpullpush.sh || chmod 755 gitpushV1.sh
 
 git status
 git add .

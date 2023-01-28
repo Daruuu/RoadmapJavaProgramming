@@ -1,0 +1,20 @@
+1. Crea una classe Cotxe que tingui els atributs model i matrícula, i els corresponents mètodes set i get per a cada un.
+Crea una altra classe CotxeTest amb un main on es creïn 2 objectes de tipus Cotxe i es provin els seus mètodes set i get.
+
+2. Crea una classe PermisConduir que tingui els atributs nom, tipusPermis i punts, i els corresponents mètodes set i get per a cada un d'ells.
+Afegeix un mètode anomenat imprimirPermis que imprimeixi per pantalla tots els atributs.
+Afegeix un mètode anomenat restarPunts que resti del total de punts del permís el número de punts que rebi com a paràmetre.
+Crea una altra classe PermisTest amb un main on es creïn 2 objectes de tipus PermisConduir i es provin els seus mètodes set, imprimirPermis i restarPunts.
+
+3. Crea una classe CotxePermis amb un mètode main que fagi el següent:
+- Crear un objecte de la classe Cotxe i un altre objecte de la classe PermisConduir.
+- Mostrar un menú per pantalla amb les següents opcions:
+a) Modificar info cotxe: aquesta opció modificarà l'objecte Cotxe amb les noves dades que demanarà a l'usuari (model i matrícula).
+b) Modificar info permis:  aquesta opció modificarà l'objecte PermisConduir amb les noves dades que demanarà a l'usuari (nom, tipus permís i punts).
+c) Mostrar info: mostrar per pantalla tots els valors dels atributs dels objectes Cotxe i PermisConduir.
+
+4. Modifiquem la classe AlumneTest de l'exemple fet a classe de manera que queda com es mostra a baix. Prova el nou codi i contesta les següents preguntes:
+
+Quants objectes Alumne es creen al programa?
+Les assignacions entre variables del tipus Alumne (com per exemple alumne3 = alumne1) fan una còpia de l'objecte?
+Les assignacions entre variables del tipus Alumne (com per exemple alumne3 = alumne1) fan que les dues variables apuntin al mateix objecte (és a dir podem accedir al mateix objecte amb els dos noms: alumne1 i alumne3)?
