@@ -1,0 +1,31 @@
+
+
+9. Crea i testeja les classes Position i Player amb els atributs que s'escaiguin
+i els mètodes que es descriuen a continuació:
+
+- Classe Position: representa un punt (x,y) a l'eix de coordenades.
+Cada posició ve definida per dos valors enters x i y.
+Els mètodes disponibles són:
+
+Constructor per defecte, que es correspondrà amb la posició (0,0).
+Constructor al qual se li passa com a paràmetre els valors
+inicials de les coordenades x i y.
+Els getters i setters corresponents als atributs de la classe.
+
+Mètodes per incrementar i decrementar els valors de cadascuna
+de les coordenades de la posició.
+Els noms dels mètodes seran incX, incY, decX i decY.
+Un mètode per establir els valors de les dues coordenades,
+ tindrà per nom setXY.
+
+
+- Classe Player: representarà un jugador que tindrà com a atributs
+la posició en la qual es troba (representada per un objecte de la classe Position)
+i el nom del jugador. Els mètodes necessaris són:
+
+Constructor al qual se li passa com a paràmetre la posició inicial
+on s'ha de situar el jugador.
+ Ha de crear l'objecte Position que guardarà la posició.
+Mètodes per moure el jugador, tindran per noms: moveRight, moveLeft, jump, fall.
+Mètodes per establir i consultar el nom del jugador (getter i setter).
+Mètode que ens retorna la posició del jugador (getter).

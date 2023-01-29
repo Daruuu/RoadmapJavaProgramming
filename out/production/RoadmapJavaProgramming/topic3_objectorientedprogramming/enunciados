@@ -18,3 +18,70 @@ c) Mostrar info: mostrar per pantalla tots els valors dels atributs dels objecte
 Quants objectes Alumne es creen al programa?
 Les assignacions entre variables del tipus Alumne (com per exemple alumne3 = alumne1) fan una còpia de l'objecte?
 Les assignacions entre variables del tipus Alumne (com per exemple alumne3 = alumne1) fan que les dues variables apuntin al mateix objecte (és a dir podem accedir al mateix objecte amb els dos noms: alumne1 i alumne3)?
+
+5. Crea i testeja una classe que modelitzi un triangle amb els següents atributs i mètodes:
+
+Atributs:
+
+side1: nombre real amb la longitud del primer costat del triangle.
+side2: nombre real amb la longitud del segon costat del triangle.
+side3: nombre real amb la longitud del tercer costat del triangle.
+Mètodes:
+
+Constructor per defecte amb els costats amb valors 3, 4 i 5.
+Constructor que rep per paràmetre tots els valors corresponents als atributs del triangle.
+Mètode perimetre() que ens calcularà el perímetre del triangle.
+Mètode area() que ens calcularà la superfície del triangle. Podeu usar la fórmula d'Heró (http://ca.wikipedia.org/wiki/F%C3%B3rmula_d%27Her%C3%B3).
+
+
+6. Crea i testeja una classe que modelitzi un cronòmetre que ens permeti consultar el temps que ha passat des de que es posa en marxa, pausar-lo i posar-lo a zero. Pensa i defineix els atributs i mètodes que creguis convenients. Pots usar la classe Date https://docs.oracle.com/javase/8/docs/api/java/util/Date.html que guarda un instant de temps com un long que representa el número de milisegons que han passat des del 01/01/1970 (https://es.wikipedia.org/wiki/Tiempo_Unix).
+
+
+
+7. Crea i testeja una classe que emuli un comptador cíclic d'un dígit (0-9) amb mètodes que ens permeti posar el comptador a 0, incrementar-lo i consultar el seu valor.
+
+
+
+8. Crea i testeja una classe que emuli un comptador cíclic de dos dígits que ens permeti posar el comptador a 0, incrementar-lo i consultar el seu valor. Utilitza la classe de l'exercici anterior.
+
+
+
+9. Crea i testeja les classes Position i Player amb els atributs que s'escaiguin i els mètodes que es descriuen a continuació:
+
+- Classe Position: representa un punt (x,y) a l'eix de coordenades. Cada posició ve definida per dos valors enters x i y. Els mètodes disponibles són:
+
+Constructor per defecte, que es correspondrà amb la posició (0,0).
+Constructor al qual se li passa com a paràmetre els valors inicials de les coordenades x i y.
+Els getters i setters corresponents als atributs de la classe.
+Mètodes per incrementar i decrementar els valors de cadascuna de les coordenades de la posició. Els noms dels mètodes seran incX, incY, decX i decY.
+Un mètode per establir els valors de les dues coordenades, tindrà per nom setXY.
+- Classe Player: representarà un jugador que tindrà com a atributs la posició en la qual es troba (representada per un objecte de la classe Position) i el nom del jugador. Els mètodes necessaris són:
+
+Constructor al qual se li passa com a paràmetre la posició inicial on s'ha de situar el jugador. Ha de crear l'objecte Position que guardarà la posició.
+Mètodes per moure el jugador, tindran per noms: moveRight, moveLeft, jump, fall.
+Mètodes per establir i consultar el nom del jugador (getter i setter).
+Mètode que ens retorna la posició del jugador (getter).
+
+
+10. Crea una classe Game amb un mètode main que mostri un menú per pantalla amb les següents opcions (usant la classe Player de l'exercici anterior):
+
+a) Afegir nou jugador: aquesta opció crearà un nou objecte de la classe Player. Demanarà a l'usuari el nom i les coordenades inicials.
+
+b) Eliminar jugador: aquesta opció eliminarà l'últim jugador creat.
+
+c) Reset de la partida: elimina tots els jugador creats.
+
+d) Mostrar jugadors: mostrar per pantalla la informació de tots els jugadors.
+
+Per guardar els jugadors al main cal crear un vector de Players de 10 posicions. Quan el vector estigui plè no es podran crear més jugadors fins que no se n'elimini un (si s'intenta donarà un error per pantalla).
+
+
+Modela amb classes:
+
+11. Cercle: D'un cercle ens interessa conèixer el radi i determinar el perímetre, l'àrea i esbrinar quin de dos cercles és el més gran (comparació amb un altre objecte).
+
+12. Cilindre: D'un cilindre ens interessa conèixer el radi de la base i l'altura i determinar l'àrea total, el volum i esbrinar quin de dos cilindres és el més gran emprant el model del cercle de l'exercici anterior.
+
+13. Anell: Un obrador de joieria fabrica aliances de matrimoni d'or. De les aliances ens interessa conèixer el seu model, el diàmetre de pas de dit D (mm) i el diàmetre de la secció de l'anell d (mm).
+
+Volem determinar el pes de l'anell (gr) , el preu de l'or (€) emprat en la seva fabricació, i el preu de venda de l'anell als majoristes (€). El cost de fabricació de l'aliança sense tenir en compte el valor de l'or és de 40 €, el preu de l'or és de 10 € el gram, el marge de benefici és del 210 % del cost total de l'anell i el pes específic de l'or és de 19,3 gr/cm3
