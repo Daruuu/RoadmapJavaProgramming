@@ -14,14 +14,18 @@ public class ContadorCiclico {
             numero = 0;
         }
         numero++;
+        System.out.println(numero);
     }
 
     public int reiniciar() {
         return numero = 0;
     }
 
-    public ContadorCiclico(int contador) {
-        this.numero = contador;
+    public ContadorCiclico() {
+    }
+
+    public ContadorCiclico(int numero) {
+        this.numero = numero;
     }
 
     public int getNumero() {

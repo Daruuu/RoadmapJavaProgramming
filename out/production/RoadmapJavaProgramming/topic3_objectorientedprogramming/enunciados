@@ -73,15 +73,27 @@ c) Reset de la partida: elimina tots els jugador creats.
 
 d) Mostrar jugadors: mostrar per pantalla la informació de tots els jugadors.
 
-Per guardar els jugadors al main cal crear un vector de Players de 10 posicions. Quan el vector estigui plè no es podran crear més jugadors fins que no se n'elimini un (si s'intenta donarà un error per pantalla).
+Per guardar els jugadors al main cal crear un vector de Players de 10 posicions.
+Quan el vector estigui plè no es podran crear més jugadors fins que no se n'elimini un (si s'intenta donarà un error per pantalla).
 
 
 Modela amb classes:
 
-11. Cercle: D'un cercle ens interessa conèixer el radi i determinar el perímetre, l'àrea i esbrinar quin de dos cercles és el més gran (comparació amb un altre objecte).
+11. Cercle:
+D'un cercle ens interessa conèixer el radi i determinar el perímetre,
+l'àrea i esbrinar quin de dos cercles és el més gran (comparació amb un altre objecte).
 
-12. Cilindre: D'un cilindre ens interessa conèixer el radi de la base i l'altura i determinar l'àrea total, el volum i esbrinar quin de dos cilindres és el més gran emprant el model del cercle de l'exercici anterior.
+12. Cilindre:
+D'un cilindre ens interessa conèixer el radi de la base i l'altura i determinar l'àrea total,
+ el volum i esbrinar quin de dos cilindres és el més gran emprant el model del cercle de l'exercici anterior.
 
-13. Anell: Un obrador de joieria fabrica aliances de matrimoni d'or. De les aliances ens interessa conèixer el seu model, el diàmetre de pas de dit D (mm) i el diàmetre de la secció de l'anell d (mm).
+13. Anell:
+Un obrador de joieria fabrica aliances de matrimoni d'or.
+De les aliances ens interessa conèixer el seu model, el diàmetre de pas de dit D (mm)
+i el diàmetre de la secció de l'anell d (mm).
 
-Volem determinar el pes de l'anell (gr) , el preu de l'or (€) emprat en la seva fabricació, i el preu de venda de l'anell als majoristes (€). El cost de fabricació de l'aliança sense tenir en compte el valor de l'or és de 40 €, el preu de l'or és de 10 € el gram, el marge de benefici és del 210 % del cost total de l'anell i el pes específic de l'or és de 19,3 gr/cm3
+Volem determinar el pes de l'anell (gr) ,
+el preu de l'or (€) emprat en la seva fabricació, i el preu de venda de l'anell als majoristes (€).
+El cost de fabricació de l'aliança sense tenir en compte el valor de l'or és de 40 €,
+el preu de l'or és de 10 € el gram,
+el marge de benefici és del 210 % del cost total de l'anell i el pes específic de l'or és de 19,3 gr/cm3

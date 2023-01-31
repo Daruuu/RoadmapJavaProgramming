@@ -16,6 +16,11 @@ public class Cronometro {
         return start = System.currentTimeMillis();
     }
 
+    //
+    public long stopCronometro(){
+
+        return 0;
+    }
     public long endCronometro() {
         return end = System.currentTimeMillis();
     }
