@@ -21,6 +21,12 @@ public class Casa {
         this.salaCasa = new Sala();
         this.cocinaCasa = new Cuina();
     }
+    public Casa() {
+        this.superficie = 120;
+        this.direccion = "direccion 0";
+        this.salaCasa = new Sala();
+        this.cocinaCasa = new Cuina();
+    }
 
     public double getSuperficie() {
         return superficie;

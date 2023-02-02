@@ -17,7 +17,7 @@ public class Player {
     private String name;
     private Position position;
 
-
+    // Constructor al qual se li passa com a paràmetre la posició inicial on s'ha de situar el jugador. Ha de crear l'objecte Position que guardarà la posició.
     public Player(int x, int y) {
         position = new Position(x, y);
     }
@@ -39,32 +39,27 @@ public class Player {
         return position;
     }
 
-    public void setPosition(Position position) {
-        this.position = position;
-    }
-
     public void moveRight() {
         position.incX();
-        position.incY();
     }
 
     public void moveLeft() {
-        position.incY();
-    }
-
-    public void jump() {
-        position.decY();
-    }
-
-    public void fall() {
         position.decX();
     }
 
-    //Mètode que ens retorna la posició del jugador (getter).
-    /*public Player getPlayerPosition() {
-        this.position = new Position().getXY();
-        return new Player();
-    }*/
+    public void jump() {
+        position.incX();
+    }
 
+    public void fall() {
+        position.decY();
+    }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", position=" + position +
+                '}';
+    }
 }
