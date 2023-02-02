@@ -7,6 +7,9 @@ public class Modul {
         this.nomModul = nomModul;
     }
 
+    public Modul() {
+    }
+
     public String getNomModul() {
         return nomModul;
     }

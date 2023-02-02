@@ -13,6 +13,9 @@ public class Alumne {
         this.dni = dni;
     }
 
+    public Alumne() {
+    }
+
     public String getNom() {
         return nom;
     }
