@@ -14,6 +14,11 @@ public class Sala {
         this.tipoSala = "desconocido";
     }
 
+    public Sala(int numeroDeTelevisions, String tipoSala) {
+        this.numeroDeTelevisions = numeroDeTelevisions;
+        this.tipoSala = tipoSala;
+    }
+
     public int getNumeroDeTelevisions() {
         return numeroDeTelevisions;
     }

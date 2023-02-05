@@ -49,7 +49,7 @@ public class Game {
         while (!opcion.equals("e")) {
             switch (opcion) {
                 case "a":
-                    game.crearJugador();
+//                    game.crearJugador();
                     break;
                 case "b":
                     //b) Eliminar jugador: aquesta opció eliminarà l'últim jugador creat.
@@ -74,7 +74,6 @@ public class Game {
             }
             opcion = sc.nextLine();
         }
-
     }
 
     public void crearJugador() {

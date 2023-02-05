@@ -1,23 +1,27 @@
 package topic3_objectorientedprogramming.exerasociacionclases02.exer03;
 
+import java.util.List;
+
 public class Ferry {
     private String matricula;
     private String nombre;
     private String puertoDestino;
     private double precioCamionTonelada;
     private double pesoMaxToneladaPorCamion;
-    private Camion camion;
+    private List<Camion> listaCamiones;
+    private  List<Peaje> listaPeaje;
 
-    public Ferry(String matricula, String nombre, String puertoDestino, double precioCamionTonelada, double pesoMaxToneladaPorCamion, Camion camion) {
+    public Ferry() {
+    }
+
+    public Ferry(String matricula, String nombre, String puertoDestino, double precioCamionTonelada, double pesoMaxToneladaPorCamion, List<Camion> listaCamiones, List<Peaje> listaPeaje) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.puertoDestino = puertoDestino;
         this.precioCamionTonelada = precioCamionTonelada;
         this.pesoMaxToneladaPorCamion = pesoMaxToneladaPorCamion;
-        this.camion = camion;
-    }
-
-    public Ferry() {
+        this.listaCamiones = listaCamiones;
+        this.listaPeaje= listaPeaje;
     }
 
     public String getMatricula() {
@@ -60,13 +64,29 @@ public class Ferry {
         this.pesoMaxToneladaPorCamion = pesoMaxToneladaPorCamion;
     }
 
-    public Camion getCamion() {
-        return camion;
+    public List<Camion> getListaCamiones() {
+        return listaCamiones;
     }
 
-    public void setCamion(Camion camion) {
-        this.camion = camion;
+    public void setListaCamiones(List<Camion> listaCamiones) {
+        this.listaCamiones = listaCamiones;
     }
+
+    public List<Peaje> getListaPeaje() {
+        return listaPeaje;
+    }
+
+    public void setListaPeaje(List<Peaje> listaPeaje) {
+        this.listaPeaje = listaPeaje;
+    }
+
+
+
+
+
+
+
+
 
 
     @Override
@@ -77,7 +97,7 @@ public class Ferry {
                 ", puertoDestino='" + puertoDestino + '\'' +
                 ", precioCamionTonelada=" + precioCamionTonelada +
                 ", pesoMaxToneladaPorCamion=" + pesoMaxToneladaPorCamion +
-                ", camion=" + camion +
+                ", listaCamiones=" + listaCamiones +
                 '}';
     }
 }
