@@ -1,8 +1,8 @@
 package topic3_objectorientedprogramming.exerclases01.exer09;
 
 public class Position {
-    private int x;  //right-left
-    private int y;  //up-down
+    private int x;
+    private int y;
 
     public Position() {
         this.x = 0;

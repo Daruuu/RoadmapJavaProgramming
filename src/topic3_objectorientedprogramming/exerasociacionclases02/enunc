@@ -2,81 +2,80 @@
 
 Define tres clases: Casa, Sala, Cocina.
 
-- La clases Sala tiene como atributos numeroDeTelevisions(int) y tipoSala(String) y dispone de un constructor que lo inicializa a 0 y "desconocido".
+- La clases Sala tiene como atributos numeroDeTelevisions(int) y tipoSala(String)
+y dispone de un constructor que lo inicializa a 0 y "desconocido".
 
-- La clase Cocina debe tener como atributos esIndependent (boolean) y númeroDeFogons(int) y un constructor que los inicializa a false y 0.
+- La clase Cocina debe tener como atributos esIndependent (boolean)
+y númeroDeFogons(int) y un constructor que los inicializa a false y 0.
 
-- La casa tendrá los siguientes atributos de la clase: superficie(double), dirección(String), salaCasa(tipo Sala) y cocinaCasa (tipo Cocina). Define un constructor por la clase Casa que establezca unos valores por defecto en los atributos simples y que cree nuevos objetos por los atributos Objeto.
+- La casa tendrá los siguientes atributos de la clase: superficie(double),
+dirección(String), salaCasa(tipo Sala) y cocinaCasa (tipo Cocina).
+Define un constructor por la clase Casa que establezca unos valores por defecto
+en los atributos simples y que cree nuevos objetos por los atributos Objeto.
 
-- Crea una nueva clase para testear las clases definidas anteriormente. En ella crea casas de diferentes tipologías y después muestra cómo se crean los resultados. (Puedes utilizar el método toString() que puedes definir en todas las clases).
+- Crea una nueva clase para testear las clases definidas anteriormente.
+En ella crea casas de diferentes tipologías y después muestra cómo se
+ crean los resultados.
+ (Puedes utilizar el método toString() que puedes definir en todas las clases).
 
 
 
 2. Gestión Instituto
 
-Se quiere hacer un mini gestor por un instituto para controlar a los alumnos, los módulos a los que está matriculado un alumno y sus notas. Guardaremos:
+Se quiere hacer un mini gestor por un instituto para controlar a los alumnos,
+los módulos a los que está matriculado un alumno y sus notas.
+Guardaremos:
 
 - Para el Alumno: nombre, apellidos, edad y dni.
-
 - Para el Módulo: el nombre del módulo
-
 - Una matrícula estará compuesta por: un alumno, un módulo y una nota.
 
-Crea una clase Test con una simulación de 2 estudiantes matriculados en 3 módulos cada uno. Da las siguientes opciones al programa:
-
-- extraerNotesMedia: Dado un dni de entrada, extrae la media de las notas de este alumno.
-
-- extraeModulsSuspesos: Dado el Dni de un alumno, extrae los módulos que ha suspendido.
+Crea una clase Test con una simulación de 2 estudiantes matriculados
+ en 3 módulos cada uno.
+Da las siguientes opciones al programa:
+- extraerNotesMedia: Dado un dni de entrada, extrae la media
+ de las notas de este alumno.
+- extraeModulsSuspesos: Dado el Dni de un alumno,
+extrae los módulos que ha suspendido.
 
 
 
 3. Ferries - Camiones
 
-Queremos gestionar cierta información asociada a los ferries que transportan camiones entre dos puertos.
-
+Queremos gestionar cierta información asociada a los ferries que transportan
+camiones entre dos puertos.
 La información relevante relativa a los camiones es:
-
 1. La matrícula del camión.
-
 2. El peso del camión en Tm.
 
-
-
 La información relevante relativa a los ferries es:
-
 1. La matrícula del ferry.
-
 2. El nombre del ferry.
-
 3. El nombre del puerto destino del ferry.
-
 5. El precio en € que cobra el ferry en el camión por cada Tm de peso.
-
 6. El peso máximo en Tm de los camiones transportables por el ferry.
-
 7. Los camiones cargados en el ferry.
 
 
 
-A partir de los datos anteriores, creamos una clase gestioFerryCamio con un menú y las siguientes funcionalidades:
+A partir de los datos anteriores, creamos una clase gestioFerryCamio
+con un menú y las siguientes funcionalidades:
 
-1. Determinar el peso total de los camiones embarcados. Debe devolver la suma de los pesos de camiones que tiene el ferry embarcado
-
-2. Determinar si un camión está embarcado. A partir de la matrícula del camión debe descubrirse si el camión está embarcado.
-
-3. Determinar si un camión puede embarcarse. Calcular si es posible embarcar un camión
-
+1. Determinar el peso total de los camiones embarcados.
+Debe devolver la suma de los pesos de camiones que tiene el ferry
+embarcado.
+2. Determinar si un camión está embarcado.
+A partir de la matrícula del camión debe descubrirse
+si el camión está embarcado.
+3. Determinar si un camión puede embarcarse.
+Calcular si es posible embarcar un camión
 4. Embarcar un camión.
-
-5. Determinar el camión que ha embarcado en n-ésima posición. Dado un número entero, determinar qué matrícula y peso tiene ese camión.
-
+5. Determinar el camión que ha embarcado en n-ésima posición.
+Dado un número entero, determinar qué matrícula y peso tiene ese camión.
 6. Determinar el importe del peaje de un camión.
-
 7. Determinar el peaje total recaudado.
 
 ESPECIFIQUE LA INFORMACIÓN QUE ENCUENTRE A FALTAR
-
-
 
 4. Telefonía
 

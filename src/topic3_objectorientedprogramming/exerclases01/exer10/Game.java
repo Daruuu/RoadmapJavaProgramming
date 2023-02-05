@@ -1,5 +1,8 @@
 package topic3_objectorientedprogramming.exerclases01.exer10;
 
+import topic3_objectorientedprogramming.exerclases01.exer09.Player;
+import topic3_objectorientedprogramming.exerclases01.exer09.Position;
+
 import java.util.Scanner;
 
 /*
@@ -16,8 +19,19 @@ d) Mostrar jugadors: mostrar per pantalla la informació de tots els jugadors.
 Per guardar els jugadors al main cal crear un vector de Players de 10 posicions. Quan el vector estigui plè no es podran crear més jugadors fins que no se n'elimini un (si s'intenta donarà un error per pantalla).
  */
 public class Game {
-    public static void main(String[] args) {
 
+    private Player[] jugadores;
+
+    public Game(Player[] jugadores) {
+        this.jugadores = new Player[10];
+    }
+
+    public Game() {
+    }
+
+    public static void main(String[] args) {
+        Game game1 = new Game();
+//        game1.menuPrograma(jugadores);
 
     }
 
@@ -29,14 +43,52 @@ public class Game {
                 "[d]- Mostar jugadors");
     }
 
-    public void menuPrograma() {
+    public void menuPrograma(Player[] jugadores) {
         Scanner sc = new Scanner(System.in);
-        String opcion = sc.nextLine();
+        String opcion = sc.nextLine().toLowerCase();
         while (!opcion.equals("e")) {
-
+            switch (opcion) {
+                case "a":
+                    game.crearJugador();
+                    break;
+                case "b":
+                    //b) Eliminar jugador: aquesta opció eliminarà l'últim jugador creat.
+                    for (int i = jugadores.length - 1; i > 0; i--) {
+                        if (jugadores[i] != null) {
+//                            jugadores[i] == ;
+//                            jugadores[i-1] = ;
+                        }
+                    }
+                    break;
+                case "c":
+                    System.out.println("Eliminar todos los jugadores");
+                    break;
+                case "d":
+                    System.out.println("Mostrar info de jugadores:");
+                    for (Player js : jugadores) {
+                        System.out.println(js);
+                    }
+                    break;
+                default:
+                    System.out.println("introduce una letra valida");
+            }
             opcion = sc.nextLine();
         }
 
+    }
+
+    public void crearJugador() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Crear un nuevo jugador:\n" +
+                "Introduce el nombre del nuevo jugador: \n");
+        String nombre = sc.nextLine();
+        System.out.print("Inicializar la posicion del jugador\n introduce coordenadas de x: ");
+        int x = sc.nextInt();
+        System.out.print("introduce coordenadas de y: ");
+        int y = sc.nextInt();
+        Position position1 = new Position(x, y);
+        Player player1 = new Player(nombre, position1);
+        jugadores[0] = player1;
     }
 
 }
