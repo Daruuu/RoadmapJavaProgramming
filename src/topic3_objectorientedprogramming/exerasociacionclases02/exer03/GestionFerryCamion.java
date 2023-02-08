@@ -1,32 +1,39 @@
 package topic3_objectorientedprogramming.exerasociacionclases02.exer03;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class GestionFerryCamion {
-    GestionFerryCamion gestionFerryCamion;
-    List<Peaje> listaPeaje;
-    List<Camion> listaCamiones;
-    static List<Ferry> ferries;
+    private List<Peaje> listaPeaje;
+    private List<Ferry> ferries;
 
 
-    public GestionFerryCamion(GestionFerryCamion gestionFerryCamion) {
-        this.gestionFerryCamion = gestionFerryCamion;
+    public GestionFerryCamion(GestionFerryCamion gestionFerryCamion, List<Peaje> listaPeaje, List<Ferry> ferries) {
+        this.listaPeaje = listaPeaje;
+        this.ferries = ferries;
     }
 
-    public GestionFerryCamion() {
+
+
+    public List<Peaje> getListaPeaje() {
+        return listaPeaje;
+    }
+
+    public void setListaPeaje(List<Peaje> listaPeaje) {
+        this.listaPeaje = listaPeaje;
+    }
+
+    public List<Ferry> getFerries() {
+        return ferries;
+    }
+
+    public void setFerries(List<Ferry> ferries) {
+        this.ferries = ferries;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        GestionFerryCamion gestionFerryCamion1 = new GestionFerryCamion();
-        listaPeaje = new ArrayList<>();
-        listaPeaje.add(0,);
-        listaCamiones = new ArrayList<>();
-        Ferry ferry1 = new Ferry("abcde", "numero 22", "Puerto Barcelona", 100, 5, listaCamiones, listaPeaje);
-        gestionFerryCamion1.programa();
-        ferries.add(ferry1);
+
     }
 
     int menuFuncionalidades(Scanner sc) {
@@ -50,7 +57,6 @@ public class GestionFerryCamion {
             switch (opcion) {
                 case 1:
 
-                    System.out.println(pesoTotalCamionesEnFerry());
                     break;
                 case 2:
                     break;
@@ -70,30 +76,14 @@ public class GestionFerryCamion {
 
     }
 
-    // 1. Determinar el peso total de los camiones embarcados.
-    //Debe devolver la suma de los pesos de camiones que tiene el ferry embarcado.
-    public double pesoTotalCamionesEnFerry() {
-        double sumaPesoCamiones = 0;
-        for (int i = 0; i < listaCamiones.size(); i++) {
-            if (listaCamiones.get(i).getPesoTonelada() > 0) {
-                sumaPesoCamiones += listaCamiones.get(i).getPesoTonelada();
-            }
-        }
-        return sumaPesoCamiones;
-    }
-
-    // 2. Determinar si un camión está embarcado.A partir de la matrícula del camión debe descubrirse si el camión está embarcado.
-    public boolean camionEnFerry() {
-        return false;
-    }
 
     // 3. Determinar si un camión puede embarcarse. Calcular si es posible embarcar un camión
 
-
-    // 4. Embarcar un camión.
-
     // 5. Determinar el camión que ha embarcado en n-ésima posición.
     // Dado un número entero, determinar qué matrícula y peso tiene ese camión.
+    void getCamionEmbarcado(int numero) {
+
+    }
 
     // 6. Determinar el importe del peaje de un camión.
 

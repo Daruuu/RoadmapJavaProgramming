@@ -9,7 +9,6 @@ public class Ferry {
     private double precioCamionTonelada;
     private double pesoMaxToneladaPorCamion;
     private List<Camion> listaCamiones;
-    private  List<Peaje> listaPeaje;
 
     public Ferry() {
     }
@@ -21,7 +20,6 @@ public class Ferry {
         this.precioCamionTonelada = precioCamionTonelada;
         this.pesoMaxToneladaPorCamion = pesoMaxToneladaPorCamion;
         this.listaCamiones = listaCamiones;
-        this.listaPeaje= listaPeaje;
     }
 
     public String getMatricula() {
@@ -72,23 +70,24 @@ public class Ferry {
         this.listaCamiones = listaCamiones;
     }
 
-    public List<Peaje> getListaPeaje() {
-        return listaPeaje;
+
+    public void embarcarCamion(String matricula){
+
     }
 
-    public void setListaPeaje(List<Peaje> listaPeaje) {
-        this.listaPeaje = listaPeaje;
+    // 1. Determinar el peso total de los camiones embarcados.
+    //Debe devolver la suma de los pesos de camiones que tiene el ferry embarcado.
+    public double pesoTotalCamionesEnFerry() {
+        double sumaPesoCamiones = 0;
+        for (int i = 0; i < listaCamiones.size(); i++) {
+            if (listaCamiones.get(i).getPesoTonelada() > 0) {
+                sumaPesoCamiones += listaCamiones.get(i).getPesoTonelada();
+            }
+        }
+
+
+        return 0;
     }
-
-
-
-
-
-
-
-
-
-
     @Override
     public String toString() {
         return "Ferry{" +
