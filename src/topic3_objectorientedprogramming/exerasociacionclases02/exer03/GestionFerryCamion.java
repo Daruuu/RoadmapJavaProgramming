@@ -7,13 +7,10 @@ public class GestionFerryCamion {
     private List<Peaje> listaPeaje;
     private List<Ferry> ferries;
 
-
     public GestionFerryCamion(GestionFerryCamion gestionFerryCamion, List<Peaje> listaPeaje, List<Ferry> ferries) {
         this.listaPeaje = listaPeaje;
         this.ferries = ferries;
     }
-
-
 
     public List<Peaje> getListaPeaje() {
         return listaPeaje;
@@ -56,7 +53,6 @@ public class GestionFerryCamion {
         while (opcion != 9) {
             switch (opcion) {
                 case 1:
-
                     break;
                 case 2:
                     break;

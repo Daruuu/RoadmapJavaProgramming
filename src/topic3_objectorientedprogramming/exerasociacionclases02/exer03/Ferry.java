@@ -1,5 +1,6 @@
 package topic3_objectorientedprogramming.exerasociacionclases02.exer03;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ferry {
@@ -11,6 +12,7 @@ public class Ferry {
     private List<Camion> listaCamiones;
 
     public Ferry() {
+        listaCamiones= new ArrayList<Camion>();
     }
 
     public Ferry(String matricula, String nombre, String puertoDestino, double precioCamionTonelada, double pesoMaxToneladaPorCamion, List<Camion> listaCamiones, List<Peaje> listaPeaje) {
@@ -72,6 +74,7 @@ public class Ferry {
 
 
     public void embarcarCamion(String matricula){
+//        listaCamiones.add(matricula);
 
     }
 
@@ -79,14 +82,12 @@ public class Ferry {
     //Debe devolver la suma de los pesos de camiones que tiene el ferry embarcado.
     public double pesoTotalCamionesEnFerry() {
         double sumaPesoCamiones = 0;
-        for (int i = 0; i < listaCamiones.size(); i++) {
-            if (listaCamiones.get(i).getPesoTonelada() > 0) {
-                sumaPesoCamiones += listaCamiones.get(i).getPesoTonelada();
+        for (Camion listaCamione : listaCamiones) {
+            if (listaCamione.getPesoTonelada() > 0) {
+                sumaPesoCamiones += listaCamione.getPesoTonelada();
             }
         }
-
-
-        return 0;
+        return sumaPesoCamiones;
     }
     @Override
     public String toString() {
