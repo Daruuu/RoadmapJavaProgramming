@@ -3,7 +3,9 @@ package topic3_objectorientedprogramming.abstracta03.exer01;
 public class Bicicletas extends Transports{
     private int numMarchas;
 
-    public Bicicletas() {
+    public Bicicletas(int id, int velocidadActualKMH, int numMarchas) {
+        super(id, velocidadActualKMH);
+        this.numMarchas = numMarchas;
     }
 
     @Override
@@ -23,4 +25,10 @@ public class Bicicletas extends Transports{
         this.numMarchas = numMarchas;
     }
 
+    @Override
+    public String toString() {
+        return "Bicicletas{" +
+                "numMarchas=" + numMarchas +
+                '}';
+    }
 }

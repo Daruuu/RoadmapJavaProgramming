@@ -5,7 +5,6 @@ public class Cotxes extends Transports {
     private double litroCombustible;
     private int litroConsumoPorKm;
 
-
     public Cotxes(int id, int velocidadActualKMH, String tipoCombustible, double litroCombustible, int litroConsumoPorKm) {
         super(id, velocidadActualKMH);
         this.tipoCombustible = tipoCombustible;

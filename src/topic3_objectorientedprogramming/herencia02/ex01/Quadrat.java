@@ -12,6 +12,14 @@ public class Quadrat extends ObjecteGeometric {
         this.costat = costat;
     }
 
+    public int getCostat() {
+        return costat;
+    }
+
+    public void setCostat(int costat) {
+        this.costat = costat;
+    }
+
     public int perimetre() {
         return 4 * costat;
     }

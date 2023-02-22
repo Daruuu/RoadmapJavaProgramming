@@ -8,7 +8,11 @@ public class Cercle extends ObjecteGeometric {
         this.radio = radio;
     }
 
-    public Cercle(double radio) {
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
         this.radio = radio;
     }
 

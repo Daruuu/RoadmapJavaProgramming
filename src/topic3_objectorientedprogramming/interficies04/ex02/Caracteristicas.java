@@ -38,7 +38,7 @@ public abstract class Caracteristicas {
         this.anyoPublicacion = anyoPublicacion;
     }
 
-    public abstract
+    //public abstract
     @Override
     public String toString() {
         return "Caracteristicas{" +
