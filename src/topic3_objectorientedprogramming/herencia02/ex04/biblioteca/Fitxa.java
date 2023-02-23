@@ -1,4 +1,6 @@
-package topic3_objectorientedprogramming.herencia02.ex04;
+package topic3_objectorientedprogramming.herencia02.ex04.biblioteca;
+
+import java.util.Objects;
 
 public class Fitxa {
     private String referencia;
@@ -23,6 +25,18 @@ public class Fitxa {
 
     public void setTitol(String titol) {
         this.titol = titol;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Fitxa))
+            return false;
+
+        Fitxa obj1 = (Fitxa) obj;
+
+        return  (Objects.equals(this.referencia, obj1.referencia));
     }
 
     @Override

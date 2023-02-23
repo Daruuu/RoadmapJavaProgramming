@@ -26,7 +26,62 @@ public class Cliente {
         listaLlamadas = new ArrayList<>();
     }
 
-    public void contestarLlamada(Double minutos) {
-//        listaLlamadas.add();
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public Float getPrecioMinuto() {
+        return precioMinuto;
+    }
+
+    public void setPrecioMinuto(Float precioMinuto) {
+        this.precioMinuto = precioMinuto;
+    }
+
+    public List<Llamada> getListaLlamadas() {
+        return listaLlamadas;
+    }
+
+    public void setListaLlamadas(List<Llamada> listaLlamadas) {
+        this.listaLlamadas = listaLlamadas;
+    }
+
+    public void contestarLlamada(int minutos) {
+//        listaLlamadas.add(minutos);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Cliente))
+            return false;
+
+        Cliente c1 = (Cliente) obj;
+
+        return getDni().equals(c1.getDni());
+//        return (!Objects.equals(this.dni, c1.dni));
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nombre='" + nombre + '\'' +
+                ", dni='" + dni + '\'' +
+                ", precioMinuto=" + precioMinuto +
+                ", listaLlamadas=" + listaLlamadas +
+                '}';
     }
 }

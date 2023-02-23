@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.herencia02.ex04;
+package topic3_objectorientedprogramming.herencia02.ex04.biblioteca;
 
 public class Obra extends Fitxa{
     private String autor;
@@ -28,5 +28,13 @@ public class Obra extends Fitxa{
 
     public void setNumPaginas(short numPaginas) {
         this.numPaginas = numPaginas;
+    }
+
+    @Override
+    public String toString() {
+        return "Obra{" +
+                "autor='" + autor + '\'' +
+                ", numPaginas=" + numPaginas +
+                '}';
     }
 }

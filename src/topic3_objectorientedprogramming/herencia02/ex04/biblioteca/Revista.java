@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.herencia02.ex04;
+package topic3_objectorientedprogramming.herencia02.ex04.biblioteca;
 
 public class Revista extends Fitxa{
     private short any;
@@ -24,5 +24,13 @@ public class Revista extends Fitxa{
 
     public void setNumero(short numero) {
         this.numero = numero;
+    }
+
+    @Override
+    public String toString() {
+        return "Revista{" +
+                "any=" + any +
+                ", numero=" + numero +
+                '}';
     }
 }
