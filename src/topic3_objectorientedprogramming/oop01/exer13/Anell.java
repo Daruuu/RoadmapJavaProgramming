@@ -21,15 +21,62 @@ public class Anell {
     private String modelo;
     private double diametroDePaso;
     private double diametroSeccion;
+    private final static int PRECIO_BASE = 40;
+    private final int PRECIO_ORO_GRAMO = 10;
+
+    public Anell(String modelo, double diametroDePaso, double diametroSeccion) {
+        this.modelo = modelo;
+        this.diametroDePaso = diametroDePaso;
+        this.diametroSeccion = diametroSeccion;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public double getDiametroDePaso() {
+        return diametroDePaso;
+    }
+
+    public void setDiametroDePaso(double diametroDePaso) {
+        this.diametroDePaso = diametroDePaso;
+    }
+
+    public double getDiametroSeccion() {
+        return diametroSeccion;
+    }
+
+    public void setDiametroSeccion(double diametroSeccion) {
+        this.diametroSeccion = diametroSeccion;
+    }
+
+    public int getPRECIO_ORO_GRAMO() {
+        return PRECIO_ORO_GRAMO;
+    }
 
     public double pesoAnilloGramo() {
         return 0;
     }
+
     public double precioOroGramoAnillo() {
         return 0;
     }
+
     public double precioVentaMayorista() {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return "Anell{" +
+                "modelo='" + modelo + '\'' +
+                ", diametroDePaso=" + diametroDePaso +
+                ", diametroSeccion=" + diametroSeccion +
+                ", PRECIO_ORO_GRAMO=" + PRECIO_ORO_GRAMO +
+                '}';
+    }
 }

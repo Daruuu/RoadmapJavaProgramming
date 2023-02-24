@@ -17,7 +17,6 @@ public class Player {
     private String name;
     private Position position;
 
-    // Constructor al qual se li passa com a paràmetre la posició inicial on s'ha de situar el jugador. Ha de crear l'objecte Position que guardarà la posició.
     public Player(int x, int y) {
         position = new Position(x, y);
     }

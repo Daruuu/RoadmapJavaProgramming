@@ -12,8 +12,6 @@ Constructor per defecte amb els costats amb valors 3, 4 i 5.
 Constructor que rep per paràmetre tots els valors corresponents als atributs del triangle.
 Mètode perimetre() que ens calcularà el perímetre del triangle.
 Mètode area() que ens calcularà la superfície del triangle.
-
-Podeu usar la fórmula d'Heró (http://ca.wikipedia.org/wiki/F%C3%B3rmula_d%27Her%C3%B3).
  */
 public class Triangle {
     private int side1;
@@ -34,11 +32,6 @@ public class Triangle {
         return (this.side1 + this.side2 + this.side3) / 2;
     }
 
-    public double area() {
-        double semiPerimetro = (side1 + side2 + side3) / 2;
-        double area = semiPerimetro * (semiPerimetro - side1) * (semiPerimetro - side2) * (semiPerimetro - side3) / 2;
-        return Math.sqrt(area);
-    }
 
     public Triangle(int side1, int side2, int side3) {
         this.side1 = side1;
@@ -68,6 +61,12 @@ public class Triangle {
 
     public void setSide3(int side3) {
         this.side3 = side3;
+    }
+
+    public double area() {
+        double semiPerimetro = (float) (side1 + side2 + side3) / 2;
+        double area = semiPerimetro * (semiPerimetro - side1) * (semiPerimetro - side2) * (semiPerimetro - side3) / 2;
+        return Math.sqrt(area);
     }
 
     @Override

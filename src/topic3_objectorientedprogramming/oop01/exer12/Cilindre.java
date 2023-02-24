@@ -31,20 +31,20 @@ public class Cilindre {
         this.altura = altura;
     }
 
-    @Override
-    public String toString() {
-        return "Cilindre{" +
-                "radi=" + radi +
-                ", altura=" + altura +
-                '}';
-    }
-
     public double areaTotalCilindre() {
         return 2 * (Math.PI * radi * radi) + 2 * (Math.PI * radi * altura);
     }
 
     public double VolumenCilindre() {
         return Math.PI * radi * radi * altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Cilindre{" +
+                "radi=" + radi +
+                ", altura=" + altura +
+                '}';
     }
 
 }

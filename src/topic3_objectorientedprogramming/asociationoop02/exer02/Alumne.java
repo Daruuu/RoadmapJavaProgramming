@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer02;
+package topic3_objectorientedprogramming.asociationoop02.exer02;
 
 public class Alumne {
     private String nom;

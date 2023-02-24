@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer01;
+package topic3_objectorientedprogramming.asociationoop02.exer01;
 
 /*
 - La classe Cocina ha de tenir com atributs

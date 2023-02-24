@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer03;
+package topic3_objectorientedprogramming.asociationoop02.exer03;
 
 public class Peaje {
     private double precio;

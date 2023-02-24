@@ -3,7 +3,7 @@ package topic3_objectorientedprogramming.oop01.exer04;
 public class Alumne {
     private String nom;
 
-    public void saluda(){
+    public void saluda() {
         System.out.println("Hello " + this.nom);
     }
 

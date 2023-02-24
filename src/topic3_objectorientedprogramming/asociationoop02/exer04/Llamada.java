@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer04;
+package topic3_objectorientedprogramming.asociationoop02.exer04;
 
 import java.util.ArrayList;
 

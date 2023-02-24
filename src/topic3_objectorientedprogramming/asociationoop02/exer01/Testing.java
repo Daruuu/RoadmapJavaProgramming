@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer01;
+package topic3_objectorientedprogramming.asociationoop02.exer01;
 
 public class Testing {
     public static void main(String[] args) {
@@ -10,10 +10,4 @@ public class Testing {
         Casa casa3 = new Casa(110, "diagonal 2", new Sala(5, tiposSala[0]), new Cocina(true, 6));
 
     }
-
-    boolean compararCasas() {
-        return false;
-    }
-
-
 }

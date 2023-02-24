@@ -18,7 +18,6 @@ public class Cronometro {
 
     //
     public long stopCronometro(){
-
         return 0;
     }
     public long endCronometro() {

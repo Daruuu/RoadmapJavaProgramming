@@ -1,4 +1,4 @@
-package topic3_objectorientedprogramming.asociatiionoop02.exer02;
+package topic3_objectorientedprogramming.asociationoop02.exer02;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,6 @@ public class Test {
         System.out.println(test1.extraerNotaMedia("312145dfA"));
         test1.extraerModuloSuspenso("31214567A");
         test1.extraerModuloSuspenso("42860564A");
-
     }
 
     // Dado un dni de entrada,

@@ -7,39 +7,39 @@ incrementar-lo i
 consultar el seu valor.
  */
 public class ContadorCiclico {
-    private int numero;
-
-    public void iniciaContadorCiclico() {
-        if (numero == 9) {
-            numero = 0;
-        }
-        numero++;
-        System.out.println(numero);
-    }
-
-    public int reiniciar() {
-        return numero = 0;
-    }
+    private int contador;
 
     public ContadorCiclico() {
     }
 
-    public ContadorCiclico(int numero) {
-        this.numero = numero;
+    public int getContador() {
+        return contador;
     }
 
-    public int getNumero() {
-        return numero;
+    public void setContador(int contador) {
+        this.contador = contador;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public ContadorCiclico(int contador) {
+        this.contador = contador;
+    }
+
+    public int reiniciarContador() {
+        return contador = 0;
+    }
+
+    public void aumentarContador() {
+        if (contador == 9) {
+            contador = 0;
+        }
+        contador++;
+        System.out.println(contador);
     }
 
     @Override
     public String toString() {
         return "ContadorCiclico{" +
-                "contador=" + numero +
+                "contador=" + contador +
                 '}';
     }
 }
