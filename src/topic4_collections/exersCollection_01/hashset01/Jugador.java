@@ -1,5 +1,7 @@
 package topic4_collections.exersCollection_01.hashset01;
 
+import java.util.HashSet;
+
 public class Jugador {
     private String dni;
     private Boleto boleto;
@@ -10,10 +12,6 @@ public class Jugador {
     public Jugador(String dni, Boleto boleto) {
         this.dni = dni;
         this.boleto = boleto;
-    }
-
-    public Jugador(String dni) {
-        this.dni = dni;
     }
 
     public String getDni() {
@@ -30,6 +28,10 @@ public class Jugador {
 
     public void setBoleto(Boleto boleto) {
         this.boleto = boleto;
+    }
+
+    public boolean esGanadorJugador(HashSet<Integer> bolasSaco) {
+        return boleto.esGanador(bolasSaco);
     }
 
     @Override

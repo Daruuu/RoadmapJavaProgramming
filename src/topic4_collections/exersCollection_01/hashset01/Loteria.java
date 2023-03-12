@@ -8,8 +8,8 @@ public class Loteria {
 
     public static void main(String[] args) {
         Loteria loteria = new Loteria();
+
         loteria.jugadores = new HashSet<>(4);
-        loteria.saco.toString();
         Boleto b1 = new Boleto();
         Boleto b2 = new Boleto();
         Boleto b3 = new Boleto();
@@ -25,7 +25,10 @@ public class Loteria {
         loteria.jugadores.add(j3);
         loteria.jugadores.add(j4);
 
-        loteria.jugadores.toString();
+        loteria.saco = new SacoBolas();
+        HashSet<Integer> bolasParaSacar = new HashSet<>();
+        // llmar a la funcion sacarBola
+
     }
 
     public Loteria() {
@@ -54,6 +57,17 @@ public class Loteria {
         this.jugadores = jugadores;
     }
 
+    public void extraerBolas(){
+        // extaer bolas del saco
+        //mostrar las bolas que he sacado
+        // comprobar si un jugador tiene esa bola en el boleto
+        // si alguno ghana eliminar su DNI
+        while (true){
+            int bola = saco.extraerUnaBola();
+
+        }
+
+    }
     @Override
     public String toString() {
         return "Loteria{" +

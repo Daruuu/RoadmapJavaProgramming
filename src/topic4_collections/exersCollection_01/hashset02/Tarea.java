@@ -1,15 +1,17 @@
 package topic4_collections.exersCollection_01.hashset02;
 
-public class Tasca {
+public class Tarea {
     private String nombre;
     private String descripcion;
+    private String estado;
 
-    public Tasca() {
+    public Tarea() {
     }
 
-    public Tasca(String nombre, String descripcion) {
+    public Tarea(String nombre, String descripcion, String estado) {
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.estado = "TO BE DONE";
     }
 
     public String getNombre() {
@@ -28,11 +30,20 @@ public class Tasca {
         this.descripcion = descripcion;
     }
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
     @Override
     public String toString() {
-        return "Tasca{" +
+        return "Tarea{" +
                 "nombre='" + nombre + '\'' +
                 ", descripcion='" + descripcion + '\'' +
+                ", estado='" + estado + '\'' +
                 '}';
     }
 }
