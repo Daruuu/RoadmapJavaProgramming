@@ -1,18 +1,19 @@
 package topic4_collections.exersCollection_01.hashset01;
 
-import java.util.HashSet;
-
 public class Jugador {
     private String dni;
-    private HashSet<Integer> boleto;
+    private Boleto boleto;
 
     public Jugador() {
-        this.boleto = new HashSet<>(4);
     }
 
-    public Jugador(String dni, HashSet<Integer> boleto) {
+    public Jugador(String dni, Boleto boleto) {
         this.dni = dni;
-        this.boleto = new HashSet<>(4);
+        this.boleto = boleto;
+    }
+
+    public Jugador(String dni) {
+        this.dni = dni;
     }
 
     public String getDni() {
@@ -23,11 +24,11 @@ public class Jugador {
         this.dni = dni;
     }
 
-    public HashSet<Integer> getBoleto() {
+    public Boleto getBoleto() {
         return boleto;
     }
 
-    public void setBoleto(HashSet<Integer> boleto) {
+    public void setBoleto(Boleto boleto) {
         this.boleto = boleto;
     }
 

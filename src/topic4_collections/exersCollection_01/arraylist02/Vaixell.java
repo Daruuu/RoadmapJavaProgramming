@@ -55,15 +55,13 @@ public class Vaixell implements Comparable<Vaixell> {
 
     @Override
     public int compareTo(@NotNull Vaixell o) {
-        return (Integer.compare(this.getEdad(), o.getEdad()));
-        /*
+//        return (Integer.compare(this.getEdad(), o.getEdad()));
         if (this.edad > o.edad)
             return 1;
         else if (this.edad < o.edad)
             return -1;
         else
             return 0;
-         */
     }
 
 
