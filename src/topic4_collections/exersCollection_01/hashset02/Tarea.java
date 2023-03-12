@@ -14,6 +14,9 @@ public class Tarea {
         this.estado = "TO BE DONE";
     }
 
+    public Tarea(String nombreTarea) {
+    }
+
     public String getNombre() {
         return nombre;
     }
