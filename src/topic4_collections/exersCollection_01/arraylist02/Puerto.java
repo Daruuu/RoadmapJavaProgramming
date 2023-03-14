@@ -42,13 +42,39 @@ public class Puerto {
                     listarVaixells();
                     break;
                 case 2:
-                    System.out.println("introudce un nuevo vaixell:");
+                    System.out.println("introduce un nuevo vaixell:");
                     sc.nextLine();
-                    Vaixell nuevoVaixell = new Vaixell(sc.nextLine(), sc.nextInt(), sc.nextInt());
+
+                    System.out.print("nombre: ");
+                    String nombre = sc.nextLine();
+                    if (!nombre.equals("")) {
+                        System.out.println("nombre correcto");
+                    } else {
+                        nombre = sc.nextLine();
+                    }
+
+                    System.out.print("preu: ");
+                    int preu = sc.nextInt();
+                    if (preu == 0) {
+                        preu = sc.nextInt();
+                    } else {
+                        System.out.println("preu correcto");
+                    }
+
+                    System.out.print("edad: ");
+                    int edad = sc.nextInt();
+                    if (edad != 0) {
+                        System.out.println("edad correcto");
+                    } else {
+                        edad = sc.nextInt();
+                    }
+
+                    Vaixell nuevoVaixell = new Vaixell(nombre, preu, edad);
                     introducirVaixell(nuevoVaixell);
                     break;
                 case 3:
                     System.out.print("eliminar un vaixell:\nintroduce el nombre del vaixell: ");
+                    sc.nextLine();
                     String nombreVaixell = sc.nextLine();
                     eliminarVaixell(nombreVaixell);
                     break;
@@ -106,7 +132,7 @@ public class Puerto {
     public void buscarVaixell(int indice) {
         if (indice >= 0 && indice < vaixellList.size()) {
             Vaixell v = vaixellList.get(indice);
-            System.out.printf("Este vaixell %s existe\n", v);
+            System.out.println(v);
         } else {
             System.out.println("vaixell NO encontrado");
         }
@@ -114,20 +140,18 @@ public class Puerto {
 
     public void modificarVaixell(String nombre) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Modificando vaixell " + nombre);
+
         boolean encontrado = false;
         for (Vaixell v : vaixellList) {
             if (v.getNom().equals(nombre)) {
-                System.out.println("introduce nuevo nomrbe: ");
-//                String nuevoNom = sc.nextLine();
+                System.out.println("Modificando vaixell: " + nombre);
+                System.out.print("introduce nuevo nomrbe: ");
                 v.setNom(sc.nextLine());
-                System.out.println("introduce nuevo precio: ");
-//                int nuevoPrecio = sc.nextInt();
+                System.out.print("introduce nuevo precio: ");
                 v.setPreu(sc.nextInt());
-                System.out.println("introduce nueva edad: ");
-//                int nuevaEdad = sc.nextInt();
+                System.out.print("introduce nueva edad: ");
                 v.setEdad(sc.nextInt());
-                System.out.println("Vaixell modificado correctamente");
+                System.out.println("Vaixell modificado correctamente!");
                 encontrado = true;
                 break;
             }
@@ -137,33 +161,34 @@ public class Puerto {
     }
 
     public void eliminarVaixell(String nomVaixell) {
-        vaixellList.removeIf(v -> v.getNom().equals(nomVaixell));
-        System.out.println("Vaixell eliminado correctamente");
-        /*for (Vaixell i : vaixellList) {
-            if (i.getNom().equals(nomVaixell)) {
+        for (Vaixell i : vaixellList) {
+            if (!i.getNom().equals(nomVaixell)) {
+                System.out.println("vaixell no encontrado!");
+                break;
+            } else {
                 vaixellList.remove(i);
+                System.out.println("Vaixell eliminado correctamente!");
                 break;
             }
         }
-         */
     }
 
     public void listarVaixellsPorAntiguedad() {
         Collections.sort(vaixellList, new VaixellsPorAntiguedad());
+        for (Vaixell v : vaixellList){
+            System.out.println(v);
+        }
     }
 
     public void listarVaixellsPorNombreYPreu() {
         Collections.sort(vaixellList, new VaixellsPorNombrePrecio());
+        for (Vaixell v : vaixellList){
+            System.out.println(v);
+        }
     }
 
     @Override
     public String toString() {
-/*
-        StringBuilder sb = new StringBuilder();
-        for (Vaixell v : vaixellList)
-            sb.append(v.toString()).append("\n");
-        return sb.toString();
-*/
         return "Puerto{" +
                 "vaixellList=" + vaixellList +
                 '}';

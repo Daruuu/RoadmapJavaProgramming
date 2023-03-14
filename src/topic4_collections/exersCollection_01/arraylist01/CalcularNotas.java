@@ -8,23 +8,38 @@ import java.util.Scanner;
 public class CalcularNotas {
     private List<Double> listaNotasDam;
 
+    public CalcularNotas() {
+        this.listaNotasDam = new ArrayList<>();
+    }
+
+    public CalcularNotas(List<Double> listaNotasDam) {
+        this.listaNotasDam = listaNotasDam;
+    }
 
     public static void main(String[] args) {
         CalcularNotas cn = new CalcularNotas();
+        cn.listaNotasDam = new ArrayList<>();
 
-        List<Double> notas = new ArrayList<>();
-
-        cn.introducirValors(notas);
-
-        int sumaValsForEach = (int) cn.sumaValorsForEach(notas);
-        int sumaValsIterator = (int) cn.sumaValorsIterator(notas);
+        cn.introducirValors();
+        int sumaValsForEach = (int) cn.sumaValorsForEach();
+        int sumaValsIterator = (int) cn.sumaValorsIterator();
         System.out.printf("suma de los valores mediante forEach es: %d\nsuma de los valores mediante Iterator es: %d\n", sumaValsForEach, sumaValsIterator);
 
-        int calcularMedia = (int) cn.calcularMedia(sumaValsForEach, notas.size());
+        int sizeArraylist = cn.listaNotasDam.size();
+
+        int calcularMedia = (int) cn.calcularMedia(sumaValsForEach, sizeArraylist);
         System.out.printf("la media de notas en clase es: %d\n", calcularMedia);
     }
 
-    public void introducirValors(List<Double> notasDam) {
+    public List<Double> getListaNotasDam() {
+        return listaNotasDam;
+    }
+
+    public void setListaNotasDam(List<Double> listaNotasDam) {
+        this.listaNotasDam = listaNotasDam;
+    }
+
+    public void introducirValors() {
         Scanner sc = new Scanner(System.in);
         double nota = 0.0;
         System.out.printf("%s \n", "introduce una nota (-1 para temrinar: ");
@@ -32,21 +47,21 @@ public class CalcularNotas {
             nota = sc.nextDouble();
 
             if (nota != -1)
-                notasDam.add(nota);
+                listaNotasDam.add(nota);
         }
     }
 
-    public double sumaValorsForEach(List<Double> notasDam) {
+    public double sumaValorsForEach() {
         double sumaNotasForEach = 0.0;
-        for (Double nota : notasDam) {
+        for (Double nota : listaNotasDam) {
             sumaNotasForEach += nota;
         }
         return sumaNotasForEach;
     }
 
-    public double sumaValorsIterator(List<Double> notasDam) {
+    public double sumaValorsIterator() {
         double sumaNotasIterator = 0.0;
-        Iterator<Double> it = notasDam.iterator();
+        Iterator<Double> it = listaNotasDam.iterator();
         while (it.hasNext()) {
             sumaNotasIterator += it.next();
         }

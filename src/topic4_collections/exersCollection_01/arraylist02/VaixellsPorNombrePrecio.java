@@ -7,6 +7,7 @@ public class VaixellsPorNombrePrecio implements Comparator<Vaixell> {
     public int compare(Vaixell o1, Vaixell o2) {
 
         int compararPorNombre = o1.getNom().compareTo(o2.getNom());
+
         if (compararPorNombre != 0)
             return compararPorNombre;
 
