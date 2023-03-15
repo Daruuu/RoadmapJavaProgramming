@@ -6,6 +6,7 @@ public class Tarea {
     private String estado;
 
     public Tarea() {
+        this.estado = "TO BE DONE";
     }
 
     public Tarea(String nombre, String descripcion, String estado) {

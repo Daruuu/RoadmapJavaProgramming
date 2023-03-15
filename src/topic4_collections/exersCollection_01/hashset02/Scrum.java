@@ -9,6 +9,9 @@ public class Scrum {
     private HashSet<Tarea> done;
 
     public Scrum() {
+        this.toBeDone = new HashSet<>();
+        this.doing = new HashSet<>();
+        this.done = new HashSet<>();
     }
 
     public Scrum(HashSet<Tarea> toBeDone, HashSet<Tarea> doing, HashSet<Tarea> done) {
@@ -41,19 +44,47 @@ public class Scrum {
         this.done = done;
     }
 
+
     public void agregarTarea(Tarea tarea) {
         toBeDone.add(tarea);
     }
 
-    public void toBeDoingADoing(String nombreTarea, String nuevoEstado){
-
+    public void toBeDoingADoing(String nombreTarea, String nuevoEstado) {
     }
-    public void estadoDoingADone(){
 
+    public void moverTarea(String nombreTarea, String nuevoEstado) {
+        nuevoEstado = nuevoEstado.toUpperCase();
+        Tarea tarea = buscarTarea(nombreTarea);
+        if (tarea != null) {
+            tarea.setEstado(nuevoEstado);
+            switch (nuevoEstado) {
+                case "DOING":
+                    toBeDone.remove(tarea);
+                    doing.add(tarea);
+                    break;
+                case "DONE":
+                    doing.remove(tarea);
+                    done.add(tarea);
+                    break;
+            }
+        }else {
+            System.out.println("nombre de tarea no existente!");
+        }
     }
+
     public void moverEstadoTarea(String nombreTarea) {
         Tarea tarea = new Tarea(nombreTarea);
-
+        for (Tarea t : toBeDone) {
+            if (!t.getNombre().contains(nombreTarea)) {
+                System.out.println("nombre de tarea no existente");
+            } else {
+                toBeDone.remove(tarea);
+                System.out.println("tarea eliminada de toBeDone");
+                tarea.setEstado("DOING");
+                doing.add(tarea);
+                System.out.println("tarea agregada a doing");
+            }
+        }
     }
 
     public void mostrarTareas() {
@@ -61,15 +92,33 @@ public class Scrum {
         for (Tarea tarea : toBeDone) {
             System.out.println(tarea.getNombre() + "-" + tarea.getDescripcion());
         }
+        System.out.println("DOING");
         Iterator<Tarea> iterator = doing.iterator();
         while (iterator.hasNext()) {
             Tarea tarea = iterator.next();
             System.out.println(tarea.getNombre() + "-" + tarea.getDescripcion());
             System.out.println();
         }
+        System.out.println("DONE");
         for (Tarea tarea : done) {
             System.out.println(tarea.getNombre() + " - " + tarea.getDescripcion());
         }
+    }
+
+    public Tarea buscarTarea(String nombreTarea) {
+        for (Tarea tarea : toBeDone) {
+            if (tarea.getNombre().equals(nombreTarea))
+                return tarea;
+        }
+        for (Tarea tarea : doing) {
+            if (tarea.getNombre().equals(nombreTarea))
+                return tarea;
+        }
+        for (Tarea tarea : done) {
+            if (tarea.getNombre().equals(nombreTarea))
+                return tarea;
+        }
+        return null;
     }
 
     @Override
