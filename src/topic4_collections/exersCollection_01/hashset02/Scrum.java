@@ -49,9 +49,6 @@ public class Scrum {
         toBeDone.add(tarea);
     }
 
-    public void toBeDoingADoing(String nombreTarea, String nuevoEstado) {
-    }
-
     public void moverTarea(String nombreTarea, String nuevoEstado) {
         nuevoEstado = nuevoEstado.toUpperCase();
         Tarea tarea = buscarTarea(nombreTarea);
@@ -67,7 +64,7 @@ public class Scrum {
                     done.add(tarea);
                     break;
             }
-        }else {
+        } else {
             System.out.println("nombre de tarea no existente!");
         }
     }
@@ -87,21 +84,22 @@ public class Scrum {
         }
     }
 
-    public void mostrarTareas() {
-        System.out.println("TO BE DONE");
+    public void mostrarEstados() {
+        System.out.println("Mostrar todos los estados:");
+        System.out.println("TO BE DONE:");
         for (Tarea tarea : toBeDone) {
-            System.out.println(tarea.getNombre() + "-" + tarea.getDescripcion());
+            System.out.println(tarea.getNombre() + " -> " + tarea.getEstado());
         }
-        System.out.println("DOING");
+        System.out.println("DOING:");
         Iterator<Tarea> iterator = doing.iterator();
         while (iterator.hasNext()) {
             Tarea tarea = iterator.next();
-            System.out.println(tarea.getNombre() + "-" + tarea.getDescripcion());
+            System.out.println(tarea.getNombre() + " -> " + tarea.getEstado());
             System.out.println();
         }
-        System.out.println("DONE");
+        System.out.println("DONE:");
         for (Tarea tarea : done) {
-            System.out.println(tarea.getNombre() + " - " + tarea.getDescripcion());
+            System.out.println(tarea.getNombre() + " -> " + tarea.getEstado());
         }
     }
 
