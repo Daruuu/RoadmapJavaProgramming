@@ -1,11 +1,14 @@
 package topic4_collections.exersCollection_01.hashmap01;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class InventarioMoviles {
-    HashMap<String,Movil> movilHashMap;
+    HashMap<String, Movil> movilHashMap;
 
     public InventarioMoviles() {
+        this.movilHashMap = new HashMap<String, Movil>();
     }
 
     public InventarioMoviles(HashMap<String, Movil> movilHashMap) {
@@ -20,12 +23,45 @@ public class InventarioMoviles {
         this.movilHashMap = movilHashMap;
     }
 
-    public void addMovil(String dni, Movil movil){
+    public void addMovil(String dni, Movil movil) {
         movilHashMap.put(dni, movil);
     }
-    public void removeMovil(String dni){
-        for(movilHashMap.keySet().){
 
+    public void removeMovil(String dni) {
+
+        Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Movil> entry = iterator.next();
+            if (entry.getKey().equals(dni)) {
+                iterator.remove();
+            } else {
+                System.out.printf("DNI %s no encontrado!", dni);
+            }
+        }
+        //movilHashMap.entrySet().removeIf(entry -> entry.getKey().equals(dni));
+    }
+
+    public void buscarMovil(String dni) {
+        Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Movil> entry = iterator.next();
+            if (entry.getKey().equals(dni)) {
+                System.out.println(entry.getValue());
+            } else {
+                System.out.printf("DNI %s no encontrado!", dni);
+            }
+        }
+    }
+
+    public void buscarDni(int numero) {
+        Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, Movil> entry = iterator.next();
+            if (entry.getValue().getNumero() == numero) {
+                System.out.println(entry.getValue());
+            } else {
+                System.out.printf("Movil con %s no encontrado!", numero);
+            }
         }
     }
 
