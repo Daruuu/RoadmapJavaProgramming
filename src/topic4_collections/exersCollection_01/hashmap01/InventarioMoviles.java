@@ -34,6 +34,7 @@ public class InventarioMoviles {
             Map.Entry<String, Movil> entry = iterator.next();
             if (entry.getKey().equals(dni)) {
                 iterator.remove();
+                break;
             } else {
                 System.out.printf("DNI %s no encontrado!", dni);
             }
@@ -42,25 +43,19 @@ public class InventarioMoviles {
     }
 
     public void buscarMovil(String dni) {
-        Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<String, Movil> entry = iterator.next();
+        for (Map.Entry<String, Movil> entry : movilHashMap.entrySet()) {
             if (entry.getKey().equals(dni)) {
                 System.out.println(entry.getValue());
-            } else {
-                System.out.printf("DNI %s no encontrado!", dni);
             }
         }
     }
 
-    public void buscarDni(int numero) {
+    public void buscarDni(String numero) {
         Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, Movil> entry = iterator.next();
-            if (entry.getValue().getNumero() == numero) {
+            if (entry.getValue().getNumero().equals(numero)) {
                 System.out.println(entry.getValue());
-            } else {
-                System.out.printf("Movil con %s no encontrado!", numero);
             }
         }
     }

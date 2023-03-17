@@ -2,10 +2,10 @@ package topic4_collections.exersCollection_01.hashmap01;
 
 import java.util.Scanner;
 
-public class Dam1 {
+public class Principal {
     public static void main(String[] args) {
-        Dam1 dam1 = new Dam1();
-        dam1.programa();
+        Principal principal = new Principal();
+        principal.programa();
     }
 
     public void opciones() {
@@ -22,13 +22,18 @@ public class Dam1 {
         InventarioMoviles im = new InventarioMoviles();
         opciones();
         int opcion = sc.nextInt();
+        String dni1 = "dni1";
+        Movil movil1 = new Movil("marca1", "modelo 1", "977543195");
+        String dni2 = "dni222";
+        Movil movil2 = new Movil("marca2", "modelo 2", "977543445");
+        String dni3 = "dni33";
+        Movil movil3 = new Movil("marca322", "modelo 3432", "977543423");
+        im.movilHashMap.put(dni1, movil1);
+        im.movilHashMap.put(dni2, movil2);
+        im.movilHashMap.put(dni3, movil3);
         while (opcion != 5) {
             switch (opcion) {
                 case 1:
-                    String dni1 = "dni1";
-                    Movil movil1 = new Movil("marca1", "modelo 1", 977543195);
-                    im.movilHashMap.put(dni1, movil1);
-
                     System.out.print("Agregar un DNI: ");
                     sc.nextLine();
                     String dni = sc.nextLine();
@@ -37,7 +42,6 @@ public class Dam1 {
                         dni = sc.nextLine();
                     }
                     System.out.print("Agregar una movil\nmarca: ");
-//                    sc.nextLine();
                     String marca = sc.nextLine();
                     if (marca == null) {
                         System.out.print("marca: ");
@@ -50,10 +54,10 @@ public class Dam1 {
                         modelo = sc.nextLine();
                     }
                     System.out.print("numero: ");
-                    int numero = sc.nextInt();
-                    if (numero == 0) {
+                    String numero = sc.nextLine();
+                    if (numero == null) {
                         System.out.print("numero: ");
-                        numero = sc.nextInt();
+                        numero = sc.nextLine();
                     }
                     Movil nuevoMovil = new Movil(marca, modelo, numero);
                     im.addMovil(dni, nuevoMovil);
@@ -79,9 +83,10 @@ public class Dam1 {
                     break;
                 case 4:
                     System.out.print("Buscar un Movil:\n introduce numero: ");
-                    int numeroMovil = sc.nextInt();
-                    if (numeroMovil == 0) {
-                        numeroMovil = sc.nextInt();
+                    sc.nextLine();
+                    String numeroMovil = sc.nextLine();
+                    if (numeroMovil == null) {
+                        numeroMovil = sc.nextLine();
                     }
                     im.buscarDni(numeroMovil);
                     break;

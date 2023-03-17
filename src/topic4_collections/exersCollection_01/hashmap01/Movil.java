@@ -3,12 +3,12 @@ package topic4_collections.exersCollection_01.hashmap01;
 public class Movil {
     private String marca;
     private String modelo;
-    private int numero;
+    private String numero;
 
     public Movil() {
     }
 
-    public Movil(String marca, String modelo, int numero) {
+    public Movil(String marca, String modelo, String numero) {
         this.marca = marca;
         this.modelo = modelo;
         this.numero = numero;
@@ -30,11 +30,11 @@ public class Movil {
         this.modelo = modelo;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
