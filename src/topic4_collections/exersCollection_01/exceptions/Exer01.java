@@ -1,4 +1,4 @@
-package topic4_collections.exersCollection_01.excepciones;
+package topic4_collections.exersCollection_01.exceptions;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

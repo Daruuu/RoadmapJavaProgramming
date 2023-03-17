@@ -9,8 +9,8 @@ public class Principal {
     }
 
     public void opciones() {
-        System.out.print("Opciones programa\n" +
-                "[1]- Introducir jugadores" +
+        System.out.print("\nOpciones programa\n" +
+                "[1]- Introducir jugadores\n" +
                 "[2]- Buscar un jugador por Dorsal\n" +
                 "[3]- Buscar un jugador por nombre\n" +
                 "[4]- Listar jugadores ordenados por numero\n" +
@@ -23,19 +23,33 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
         EquipoFutbol equipoFutbol = new EquipoFutbol();
 
+        Dorsal dorsal01 = new Dorsal(7);
+        Dorsal dorsal02 = new Dorsal(11);
+        Dorsal dorsal03 = new Dorsal(9);
+        Dorsal dorsal04 = new Dorsal(6);
+        Jugador jugador01 = new Jugador("Kevin", 15, "defensa");
+        Jugador jugador02 = new Jugador("Dani", 17, "portero");
+        Jugador jugador03 = new Jugador("Dennis", 16, "defensa");
+        Jugador jugador04 = new Jugador("Dan", 15, "delantero");
+        equipoFutbol.addJugadorHashMap(dorsal01, jugador01);
+        equipoFutbol.addJugadorHashMap(dorsal02, jugador02);
+        equipoFutbol.addJugadorHashMap(dorsal03, jugador03);
+        equipoFutbol.addJugadorHashMap(dorsal04, jugador04);
+
         opciones();
         int opcion = sc.nextInt();
 
         while (opcion != 8) {
             switch (opcion) {
                 case 1:
-                    System.out.print("Agregar un Dorsal\ndorsalABuscar: ");
+                    System.out.print("Agregar un Dorsal\ndorsal: ");
                     int dorsal = sc.nextInt();
                     if (dorsal == 0) {
-                        System.out.print("dorsalABuscar: ");
+                        System.out.print("dorsal: ");
                         dorsal = sc.nextInt();
                     }
                     System.out.print("Agregar una Jugador\nnombre: ");
+                    sc.nextLine();
                     String nombre = sc.nextLine();
                     if (nombre == null) {
                         System.out.print("nombre: ");
@@ -48,6 +62,7 @@ public class Principal {
                         edad = sc.nextInt();
                     }
                     System.out.print("posicion: ");
+                    sc.nextLine();
                     String posicion = sc.nextLine();
                     if (posicion == null) {
                         System.out.print("posicion: ");
@@ -60,20 +75,20 @@ public class Principal {
                     break;
                 case 2:
                     System.out.println("Buscar jugador por Dorsal");
-                    System.out.println();
                     System.out.print("dorsal: ");
+//                    System.out.println();
                     int dorsalABuscar = sc.nextInt();
                     if (dorsalABuscar == 0) {
                         System.out.print("dorsal: ");
                         dorsalABuscar = sc.nextInt();
                     }
-                    Dorsal dBuscar = new Dorsal(dorsalABuscar);
-                    equipoFutbol.searchJugadorPorDorsal(dBuscar);
+                    equipoFutbol.searchJugadorPorDorsal(dorsalABuscar);
                     break;
                 case 3:
                     System.out.println("Buscar jugador por nombre");
                     System.out.println();
                     System.out.print("nombre: ");
+                    sc.nextLine();
                     String nombreABuscar = sc.nextLine();
                     if (nombreABuscar == null) {
                         System.out.print("nombre: ");

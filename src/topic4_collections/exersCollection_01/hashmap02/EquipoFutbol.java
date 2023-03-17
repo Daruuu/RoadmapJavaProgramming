@@ -7,7 +7,7 @@ public class EquipoFutbol {
     private HashMap<Dorsal, Jugador> hashMapJugadores;
 
     public EquipoFutbol() {
-        this.hashMapJugadores = new HashMap<>();
+        this.hashMapJugadores = new HashMap<Dorsal, Jugador>();
     }
 
     public EquipoFutbol(HashMap<Dorsal, Jugador> hashMapJugadores) {
@@ -26,7 +26,8 @@ public class EquipoFutbol {
         hashMapJugadores.put(dorsal, jugador);
     }
 
-    public void searchJugadorPorDorsal(Dorsal dorsal) {
+    public void searchJugadorPorDorsal(int dorsal) {
+//        Jugador jugador = hashMapJugadores.get(dorsal);
         Jugador jugador = hashMapJugadores.get(dorsal);
         if (jugador == null) {
             System.out.printf("Dorsal %s no encontrado\n", dorsal);
@@ -48,7 +49,7 @@ public class EquipoFutbol {
     }
 
     public void listarOrdenat() {
-        TreeMap<Dorsal, Jugador> treeMapOrdenat = new TreeMap<>(hashMapJugadores);
+        TreeMap<Dorsal, Jugador> treeMapOrdenat = new TreeMap<Dorsal, Jugador>(hashMapJugadores);
         treeMapOrdenat.putAll(hashMapJugadores);
         for (Dorsal dKey : treeMapOrdenat.keySet()) {
             System.out.printf("key: %s. value: %s\n", dKey, treeMapOrdenat.get(dKey).getNombre());
