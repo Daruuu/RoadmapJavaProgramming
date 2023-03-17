@@ -6,7 +6,6 @@ public class ScrumMain {
     public static void main(String[] args) {
         ScrumMain scrumMain = new ScrumMain();
         scrumMain.programa();
-
     }
 
     public void opciones() {

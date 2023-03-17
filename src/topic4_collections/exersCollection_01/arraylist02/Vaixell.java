@@ -48,7 +48,6 @@ public class Vaixell  {
         Vaixell vaixell = (Vaixell) obj;
         return Objects.equals(this.nom, vaixell.nom);
     }
-
     */
 
     @Override
