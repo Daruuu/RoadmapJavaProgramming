@@ -1,0 +1,140 @@
+1.Objeto Geométrico.
+Crea la clase ObjetoGeometric que tiene:
+atributos: coord_x, coord_y, color
+métodos: constructor, toString()
+
+Crea la clase Círculo que hereda de ObjecteGeometric y, además, tiene:
+atributos: radio
+métodos: constructor, toString(), perimetro() y area()
+
+Crea la clase Cuadrado que hereda de ObjecteGeometric y, además, tiene:
+atributos: lado
+métodos: constructor, toString(), perimetro() y area()
+También tendrá que crear el pograma principal que comprueba que todo funcione correctamente.
+
+Recordatorio:
+
+Área círculo = pi * radio * radio
+Perímetro círculo = 2 * pi * radio
+Área cuadrado = lado * lado
+Perímetro cuadrado = 4* lado
+
+2. Vehículos
+
+Se pretende desarrollar una aplicación que permite calcular los precios de alquiler
+de una empresa de alquiler de vehículos.
+Cada vehículo se identifica por su matrícula.
+
+La empresa alquila distintos tipos de vehículos, tanto por transporte
+de personas como de carga. En la actualidad, los vehículos alquilados por la empresa son:
+coches, microbuses, furgonetas de carga y camiones.
+
+El precio del alquiler de cualquier vehículo tiene un componente base que depende
+de los días de alquiler a razón de 10€ por día.
+
+En caso de alquiler de un coche, al precio base se le suma la cantidad de 1.5€ por plaza y día.
+El precio de alquiler del microbus es igual que el de los coches,
+pero se le añade una cantidad de 2€ por plaza independientemente de los días de alquiler.
+El precio de los vehículos de carga es el precio base más 20€ * PMA
+(donde PMA es el peso máximo autorizados en toneladas).
+Además, en caso de camiones, al precio se le suma un fijo de 40€ independientemente
+de los días de alquiler.
+Las operaciones que el empleado de la empresa de alquiler
+debe poder realizar son las siguientes:
+
+Añadir un vehículo.
+Obtener el precio del vehículo.
+
+3. School.
+
+Define las clases correspondientes al siguiente diagrama UML.
+
+Añade constructores a cada clase de forma que el constructor llame al constructor de la clase
+madre y seguidamente escriba por pantalla “Soy el constructor de la clase xxx”.
+Después crea una clase ejecutora (con un main) en el mismo package,
+crea objetos de cada clase y observa qué se muestra por pantalla en cada creación.
+
+4- Biblioteca I Implementación herencia
+
+El objetivo de esta actividad es implementar una serie de clases en Java relacionadas
+mediante herencia. Implemente las clases Ficha, Obra, Volumen y
+Revista correspondientes a la figura siguiente, pensadas para poder gestionar algunos
+de los elementos que nos podemos encontrar en la gestión de una biblioteca.
+
+El significado de los atributos que puedan inducir a confusión son:
+
+nrePags: número de páginas de la obra
+nro: número de revista o número de volumen
+Estas clases deben contener, como mínimo, los siguientes métodos:
+
+Constructores adecuados, que permitirán crear objetos de las clases correspondientes.
+Métodos para obtener los valores de los atributos.
+Métodos para modificar los valores de los atributos.
+El método toString(), que debe mostrar la información del objeto activo por la consola.
+La sobreescritura de los métodos ecuales() heredado de la clase Object.
+Debe considerarse que dos fichas son iguales si tienen la misma referencia.
+Las clases deben residir en un paquete llamado biblioteca. Desarrolle otra clase,
+llamada PruebaFichas, que contenga un método main() que compruebe la gestión correcta
+de las clases Ficha y derivadas implementadas. La presencia de esta clase no prohíbe
+que cada clase tenga su propio método main() para comprobar su funcionamiento.
+
+
+5. Biblioteca II –Gestión de Objetos en una jerarquía de Herencia
+
+El objetivo de esta actividad es ver cómo se gestionan distintos objetos cuando éstos
+ pertenecen a diferentes clases vinculadas mediante herencia. Considere la implementación
+  de la jerarquía de clases correspondiente a la actividad anterior.
+
+Diseñe una clase llamada Biblioteca que permita la gestión de una biblioteca a
+partir de una tabla de objetos de las clases derivadas de la clase Ficha.
+
+Los requerimientos son los siguientes:
+
+En la creación de la biblioteca debe indicarse su dimensión.
+En una biblioteca no puede haber dos fichas con igual referencia.
+Debe proporcionar métodos para:
+Conocer la capacidad de la biblioteca.
+Conocer el número de elementos existentes en la biblioteca.
+Añadir una ficha a la biblioteca.
+Extraer una ficha a partir de su referencia.
+Proporcionar la ficha que se encuentra en una determinada posición en la biblioteca.
+Visualizar el contenido de la biblioteca.
+Desarrolle otra clase, llamada PruebaBiblioteca, que contenga un método main()
+que compruebe la gestión correcta de la clase Biblioteca implementada.
+
+
+6. Empleados
+
+Tenemos un sistema donde controlamos a los trabajadores que hay en nuestra empresa.
+Del Empleado guardaremos el nombre, apellido, edad y salario. Además de la constructora
+por defecto y la constructora por parámetros y de sus setters&getters,
+un empleado también tendrá:
+
+boolean plus(int plusSalarial).
+Este método debe ser capaz de sumar una cantidad que entraremos como parámetro
+si el empleado tiene más de 40 años. Devuelve una variable booleana para informar
+si ha subido su salario o no.
+
+boolean comprobaNombre(): nos comprueba que el nombre no está vacío.
+Después tendremos un tipo de empleado que es un Comercial, de un comercial
+guardaremos la comision que se lleva. Crea igualmente constructoras y gettersSetters.
+
+Además tenemos a un empleado que será el Repartidor. Este empleado guardaremos
+la zona por la que reparte el producto. Crea igualmente constructoras y gettersSetters.
+
+Haz una clase ejecutora, comprueba la creación de diferentes tipos de objetos
+distintos empleado, comercial y repartidor. Compara clases, utiliza el getClass,
+instanceOf, prueba la igualdad entre dos Objetos (equalsTo).
+
+
+
+
+
+
+
+
+
+
+
+
+
