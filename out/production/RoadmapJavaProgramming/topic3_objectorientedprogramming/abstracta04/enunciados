@@ -1,0 +1,162 @@
+Ejercicio 1. Transportes
+Queremos moldear diversos tipos de transportes: coches, bicicletas y metro.
+
+La información relevante relativa a todos los transportes es:
+
+  1. El identificador
+
+  2. La velocidad actual en km/h.
+
+La información relevante relativa a los coches es:
+
+1. El tipo de combustible.
+
+2. El precio por litro de combustible.
+
+3. Los litros de combustible que gasta un coche por cada km recorrido.
+
+La información relevante relativa a las bicicletas es:
+
+1. El número de marchas.
+
+La información relevante relativa a los metros es:
+
+1. El precio del billete. Cada 5km el precio del billete aumenta un 1€.
+
+A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
+
+1. Calcular el tiempo en horas que tarda cada vehículo en recorrer una distancia en kilómetros, a velocidad constante.
+
+2. Calcular el precio que debemos pagar como usuarios de cada vehículo al recorrer una distancia, el programa debe pedir la distancia recorrida. Establece el precio que necesites en cada caso.
+
+
+
+Ejercicio 2: Aquarium
+Queremos moldear los componentes de un acuario. En un acuario viven animales y plantas. La información relevante relativa a todos los organismos (peces y plantas) es:
+
+1. El nombre del pez o de la planta.
+
+2. La familia a la que pertenece
+
+3. El tipo de luz que necesita el animal o planta. La luz estará codificada con tres letras en función de las necesidades de cada organismo: "H" alta, media "M" y baja "L".
+
+4. La temperatura máxima que puede tolerar el pez o planta.
+
+5. La temperatura mínima que puede tolerar el pez o planta.
+
+6. El PH máximo que puede tolerar el pez o planta.
+
+7. El PH mínimo que puede tolerar el pez o planta.
+
+La información relevante relativa a todos los peces es:
+
+1. La procedencia geográfica del pez.
+
+2. La dieta codificada según esta escala ("W" Algas, "O" Omnívoro, "L" Hojas).
+
+3. La longitud en cm del pez.
+
+La información relevante relativa a todas las plantas es:
+
+1. El tipo de planta, codificándolo de la siguiente manera: "S" Tija, "B" Bulbo, "R" Raíces.
+
+
+
+A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
+
+Para cada organismo, devolver una cadena con los márgenes de acidez del agua aceptables por la especie. Por ejemplo: 6-7.
+Para cada organismo, devolver una cadena con los márgenes de temperatura aceptables por la especie. Por ejemplo: 10-20.
+Para cada pez, traducir el código del tipo de dieta a la explicación pertinente. Si es 'W', "Algas", etc.
+Para cada organismo, traducir el código de tipos de necesidades de luz a la explicación pertinente. Si es 'H', "Necesidades altas de luz", etc.
+Para cada planta, traducir el código de tipos de planta a la explicación pertinente. Si es 'S', "Tija", etc.
+
+
+Ejercicio 3: Áreas
+Queremos moldear los espacios físicos de un centro escolar.
+
+La información relevante relativa a todos los espacios es:
+
+1. El código identificador.
+
+2. La superficie en m².
+
+3. Si dispone de luz natural o no.
+
+4. El consumo eléctrico, en Kwh por metro cuadrado.
+
+La información relevante de los despachos es:
+
+1. El número de tablas.
+
+2. Si dispone de máquina de café.
+
+La información relevante de las aulas es:
+
+1. El aforo máximo.
+
+2. Si disponen o no de sillas de pala.
+
+3. El número de ordenadores.
+
+4. Si disponen o no de conectores de red.
+
+La información relevante de los laboratorios es:
+
+1. El número de mecheros Bunsen (para calentar y esterilizar muestras)
+
+La información relevante de las aulas de informática es:
+
+1. El número de impresoras.
+
+  La información relevante de los gimnasios es:
+
+1. Si tiene duchas o no.
+
+2. El número de gradas.
+
+
+
+A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
+
+1. Calcular el consumo por metro cuadrado de cualquier espacio.
+
+2. Calcular el espacio en metros cuadrados por estudiante en las aulas, teniendo presente que para los gimnasios debemos tener en cuenta las gradas (cada grada equivale a 1m²), y que en las aulas de informática cada impresora resta 1m² para el estudiante.
+
+
+
+Ejercicio 4: Water
+La facturación del agua en una pequeña ciudad se basa en tres conceptos: consumo, saneamiento y residuales.
+
+La información relevante relativa de cada factura es:
+
+1. El importe por consumo
+
+2. El importe por saneamiento.
+
+3. El importe por residuales.
+
+4. El descuento aplicado por saneamiento.
+
+5. El descuento aplicado por residuales.
+
+A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
+
+
+
+1,Calcular el importe de la factura, teniendo en cuenta que:
+
+a. Los clientes normales pagan la suma de los tres importes, sin ningún tipo de descuento.
+b. Las familias numerosas de tipo 1 pagan todo el consumo pero tienen un descuento del 25% en el saneamiento y la depuración.
+c. Las familias numerosas de tipo 2 pagan todo el consumo pero tienen un descuento del 75% en el saneamiento y del 50% en la depuración, con un máximo en cada uno de estos conceptos de 16€.
+
+
+
+
+
+
+
+
+
+
+
+

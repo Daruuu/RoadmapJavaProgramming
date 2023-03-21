@@ -51,9 +51,7 @@ public class InventarioMoviles {
     }
 
     public void buscarDni(String numero) {
-        Iterator<Map.Entry<String, Movil>> iterator = movilHashMap.entrySet().iterator();
-        while (iterator.hasNext()) {
-            Map.Entry<String, Movil> entry = iterator.next();
+        for (Map.Entry<String, Movil> entry : movilHashMap.entrySet()) {
             if (entry.getValue().getNumero().equals(numero)) {
                 System.out.println(entry.getValue());
             }

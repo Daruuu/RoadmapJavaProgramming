@@ -1,0 +1,157 @@
+1. Crea una clase Coche que tenga los atributos modelo y matrícula,
+y los correspondientes métodos set y get para cada uno.
+
+Crea otra clase CotxeTest con un main donde se creen 2 objetos de
+tipo Coche y se prueben sus métodos set y get.
+
+
+2. Crea una clase PermisConducir que tenga los atributos nombre, tiposPermis y puntos,
+y los correspondientes métodos set y get para cada uno de ellos.
+
+a) Añade un método llamado imprimirPermiso que imprima por pantalla todos los atributos.
+b) Añade un método llamado restarPuntos que reste del total de puntos del permiso
+el número de puntos que reciba como parámetro.
+c) Crear otra clase PermisTest con un main donde se creen 2 objetos de tipo
+PermisConducir y se prueben sus métodos set, imprimirPermis y restarPuntos.
+
+
+3. Crea una clase CochePermis con un método main que haga lo siguiente:
+
+- Crear un objeto de la clase Coche y otro objeto de la clase PermisConduir.
+- Mostrar un menú por pantalla con las siguientes opciones:
+a) Modificar info coche: esta opción modificará el objeto Coche con los nuevos datos
+que pedirá al usuario (modelo y matrícula).
+
+b) Modificar info permis: esta opción modificará el objeto PermisConduir con los nuevos
+datos que pedirá al usuario (nombre, tipo permiso y puntos).
+
+c) Mostrar info: mostrar por pantalla todos los valores de los atributos de los objetos
+Coche y PermisConduir.
+
+4. Modificamos la clase AlumneTest del ejemplo realizado en clase de forma que queda como
+se muestra abajo. Prueba el nuevo código y contesta a las siguientes preguntas:
+
+¿Cuántos objetos Alumno se crean en el programa?
+¿Las asignaciones entre variables del tipo Alumno (como por ejemplo alumno3 = alumno1)
+hacen una copia del objeto?
+¿Las asignaciones entre variables del tipo Alumno (como por ejemplo alumno3 = alumno1)
+hacen que las dos variables apunten al mismo objeto (es decir podemos acceder al mismo
+ objeto con los dos nombres: alumno1 y alumno3)?
+
+ public class AlumneTest {
+
+     public static void main(String[] args) {
+         //crea un objecte uf4.exemples.Alumne i l'assigna a la variable alumne1
+         Alumne alumne1 = null;
+         Alumne alumne2 = null;
+         Alumne alumne3 = null;
+
+         alumne1 = new Alumne();
+         alumne1.setNom("Ramon");
+
+         alumne2 = new Alumne();
+         alumne2.setNom("Sonia");
+
+         alumne3 = alumne1;
+         alumne3.saluda();
+         alumne1.saluda();
+
+         alumne1 = alumne2;
+         alumne1.saluda();
+
+         alumne2.setNom("Moncho");
+
+         alumne1.saluda();
+     }
+ }
+
+5. Crea y testea una clase que modelice un triángulo con los siguientes atributos y métodos:
+
+Atributos:
+
+side1: número real con la longitud del primer lado del triángulo.
+side2: número real con la longitud del segundo lado del triángulo.
+side3: número real con la longitud del tercer lado del triángulo.
+
+Métodos:
+Constructor por defecto con los lados con valores 3, 4 y 5.
+Constructor que recibe por parámetro todos los valores correspondientes a los atributos del triángulo.
+Método perimetro() que nos calculará el perímetro del triángulo.
+Método area() que nos calculará la superficie del triángulo.
+Puede utilizar la fórmula de Herón https://es.wikipedia.org/wiki/F%C3%B3rmula_de_Her%C3%B3n
+
+6. Crea y testea una clase que modelice un cronómetro que nos permita consultar el tiempo que ha pasado
+desde que se pone en marcha, pausarlo y ponerlo a cero. Piensa y define los atributos y
+métodos que creas convenientes.
+Puedes usar la clase Date https://docs.oracle.com/javase/8/docs/api/java/util/Date.html
+que guarda un instante de tiempo como un long que representa el número de milisegundos
+que han pasado desde el 01/01/1970 (https://es.wikipedia.org/wiki/Tiempo_Unix).
+
+
+7. Crea y testea una clase que emule un contador cíclico de un dígito (0-9) con métodos
+que nos permita poner el contador a 0, incrementarlo y consultar su valor.
+
+
+8. Crea y testea una clase que emule un contador cíclico de dos dígitos que nos
+permita poner el contador a 0, incrementarlo y consultar su valor.
+Utiliza la clase del ejercicio anterior.
+
+9. Crea y testea las clases Position y Player con los atributos que correspondan y
+los métodos que se describen a continuación:
+
+- Clase Position: representa un punto (x,y) en el eje de coordenadas.
+Cada posición viene definida por dos valores enteros x y y. Los métodos disponibles son:
+
+Constructor por defecto, que corresponderá con la posición (0,0).
+Constructor al que se le pasa como parámetro los valores iniciales de las coordenadas x y y.
+Los getters y setters correspondientes a los atributos de la clase.
+Métodos para incrementar y decrementar los valores de cada una de las coordenadas de la posición.
+Los nombres de los métodos serán incX, incY, decX y decY.
+Un método para establecer los valores de las dos coordenadas tendrá por nombre setXY.
+- Clase Player: representará a un jugador que tendrá como atributos la posición en la que se encuentra
+ (representada por un objeto de la clase Position) y el nombre del jugador.
+
+Los métodos necesarios son:
+
+Constructor al que se le pasa como parámetro la posición inicial donde debe situarse el jugador.
+Debe crear el objeto Position que guardará la posición.
+Métodos para mover al jugador, tendrán por nombres: moveRight, moveLeft, jump, fall.
+Métodos para establecer y consultar el nombre del jugador (getter y setter).
+Método que nos devuelve la posición del jugador (getter).
+
+
+10. Crea una clase Game con un método main que muestre un menú por pantalla con las siguientes opciones
+(usando la clase Player del ejercicio anterior):
+
+a) Añadir nuevo jugador: esta opción creará un nuevo objeto de la clase Player.
+Pide al usuario el nombre y las coordenadas iniciales.
+
+b) Eliminar jugador: esta opción eliminará al último jugador creado.
+c) Reset de la partida: elimina a todos los jugadores creados.
+d) Mostrar jugadores: mostrar por pantalla la información de todos los jugadores.
+
+Para guardar a los jugadores en el main es necesario crear un vector de Players de 10 posiciones.
+Cuando el vector esté lleno no se podrán crear más jugadores hasta que se elimine uno
+(si se intenta dará un error por pantalla).
+
+
+Modela con clases:
+
+11. Círculo: De un círculo nos interesa conocer el radio y determinar el perímetro,
+el área y averiguar cuál de dos círculos es el mayor (comparación con otro objeto).
+
+12. Cilindro: De un cilindro nos interesa conocer el radio de la base y la altura y
+determinar el área total, el volumen y averiguar cuál de dos cilindros es el mayor
+empleando el modelo del círculo del ejercicio anterior.
+
+13. Anillo: Un obrador de joyería fabrica alianzas de matrimonio de oro. De las alianzas
+nos interesa conocer su modelo, el diámetro de paso de dedo D (mm)
+y el diámetro de la sección del anillo d (mm).
+
+Queremos determinar el peso del anillo (gr), el precio del oro (€) empleado en su fabricación,
+y el precio de venta del anillo a los mayoristas (€). El coste de fabricación de la alianza
+sin tener en cuenta el valor del oro es de 40€, el precio del oro es de 10€ el gramo,
+el margen de beneficio es del 210% del coste total del oro anillo y el
+peso específico del oro es de 19,3 gr/cm3
+on R = D/2, r = d/2 i el volum del torus = 2*Pi2 *R*r2
+

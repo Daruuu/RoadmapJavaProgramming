@@ -38,7 +38,6 @@ Da las siguientes opciones al programa:
 extrae los módulos que ha suspendido.
 
 
-
 3. Ferries - Camiones
 
 Queremos gestionar cierta información asociada a los ferries que transportan
@@ -55,7 +54,6 @@ La información relevante relativa a los ferries es:
 5. El precio en € que cobra el ferry en el camión por cada Tm de peso.
 6. El peso máximo en Tm de los camiones transportables por el ferry.
 7. Los camiones cargados en el ferry.
-
 
 
 A partir de los datos anteriores, creamos una clase gestioFerryCamio
@@ -80,15 +78,14 @@ Dado un número entero, determinar qué matrícula y peso tiene ese camión.
 6. Determinar el importe del peaje de un camión.
 
 7. Determinar el peaje total recaudado.
-
 ESPECIFIQUE LA INFORMACIÓN QUE ENCUENTRE A FALTAR
+
 
 4. Telefonía
 
 Una empresa de telefonía móvil desea un programa para gestionar la facturación de las llamadas de voz de sus clientes. El precio de las llamadas se calcula en función de un precio por minuto que puede variar entre clientes. Por cada cliente guardaremos las llamadas que realice.
 
 Queremos diseñar y escribir un programa que pueda efectuar las siguientes operaciones:
-
 
 Añadir un cliente, teniendo en cuenta que no puede haber dos clientes con el mismo DNI.
 Añadir una llamada a un cliente.
@@ -123,12 +120,8 @@ A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
 4. Determinar la duración de un contrato en días.
 
 
-
-
 6. Consultorios médicos
 Queremos gestionar cierta información asociada a la programación de visitas en consultorios médicos.
-
-
 
 La información relevante relativa a las visitas es:
 
@@ -136,13 +129,11 @@ La información relevante relativa a las visitas es:
 
 2. El nombre del paciente.
 
-
 La información relevante relativa a los consultorios es:
 
 1. El nombre del doctor
 2. La especialidad médica.
 3. Las visitas programadas del consultorio.
-
 
 A partir de los datos anteriores, queremos efectuar las siguientes operaciones:
 

@@ -1,33 +1,42 @@
 package topic4_collections.exersCollection_01.exceptions;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Exer03 {
     public static void main(String[] args) {
-        int[] array = new int[10];
         Scanner sc = new Scanner(System.in);
-        int j = 0;
-        while (j < array.length) {
-            System.out.print(array[j] + " ");
-            j++;
-        }
+        Exer03 exer = new Exer03();
+
         try {
-            int i = 0;
-            int position;
-            while (i < array.length) {
-                array[i] = i;
-                i++;
+            int[] nuevoArr = exer.introDatosArray();
+            for (int i : exer.introDatosArray()){
+                System.out.print(i + " ");
             }
-            System.out.println("buscar una posicion dle array: ");
-            position = sc.nextInt();
+            System.out.print("\nbuscar una posicion en array: ");
+            int position = sc.nextInt();
+            System.out.println(nuevoArr[position]);
 
-/*
-            while (){
+            System.out.print("input string: ");
+            String str = sc.nextLine();
+            System.out.println(nuevoArr[Integer.parseInt(str)]);
 
-            }
-*/
-        } catch (ArrayIndexOutOfBoundsException e) {
-
+        } catch (ArrayIndexOutOfBoundsException excepcionTipoOutOFBound) {
+            System.out.println(excepcionTipoOutOFBound.getMessage());
+        } catch (InputMismatchException excepcioTipoInput) {
+            System.out.println(excepcioTipoInput.getMessage());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
+    }
+
+    public int[] introDatosArray() {
+        int[] array = new int[10];
+        int i = 0;
+        while (i < array.length) {
+            array[i] = i;
+            i++;
+        }
+        return array;
     }
 }
