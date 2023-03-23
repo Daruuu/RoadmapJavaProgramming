@@ -8,27 +8,29 @@ public class Exer04 {
         Exer04 e4 = new Exer04();
 
         Scanner sc = new Scanner(System.in);
-        try{
-            System.out.print("Introduce numero positivo: ");
-            int p = sc.nextInt();
-            e4.imprimirPositiu(p);
 
-            System.out.print("Introduce numero negativo: ");
-            int n = sc.nextInt();
-            e4.imprimirNegatiu(n);
-        }catch (Exception ePositivo){
-
-//        }catch (Exception eNegativo){
+        System.out.print("Introduce numero: ");
+        int number = sc.nextInt();
+        try {
+            if (number >= 0) {
+                e4.imprimirNegatiu(number);
+            } else {
+                e4.imprimirPositiu(number);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
-    void imprimirPositiu(int p) {
-        if (p >= 0)
-            System.out.println("positiu-> " + p);
+    void imprimirPositiu(int p) throws Exception {
+        if (p < 0)
+            throw new Exception("el numero es negativo");
+        System.out.println(p);
     }
 
-    void imprimirNegatiu(int n) {
+    void imprimirNegatiu(int n) throws Exception {
         if (n >= 0)
-            System.out.println("negativo-> " + n);
+            throw new Exception("el numero es positivo o cero");
+        System.out.println(n);
     }
 }

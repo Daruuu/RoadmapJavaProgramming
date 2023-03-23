@@ -17,12 +17,13 @@ public class Exer05 {
         matricula = sc.nextLine();
 
         System.out.println("Introduce el nom:");
-        matricula = sc.nextLine();
+        nombre = sc.nextLine();
 
-        System.out.println("Introduce la edad:");
+        System.out.println("Introduce la edad:(> 0)");
         edad = sc.nextInt();
 
         System.out.println("Introduce el sexo:(dona, home");
         sexe = sc.nextLine();
+
     }
 }
