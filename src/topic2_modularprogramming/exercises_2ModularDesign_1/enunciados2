@@ -1,107 +1,103 @@
-Fes el disseny (aplicant anàlisi top-down) i implementació dels següents problemes.
-Defineix tants mètodes com creguis necessari a cada exercici.
+Realiza el diseño (aplicando análisis top-down) e implementación de los siguientes problemas.
+Define tantos métodos como creas necesario en cada ejercicio.
 
 
-1) Feu un programa anomenat OrdenarPerZeros que, donat un array de números enters inicialitzat amb valors concrets,
-primer el mostri per pantalla i després el mostri ordenat de manera ascendent d'acord al nombre de 0 de cada valor.
-Declareu l'array com a variable dins el mètode principal.
-A mode d'exemple, el comportament del programa podria ser el següent:
+1) Haga un programa llamado OrdenarPerZeros que, dado un array de números enteros inicializado
+con valores concretos, primero lo muestre por pantalla y después el muestre ordenado de forma
+ascendente de acuerdo al número de 0 de cada valor.
+Declare el array como variable dentro del método principal.
+A modo de ejemplo, el comportamiento del programa podría ser el siguiente:
 [ 100 2014 12 30 302 40020 7009 500000 ]
 [ 500000 40020 7009 100 2014 30 302 12 ]
 
 
-
-2) Feu un programa anomenat MesVocals que llegeixi una frase i, tot seguit,
-mostri per pantalla quina és la paraula amb més vocals (sense importar majúscules i minúscules).
-A mode d'exemple, el comportament del programa podria ser el següent:
-Escriu una frase:
-Hi havia una vegada una noia anomenada Caputxeta Vermella
-La paraula amb mes vocals és "anomenada".
-
+2) Haga un programa llamado MasVocals que lea una frase y, a continuación,
+muestre por pantalla cuál es la palabra con más vocales (sin importar mayúsculas y minúsculas).
+A modo de ejemplo, el comportamiento del programa podría ser el siguiente:
+Escribe una frase:
+Érase una vez una chica llamada Caperucita Roja
+La palabra con más vocales es "llamada".
 
 
-3) Fes el disseny modular i la seva posterior implementació en Java d'un programa que porti la
-comptabilitat d'una empresa.
-L'objectiu és controlar els ingressos i les despeses que hi ha hagut durant un període de temps.
-El programa té un menú amb les següents opcions:
-1. Alta d'ingrés
-2. Alta de despesa
-3. Mostra resum
-4. Històric ingressos
-5. Històric despeses
-6. Fi
+3) Haz el diseño modular y su posterior implementación en Java de un programa que lleve la
+contabilidad de una empresa.
+El objetivo es controlar los ingresos y gastos habidos durante un período de tiempo.
+El programa tiene un menú con las siguientes opciones:
+1. Alta de ingreso
+2. Alta de gasto
+3. Muestra resumen
+4. Histórico ingresos
+5. Histórico gastos
+6. Fin
 
-L'opció 'Alta d'ingrés': l'usuari introdueixi una nova partida per a l'ingrés.
-L'opció 'Alta de despesa': l'usuari introdueixi una nova partida per a la despesa.
-L'opció 'Mostra resum': ens mostra un informe on apareix el total d'ingressos i el total de despeses.
-A més, en cas que hi hagi més ingressos que despeses ens mostrarà també la següent frase:
+La opción 'Alta de ingreso': el usuario introduzca una nueva partida para el ingreso.
+La opción 'Alta de gasto': el usuario introduzca una nueva partida para el gasto.
+La opción 'Mostra resum': nos muestra un informe donde aparece el total de ingresos y el total de gastos.
+Además, en caso de que haya más ingresos que gastos nos mostrará también la siguiente frase:
 
-«L'empresa ha tingut uns beneficis de X euros»,
-on X és la diferència entre ingressos i despeses.
+"La empresa ha tenido unos beneficios de X euros",
+donde X es la diferencia entre ingresos y gastos.
 
-En cas que les despeses siguin més grans que els ingressos la frase a mostrar és:
-«L'empresa ha tingut un dèficit de X euros», on X és la diferència entre les despeses i els ingressos.
+En caso de que los gastos sean mayores que los ingresos, la frase a mostrar es:
+"La empresa ha tenido un déficit de X euros", donde X es la diferencia entre los gastos y los ingresos.
 
-Les opcions històric ingressos i despeses mostraran un llistat dels ingressos i despeses realitzats respectivament,
-així com la data exacte de la seva realització.
-L'opció 'fi' fa que acabi el programa.
-Usar arrays per a emmagatzemar els ingressos i despeses, així com les dates.
-Usar la classe LocalDateTime per a representar les dates.
+Las opciones histórico ingresos y gastos mostrarán un listado de los ingresos y gastos realizados respectivamente,
+así como la fecha exacta de su realización.
+La opción 'fin' hace que termine el programa.
+Usar arrays para almacenar los ingresos y gastos, así como las fechas.
+Usar la clase LocalDateTime para representar las fechas.
+
+4) En Estados Unidos es muy popular un juego de dados con apuestas:
+un jugador tira simultáneamente dos dados y suma la puntuación obtenida entre ellos,
+el valor resultante de la suma será la puntuación obtenida en el lanzamiento.
+Reglas del juego.
+La puntuación obtenida en el primer lanzamiento se llama punto, que se memoriza.
+Si el punto es 7 o 11 se gana y termina la partida.
+Si el punto es 2, 3 o 12 se pierde y se termina la partida.
+Por los demás valores del punto se sigue lanzando los dados hasta que se saca de nuevo el punto obtenido en el primer lanzamiento,
+  entonces se gana y se termina la partida, o se quita un 7, entonces se pierde y se termina la partida.
+Ejemplos de partidas:
+
+7 (es el punto) Se gana
+11 (es el punto) Se gana
+2 (es el punto) Se pierde
+3 (es el punto) Se pierde
+12 (es el punto) Se pierde
+8 (es el punto), 9, 6, 5, 8 Se gana
+8 (es el punto), 9, 6, 5, 7 Se pierde
 
 
-
-4) Als Estats Units és molt popular un joc de daus amb apostes:
-un jugador llença simultàniament dos daus i suma la puntuació obtinguda entre ells,
-el valor resultant de la suma és la puntuació obtinguda en el llançament.
-Regles del joc.
-La puntuació obtinguda en el primer llançament s’anomena punt, que es memoritza.
-Si el punt és 7 o 11 es guanya i s'acaba la partida.
-Si el el punt és 2, 3 o 12 es perd i s'acaba la partida.
-Pels altres valors del punt es seguix llançant els daus fins que es treu de nou el punt obtingut al primer llançament,
- llavors es guanya i s'acaba la partida, o es treu un 7, llavors es perd i s'acaba la partida.
-Exemples de partides:
-
-7 (és el punt) Es guanya
-11 (és el punt) Es guanya
-2 (és el punt) Es perd
-3 (és el punt) Es perd
-12 (és el punt) Es perd
-8 (és el punt), 9, 6, 5, 8 Es guanya
-8 (és el punt), 9, 6, 5, 7 Es perd
-
-Dissenyar i implementar una aplicació emprant la metodologia de disseny descendent (top-down)
-i el paradigma de la programació estructurada i modular que permeti:
+Diseñar e implementar una aplicación utilizando la metodología de diseño descendente (top-down)
+y el paradigma de la programación estructurada y modular que permita:
 1. Jugar una partida:
-l'usuari llença els daus apretant la tecla espai i l'aplicació va informant del resultat i dels següents passos.
+el usuario tira los dados apretando la tecla espacio y la aplicación va informando del resultado y de los siguientes pasos.
 
-2. Determinar l'equitat del joc:
-l'aplicació juga automàticament el nombre de partides que li entra l'usuari per teclat,
-comptant el nombre de partides guanyades i perdudes i calculant la probabilitat de guanyar en %.
-L'única diferència amb la partida interactiva (opció anterior) és que l'usuari no ha d'apretar l'espai per llançar els daus,
-la resta de missatges per pantalla són els mateixos.
+2. Determinar la equidad del juego:
+la aplicación juega automáticamente el número de partidas que le entra el usuario por teclado,
+contando el número de partidas ganadas y perdidas y calculando la probabilidad de ganar en %.
+La única diferencia con la partida interactiva (opción anterior) es que el usuario no debe apretar el espacio para lanzar los dados,
+el resto de mensajes por pantalla son los mismos.
 
-3. Obtenir ajuda en línia.
-4. Sortir de l'aplicació.
-
-
-
-5) Ens han demanat que fem una gestió molt simple de reserves d'un cinema. El programa ha de complir els següents requisits:
-
-S'ha d'iniciar amb un nombre total d'entrades lliures.
-Ha d'anar preguntant el nombre d'entrades que volem reservar. En cada reserva ha de comprovar si hi suficients localitats lliures.
-En cas afirmatiu, ha de calcular el preu total de la reserva a raó de 6 euros l'entrada.
-El programa ha d'acabar quan li demanem un nombre d'entrades que sobrepassa l'aforament disponible.
-Quan això passi s'ha de mostrar el nombre total d'entrades venudes per aquella sessió i la recaudació total que s'ha realitzat.
+3. Obtener ayuda online.
+4. Salir de la aplicación.
 
 
-6) Donada una frase on apareixen una llista de paraules digues amb quina freqüència apareix una paraula X. Per exemple:
- "cinc boles serveixen per cinc jocs i per cinc nens" la paraula "cinc" apareix amb una freqüència de 3/10.
+5) Nos han pedido que hagamos una gestión muy simple de reservas de un cine. El programa debe cumplir los siguientes requisitos:
+
+Se debe iniciar con un número total de entradas libres.
+Debe ir preguntando el número de entradas que queremos reservar. En cada reserva debe comprobar si existen suficientes localidades libres.
+En caso afirmativo, debe calcular el precio total de la reserva a razón de 6 euros la entrada.
+El programa debe terminar cuando le pedimos un número de entradas que sobrepasa el aforo disponible.
+Cuando esto ocurra se debe mostrar el número total de entradas vendidas por aquella sesión y la recaudación total que se ha realizado.
 
 
-7) Haurem de fer la gestió d'una rentadora.
-Tenim dos cubells, un per roba blanca i un altre per roba d'altres colors.
-Hem de dissenyar un programa modular on anem introduint la roba i especifiquem el pes i el color.
-Si és de color blanc el dispositem en el cubell blanc i sinó al de color.
-Quan un dels dos cubells traspassa els 2 kg de pes s'ha d'enviar a rentar,
-és llavors quan acaba el programa i ens ha d'anunciar quin dels dos cubells ha rentat i amb quin pes.
+6) Dada una frase donde aparecen una lista de palabras di con qué frecuencia aparece una palabra X. Por ejemplo:
+  "cinco bolas sirven por cinco juegos y por cinco niños" la palabra "cinco" aparece con una frecuencia de 3/10.
 
+
+7) Deberemos hacer la gestión de una lavadora.
+Tenemos dos cubos, uno para ropa blanca y otro para ropa de otros colores.
+Debemos diseñar un programa modular en el que vamos introduciendo la ropa y especificamos el peso y el color.
+Si es de color blanco lo depositamos en el cubo blanco y sino en el de color.
+Cuando uno de los dos cubos traspasa los 2 kg de peso debe enviarse a lavar,
+es entonces cuando termina el programa y debe anunciarnos cuál de los dos cubos ha lavado y con qué peso.

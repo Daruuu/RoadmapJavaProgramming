@@ -1,0 +1,65 @@
+Para realizar los siguientes ejercicios deberá realizar la función
+principal (main) del programa, donde se realizará la entrada y
+salida de datos y que llamará a la función descrita en el enunciado
+del ejercicio.
+
+1. (signo) Realizar una función que reciba un entero y devuelva la cadena "negativo",
+"cero" o "positivo" según si el entero es negativo, cero o positivo.
+
+2. (esPrimero) Hacer una función que reciba un número natural y nos devuelva true
+si es primero y false si no lo es.
+
+3. (max) Hacer una función que dados dos números nos devuelva el máximo.
+
+4. (max,min) Hacer dos funciones que dados tres números nos devuelvan el máximo y el mínimo, respectivamente.
+
+5. (ordena) Hacer una función que dados tres números nos los ordene de forma creciente.
+
+6. (sumaArray) Hacer una función que reciba un vector numérico y devuelva la suma de sus elementos.
+
+7. (paresArray) Hacer una función que reciba un vector y devuelva cuántos elementos son pares.
+
+8. (primersArray) Realizar una función que reciba un vector y devuelva otro vector con todos
+los elementos del vector original que sean primeros.
+
+9. (maximMatriu) Realizar una función que devuelva el valor máximo de una matriz.
+
+10. Realizar un programa que recoja desde teclado dos números y presente una serie de opciones
+correspondientes a operaciones aritméticas (suma, resta, multiplicación, división).
+Según la opción escogida se llama una función que devuelva el valor del resultado de la operación.
+Si se quiere seguir operando se debe contestar 'S' a un mensaje que diga "¿Quieres continuar?”.
+Para terminar el programa se debe contestar 'N'.
+
+11. El nombre del día de la semana. El objetivo de esta actividad es saber codificar un método
+con parámetros de entrada y salida para que realice una tarea concreta. Tienes que crear una
+función que si le entramos un entero sea capaz de sacar un String indicando qué día de la
+semana es (del 1 al 7), si no está en ese rango también debe decirlo.
+Haz el ejercicio de dos formas.
+Haciendo que diaDeLaSemana es una función y haciendo que diaDeLaSemana sea una acción.
+
+12. Haz un conversor de temperaturas.
+El programa debe pedir en qué magnitud entramos la temperatura (celsivos, farenheit o kelvin),
+seguidamente entraremos el valor numérico. A continuación se mostrará un menú donde se permitirá
+realizar la conversión adecuada: de celsius a farenheit, de celsius a kelvin, de farenheit a celsius,
+de farenheit a kelvin, de kelvin a celsius y de kelvin a farenheit.
+
+Haz un menú con estas opciones y una última opción para salir. Implementa las funciones que
+necesites para realizar las conversiones, en el main no puede haber ninguna conversión.
+El programa debe tener en cuenta que si nos entran una determinada magnitud ésta sólo permitirá
+convertir a las otras dos... sino debe darnos error.
+Ej: si entramos la magnitud inicial con Celsius, no podremos convertir de
+Farenheit a Celsius ya que ya lo tenemos en Celsius.
+
+13. Complete la clase Forecast.java para que devuelva la temperatura, humedad, presión,
+viento (velocidad y dirección) o estado general del tiempo de la ciudad que se le pase
+por parámetro al ejecutar el programa. La información que deseamos recuperar también se
+pasará por parámetro (fije vosotros la sintaxis concreta).
+
+Recuerde que los parámetros que se pasan al ejecutar un programa se pueden recuperar
+en en vector de argumentos String[] args del main.
+
+Aquí tiene más información de la API REST que estamos usando para recuperar
+la información del tiempo: http://openweathermap.org/api
+
+La información debe extraerla de la cadena XML que devuelve la API,
+usando los métodos de la clase String (por ejemplo split()).

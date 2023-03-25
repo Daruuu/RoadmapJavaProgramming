@@ -1,0 +1,78 @@
+A) ArrayList
+
+1. Queremos calcular la nota media de programación de la clase de 1º de DAM. Para ello
+crearemos un método introduceValors donde el usuario introducirá notas en un
+ArrayList y termina cuando se introduce un -1.
+
+A continuación habrá una función sumaValors que sumará todos los valores de este ArrayList.
+(Haz el bucle con Iterator y sin él). Sin él sería utilizando el foreach, por ejemplo:
+for (Integer y: conjuntoIntegers)
+
+Por último se entrega la media aritmética al usuario.
+
+2. Crea un pequeño programa por un puerto pesquero capaz de tener una estructura ArrayList
+de Barcos. Un Barco se identifica por un nombre, un precio y una edad.
+
+Realiza las operaciones necesarias para introducir, buscar, modificar y sacar un barco
+de este arraylist.
+También queremos una opción donde se listen todos los barcos actualmente,
+además queremos que se listen por antigüedad (de más viejo a más nuevo), por orden
+lexicográfico de nombre y por precio (de cara a barato).
+
+
+B) Hashset
+
+
+1. Crea un saco con bolas de una lotería.
+Este saco (Hashset) contendrá las bolas del 0 al 100.
+Paralelamente debes crear una clase Jugador que estará compuesto de un
+dni y un boleto con 4 números del 0 al 100 diferentes.
+
+Crea 4 jugadores con 4 boletos random y simula una lotería que vaya sacando números
+del saco creado anteriormente.
+Una vez uno de los jugadores gana (se han quitado los 4 números del jugador) se termina
+el juego y se quita el dni del ganador.
+
+
+2. Realiza un circuito con diferentes estructuras de Hashset capaz de simular las fases por
+las que pasa una tarea en un ciclo de SCRUM. Una tarea se identifica por un nombre y descripción.
+
+Es necesario tener un conjunto de tareas de cada uno de estos grupos: TO BE DONE, DOING y DONE.
+Así pues, cuando introducimos una tarea en el sistema pasa automáticamente a TO BE DONE.
+
+Una vez que se está realizando es necesario pasar esta tarea de TO BE DONE a DOING,
+y una vez finalizada pasará de DOING A DONE.
+
+Es necesario tener estas opciones en el programa:
+1. Introducir una tarea.
+2. Pasar de TO BE DONE A DOING
+3. Pasar de DOING A DONE
+4. Mostrar el estado actual de los tres conjuntos de tareas.
+
+
+C) Hashmap
+
+
+1. Crea un Hashmap capaz de inventariar todos los móviles de los alumnos de DAM1.
+Hashmap será una estructura conjuntaMobils<dni, Mobil>. Dny será un String y
+clase Mobil está compuesto por una Marca, un modelo y un número.
+
+Crea las siguientes opciones:
+a) Añadir móvil. (vigilar con días repetidos).
+b) Quitar móvil.
+c) Buscar un móvil a partir de un dni.
+d) Buscar un dni a partir del número de móvil.
+
+
+2. Asignación de dorsales de un equipo de fútbol.
+Debemos definir una estructura de Hashmap <Dorsal, Jugador>,
+Un dorsal es sólo un entero, mientras que un Jugador es de la clase Jugador.
+Un jugador contiene un nombre, una edad y una posición.
+
+Haga un programa capaz de:
+a) Introducir Jugadores en el Hashmap.
+b) Buscar a un jugador por dorsal en el Hashmap.
+c) Buscar a un jugador por nombre en el Hashmap.
+d) Listar Jugadores ordenados por número.
+e) Listar jugadores por edad.
+f) Listar jugadores por posición.

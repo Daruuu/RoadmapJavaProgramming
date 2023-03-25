@@ -1,0 +1,30 @@
+1. Provoca la excepción InputMismatchException y captúrala indicando un mensaje.
+
+2. A continuación realiza un programa que permita capturar tanto excepciones de
+InputMismatchException y ArithmeticException y que además, capture también cualquier
+otro tipo de excepción que se pueda producir.
+
+3. A continuación crea un programa que introduzca valores enteros en un array de 10
+posiciones y que después pregunte por una posición del array y nos entregue el resultado.
+Es necesario controlar las excepciones de InputMismatchException y ArrayIndexOutOfBounds.
+
+4. Implementa un programa donde se deba crear un bucle en el que se vayan introduciendo
+números, por cada uno de ellos aplicaremos los dos métodos siguientes:
+
+    void imprimirPositivo(int p): Imprime el valor p. Lanza una ‘Exception’ si p < 0
+    void imprimirNegativo(int n): Imprime el valor n. Lanza una ‘Exception’ si n >= 0
+
+El main será el encargado de realizar las llamadas a las funciones y capturar sus excepciones.
+Los métodos imprimirPositivo e imprimirNegativoNO hacen el tratamiento de las excepciones.
+
+5. Haz un programa que sea un formulario que solicite datos sobre la matrícula, en concreto
+es necesario pedir información sobre el nombre y apellidos, la edad, el dni y el sexo.
+Hay que controlar que la edad introducida es > 0, que el Dni es correcto
+(busca qué algoritmo lo valida), y que haya introducido como sexo (mujer, hombre).
+Para los tres tipos de errores posibles debes crear su propia exception propia.
+
+6. Busca la actividad 4 de herencia, la que corresponde a libros, volúmenes, ediciones…
+y aplica todas las excepciones que se te ocurran. Hazlo de dos formas diferentes:
+
+Que las excepciones sean tratadas allá donde se generan.
+Que las excepciones sean tratadas de forma centralizada en el main del programa.

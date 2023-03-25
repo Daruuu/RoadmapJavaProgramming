@@ -9,9 +9,10 @@ public class Exer04 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduce numero: ");
-        int number = sc.nextInt();
         try {
+            System.out.print("Introduce numero: ");
+            int number = sc.nextInt();
+
             if (number >= 0) {
                 e4.imprimirNegatiu(number);
             } else {
