@@ -1,0 +1,30 @@
+Problema 1: ArrayList (4 puntos)
+
+Es necesario un programa capaz de:
+Añadir coches a los directorios de coches del concesionario.
+Listar el total de coches.
+
+Buscar un coche a partir de una matrícula y que devuelva la posición del listado donde se encuentra.
+Modificar un coche del listado.
+Eliminar un coche del listado.
+Crea un pequeño menú para realizar las diferentes acciones.
+
+Como bonus (0,5 puntos más): Queremos una opción que permita ordenar los coches de más caro a más barato.
+
+
+Problema 2: HashSet (2,5 puntos)
+
+Queremos guardar los números de teléfono de nuestros compañeros de clase.
+Para solucionar el problema de los elementos repetidos, HashSet es idóneo ya que no
+podemos incluir dos elementos iguales.
+
+Crea un programa que permita:
+
+Añadir números de teléfono a un HashSet,
+si lo añade indica en un mensaje que se ha añadido correctamente,
+sino indica que el número ya estaba incluido en HashSet y que por tanto es repetido.
+
+Nos busque si ya tenemos un teléfono dentro de HashSet.
+
+Elimine un número de teléfono de un HashSet, de igual forma queremos que nos aparezca un mensaje
+indicando si la operación se ha realizado o no.
