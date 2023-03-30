@@ -1,0 +1,56 @@
+UF5. Prova
+
+Problema 1: ArrayList (4 puntos)
+
+Necesitamos un programa capaz de gestionar el listado de alumnos de una clase o módulo.
+
+Un Alumno se identifica por su DNI, además queremos guardar su nombre, apellidos y
+nota de la prueba de acceso (con decimales).
+
+Es necesario un programa capaz de:
+
+Añadir alumnos a los directorios de la clase.
+Listar a todos los alumnos.
+Buscar a un alumno a partir de un DNI y que devuelva la posición del listado
+donde se encuentra.
+Modificar el nombre y apellidos de un alumno del listado a partir de la posición que
+ocupa en la lista
+Eliminar a un alumno del listado a partir de la posición que ocupa en la lista
+
+Crea un pequeño menú para realizar las diferentes acciones.
+
+Como bonus (0,5 puntos más): Queremos una opción que permita ordenar a
+los alumnos de más a menos nota de acceso.
+
+
+
+Problema 2: HashSet (2,5 punts)
+
+Queremos montar una liga de Pokémon en el instituto y la clase será un equipo.
+Queremos guardar los nombres de los Pokémon que traerán nuestros compañeros de clase.
+Para solucionar el problema de los elementos repetidos HashSet es idóneo ya que no podemos
+  incluir dos elementos iguales.
+
+Crea un programa que permita:
+
+Añadir nombres de Pokémon a un HashSet, si lo añade indica en un mensaje que se ha añadido
+correctamente, sino indica que el nombre ya estaba incluido en HashSet y que por tanto es repetido.
+Nos busque si ya tenemos un nombre de Pokémon dentro del HashSet.
+Elimine un nombre de Pokémon de un HashSet, de igual forma queremos que nos aparezca un mensaje
+indicando si la operación se ha realizado o no.
+
+
+Problema 3 (2 punts)
+
+Volem controlar els valors d'un array de nombres enters. Crea un array de 10 posicions i fes un mini menú que permeti: afegir nombre a una posició o buscar un nombre d'una posició concreta. Controla allà on sigui necessari: InputMismatchException, ArrayIndexOutOfBoundsException i fes una Excepció pròpia que es llanci només quan introduïm el nombre ZERO.
+
+
+
+Problema 4: GUI (1,5 punts)
+
+Retornant al problema 1 ens agradaria que modelitzessis una interfície on aparegui
+la informació necessària per afegir un alumne a la classe.
+Per tant, et demanem una finestra on apareguin cinc labels per (DNI, nom, cognom1, cognom2 i nota)
+i cinc caixetes on incloure cada camp, i dos botons per a acceptar o cancel·lar.
+Si s'accepta ha d'aparèixer un missatge al terminal que digui que s'ha matriculat a l'alumne
+a la classe i ha de tancar la finestra i si es cancel·la només ha de tancar la finestra.
