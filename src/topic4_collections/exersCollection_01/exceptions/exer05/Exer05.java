@@ -9,33 +9,14 @@ public class Exer05 {
         Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Introduce el nom: ");
-            String nombre = sc.nextLine();
-
-            System.out.print("Introduce los apellidos: ");
-            String apellidos = sc.nextLine();
-
-            System.out.print("Introduce la edad: ");
-            int edad = sc.nextInt();
-            if (edad < 0) {
-                throw new EdadException("la edad debe ser mayor a 0");
-            }
-            sc.nextLine();
-
-            System.out.print("Introduce el dni: ");
-            String dni = sc.nextLine();
-
-            if (!ex.validarDni(dni)) {
-                throw new DniException("DNI invalido");
-            }
-
-            System.out.print("Introduce el sexo (dona, home): ");
-            String sexe = sc.nextLine();
+            ex.formularioMatricula(sc);
 
         } catch (EdadException e) {
             throw new RuntimeException(e);
-        } catch (DniException e) {
-            throw new RuntimeException(e);
+        } catch (DniException d) {
+            throw new RuntimeException("error al introducir el dni " + d.getMessage());
+        } catch (SexoException s) {
+            throw new RuntimeException("error al introducir el sexo " + s.getMessage());
         } catch (Exception e) {
             System.out.println("error " + e.getMessage());
         } finally {
@@ -43,24 +24,32 @@ public class Exer05 {
         }
     }
 
-    public void formularioMatricula() {
-        Scanner sc = new Scanner(System.in);
-        String nombre;
-        String apellidos;
-        int edad;
-        String sexe;
-
+    public void formularioMatricula(Scanner sc) throws EdadException, DniException, SexoException {
         System.out.print("Introduce el nom: ");
-        nombre = sc.nextLine();
+        String nombre = sc.nextLine();
 
         System.out.print("Introduce los apellidos: ");
-        apellidos = sc.nextLine();
+        String apellidos = sc.nextLine();
 
         System.out.print("Introduce la edad: ");
-        edad = sc.nextInt();
+        int edad = sc.nextInt();
+        if (edad < 0) {
+            throw new EdadException("la edad debe ser mayor a 0");
+        }
+        sc.nextLine();
+
+        System.out.print("Introduce el dni: ");
+        String dni = sc.nextLine();
+
+        if (!validarDni(dni)) {
+            throw new DniException("DNI invalido");
+        }
 
         System.out.print("Introduce el sexo (dona, home): ");
-        sexe = sc.nextLine();
+        String sexe = sc.nextLine();
+        if ((!sexe.equals("home")) && (!sexe.equals("dona"))) {
+            throw new SexoException("valores posibles son :(home/dona)");
+        }
     }
 
     public boolean validarDni(String dni) {
