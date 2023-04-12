@@ -1,36 +1,39 @@
 package topic5_files.practice_01;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Exer06 {
     public static void main(String[] args) {
 
     }
 
-    void clonarDirectorio() throws IOException {
-        String path = "src/topic5_files/practice_01";
-        FileReader fr = new FileReader(path);
-        BufferedReader br = new BufferedReader(fr);
-        String line = br.readLine();
+    void clonarDirectorio(String path) throws IOException {
+        File directorio = new File(path);
 
-    }
+        if (!directorio.exists()) {
+            System.out.println("el directorio no existe!");
+        }
 
-    public String leerFicheroTexto(String path){
-        try{
-            String str ="";
-            FileReader fr = new FileReader(path);
-            BufferedReader br = new BufferedReader(fr);
-            String linea = br.readLine();
+        File[] listaFiles = directorio.listFiles();
+        if (listaFiles == null) {
+            System.out.println("directorio vacio!");
+            return;
+        }
 
+        for (File archivos : listaFiles) {
+            if (directorio.isDirectory()) {
+                File nuevoArchivo = new File(archivos.getPath() + ".txt");
+                try {
+                    nuevoArchivo.createNewFile();
+                } catch (IOException e) {
+                    System.out.println(nuevoArchivo.getName());
+                }
+            }
+            if (archivos.isFile()) {
+                File nuevoArchivo = new File(directorio.getPath() + "/" + archivos.getName().replace(".txt", ""));
+                nuevoArchivo.mkdir();
 
-
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e.getMessage());
+            }
         }
     }
 }
