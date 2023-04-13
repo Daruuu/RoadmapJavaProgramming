@@ -1,34 +1,48 @@
 package topic5_files.practice_01;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
 
 public class Exer03 {
     public static void main(String[] args) throws FileNotFoundException {
         Exer03 exer03 = new Exer03();
-        Scanner sc = new Scanner(System.in);
-        exer03.buscadorArchivos(sc);
+        String rutaDirectorio = "/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practice_01/test3/";
+//        exer03.buscadorArchivos(rutaDirectorio);
+        exer03.buscar(rutaDirectorio);
     }
 
-    public void buscadorArchivos(Scanner sc) {
-
+    public void buscadorArchivos(String rutaDirectorio) {
         try {
-            String rutaDirectorio = sc.nextLine();
             FileReader fr = new FileReader(rutaDirectorio);
             BufferedReader br = new BufferedReader(fr);
             String linea = br.readLine();
 
             while (linea != null) {
-                if (linea.contains("exercici")) {
+                if (linea.contains("exercisi")) {
+                    System.out.println("un fichero coincide con el nombre");
                     break;
                 }
-                linea = sc.nextLine();
+                linea = br.readLine();
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            br.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public void buscar(String ruta) {
+
+        try {
+            File file = new File(ruta);
+            File[] filesLista = file.listFiles();
+
+            for (File f : filesLista) {
+                if (f.getName().contains("exercisi")) {
+                    System.out.println("archivo con nombre -> " + f.getName());
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

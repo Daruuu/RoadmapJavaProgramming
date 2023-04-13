@@ -3,8 +3,10 @@ package topic5_files.practice_01;
 import java.io.*;
 
 public class Exer06 {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws IOException {
+        Exer06 exer06 = new Exer06();
+        String path = "";
+        exer06.clonarDirectorio(path);
     }
 
     void clonarDirectorio(String path) throws IOException {
@@ -32,7 +34,6 @@ public class Exer06 {
             if (archivos.isFile()) {
                 File nuevoArchivo = new File(directorio.getPath() + "/" + archivos.getName().replace(".txt", ""));
                 nuevoArchivo.mkdir();
-
             }
         }
     }
