@@ -1,4 +1,4 @@
-package topic5_files.practice_01;
+package topic5_files.practica_01;
 
 import java.io.*;
 
