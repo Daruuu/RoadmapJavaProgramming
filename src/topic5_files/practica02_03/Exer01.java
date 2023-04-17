@@ -24,12 +24,3 @@ public class Exer01 {
         bufferedReader.close();
     }
 }
-/*
-        while (linea != null) {
-                str += str + linea + "\n";
-                linea = bufferedReader.readLine();
-                }
-                bufferedReader.close();
-                return str;
-                }
-*/

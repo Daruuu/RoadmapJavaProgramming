@@ -9,7 +9,7 @@ public class Exer06 {
         exer06.clonarDirectorio(path);
     }
 
-    void clonarDirectorio(String path) throws IOException {
+    void clonarDirectorio(String path) {
         File directorio = new File(path);
 
         if (!directorio.exists()) {

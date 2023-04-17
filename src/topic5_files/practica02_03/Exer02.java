@@ -22,5 +22,4 @@ public class Exer02 {
         }
         bufferedReader.close();
     }
-
 }
