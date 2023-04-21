@@ -10,7 +10,6 @@ public class Exer01 {
         Exer01 ex = new Exer01();
         String ruta = "/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/test01.txt";
         ex.leerFichero(ruta);
-
     }
 
     public void leerFichero(String rutaFichero) throws IOException {
