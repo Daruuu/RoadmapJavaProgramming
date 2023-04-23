@@ -1,0 +1,11 @@
+Maven es una herramienta de automatización de compilación que se utiliza principalmente
+para proyectos Java. Permite a los desarrolladores administrar dependencias,
+construir e implementar sus proyectos y mantener la coherencia en diferentes entornos.
+Maven utiliza un archivo de modelo de objetos de proyecto (POM) para definir la estructura
+del proyecto, las dependencias y el proceso de compilación. Esto facilita la colaboración de
+los desarrolladores y garantiza que el proyecto se pueda construir e implementar de manera
+consistente, independientemente del entorno. Maven también admite plugins,
+que se pueden usar para agregar funcionalidad adicional al proceso de compilación.
+En general, Maven es una herramienta poderosa que puede ahorrar tiempo y esfuerzo a los
+desarrolladores al automatizar muchas de las tareas involucradas en la construcción
+e implementación de proyectos Java.

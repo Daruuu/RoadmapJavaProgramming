@@ -1,0 +1,7 @@
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testExercises/test10v1.txt 20
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testExercises/archivoALeerExer10.txt 696
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testInputs/test10v3 882
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testInputs/test10v2.txt 696
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testInputs/exer09Input.txt 32
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testInputs/output09Output.txt 32
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testInputs/test10v1.txt 20

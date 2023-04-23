@@ -1,0 +1,2 @@
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testExercises/test10v1.txt 20
+/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica02_03/testExercises/archivoALeerExer10.txt 696
