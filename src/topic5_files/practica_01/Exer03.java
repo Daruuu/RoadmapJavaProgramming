@@ -1,47 +1,34 @@
 package topic5_files.practica_01;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 
 public class Exer03 {
     public static void main(String[] args) throws FileNotFoundException {
         Exer03 exer03 = new Exer03();
-        String rutaDirectorio = "/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practice_01/test3/";
-//        exer03.buscadorArchivos(rutaDirectorio);
-        exer03.buscar(rutaDirectorio);
+        String rutaDirectorio = "/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica_01/testExer03";
+        File file = new File(rutaDirectorio);
+        String str = "exercisi";
+        exer03.buscarNombreArchivo(file, str);
     }
 
-    public void buscadorArchivos(String rutaDirectorio) {
-        try {
-            FileReader fr = new FileReader(rutaDirectorio);
-            BufferedReader br = new BufferedReader(fr);
-            String linea = br.readLine();
+    public void buscarNombreArchivo(File rutaDirectorio, String strABuscar) {
 
-            while (linea != null) {
-                if (linea.contains("exercisi")) {
-                    System.out.println("un fichero coincide con el nombre");
-                    break;
+        boolean encontrado = false;
+        try {
+            if (!rutaDirectorio.isDirectory()) {
+                System.out.println("la ruta es incorrecta!");
+            } else {
+                File[] filesLista = rutaDirectorio.listFiles();
+                for (File archivo : filesLista) {
+                    if (archivo.isFile() && archivo.getName().contains(strABuscar)) {
+                        System.out.println("archivo con nombre -> " + archivo.getName() + " contiene el nombre buscado.");
+                        encontrado = true;
+                    }
                 }
-                linea = br.readLine();
             }
-            br.close();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void buscar(String ruta) {
-
-        try {
-            File file = new File(ruta);
-            File[] filesLista = file.listFiles();
-
-            for (File f : filesLista) {
-                if (f.getName().contains("exercisi")) {
-                    System.out.println("archivo con nombre -> " + f.getName());
-                }
+            if (!encontrado) {
+                System.out.println("ningun archivo con ese nombre!");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

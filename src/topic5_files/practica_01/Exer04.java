@@ -5,29 +5,25 @@ import java.io.*;
 public class Exer04 {
     public static void main(String[] args) {
         Exer04 exer04 = new Exer04();
-        exer04.informacionDirectorio();
+
+        String pathRepo = "/home/daruuu/IdeaProjects/RoadmapJavaProgramming/src/topic5_files/practica_01/testExer03";
+        File finalPath = new File(pathRepo);
+
+        exer04.datosArchivos(finalPath);
     }
 
-    public void informacionDirectorio() {
+    public void datosArchivos(File rutaDir) {
         try {
-            System.out.print("Introduce nombre del directorio: ");
-            String pathDirectory = "prueba";
+            if (rutaDir.isDirectory()) {
 
-            String pathRepo = "src/topic5_files/practice_01/";
-
-            File finalPath = new File(pathRepo + pathDirectory);
-            System.out.println(finalPath.getCanonicalPath());
-
-            if (finalPath.isDirectory()) {
-
-                File[] files = finalPath.listFiles();
+                File[] files = rutaDir.listFiles();
                 for (File f : files) {
-                    System.out.println("file -> " + f.getCanonicalPath() +
-                            "\n" + f.length() +
-                            "\n" + f.getName());
+                    System.out.print("archivo con nombre: " + f.getName() +
+                            "\n" + "ruta : " + f.getPath() +
+                            "\n" + "y numero de bytes de " + f.length() + "\n");
                 }
             } else {
-                System.out.println("is not a direcotry");
+                System.out.println("is not a directory");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());

@@ -4,7 +4,7 @@ import java.util.Scanner;
 /*
  * Reto #47
  * VOCAL MÁS COMÚN
- * Fecha publicación enunciado: 21/11/22
+ * Fecha publicación enunciado.txt: 21/11/22
  * Fecha publicación resolución: 28/11/22
  * Dificultad: FÁCIL
  *

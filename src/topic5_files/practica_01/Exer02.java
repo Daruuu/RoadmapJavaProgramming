@@ -8,7 +8,7 @@ public class Exer02 {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Introduce nombre de directorio: ");
-        String nombreDirectorio = sc.nextLine();
+        String nombreDirectorio = sc.next();
 
         if (nombreDirectorio.length() == 0) {
 

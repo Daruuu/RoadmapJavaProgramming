@@ -1,0 +1,2 @@
+Bash is a command-line shell and scripting language that is used primarily on Unix-based systems. It is open-source and freely available, making it a popular choice for automation and system administration tasks. Some of its features include job control, command-line editing, scripting capabilities, and the ability to run programs in the background. With its powerful set of tools and utilities,
+Bash is an essential tool for developers, system administrators, and power users who need to work efficiently on the command line.
