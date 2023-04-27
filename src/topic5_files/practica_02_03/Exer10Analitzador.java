@@ -31,6 +31,7 @@ public class Exer10Analitzador {
         FileReader fileReader = new FileReader(inputFile);
         BufferedReader br = new BufferedReader(fileReader);
 
+
         while ((line = br.readLine()) != null) {
             String[] words = line.split("");
             count += words.length;

@@ -1,0 +1,30 @@
+DB01:Database:Oracle Database:K. Loney:69.99:10
+DB02:Database:Databases in Depth:C. J. Date:29.95:6
+DB05:Database:Database Processing:D. Kroenke:136.65:12
+DB07:Database:Access Database Design:S. Roman:34.95:25
+DB09:Database:SQL Server 2005:P. Debetta:29.99:0
+GR01:Graphics:Adobe Photoshop CS2:Adobe:29.99:4
+GR03:Graphics:Learning Web Design:J. Niederst:39.95:8
+GR04:Graphics:Macromedia Flash Professional:T. Green:44.99:17
+GR07:Graphics:Digital Photographer Handbook:M. Freeman:24.95:22
+GR10:Graphics:Creating Motion Graphics:T. Meyer:59.95:13
+HW02:Hardware:How Computers Work:R. White:29.99:8
+HW04:Hardware:Upgrading and Repairing PCs:S. Mueller:59.99:5
+HW05:Hardware:USB System Architecture:D. Anderson:49.99:1
+HW08:Hardware:Designing Embedded Hardware:J. Catsoulis:44.95:3
+HW11:Hardware:Contemporary Logic Design:R. Katz:102.95:2
+SW03:Software:Java How to Program:Deitel:98.59:9
+SW04:Software:C Programming Language:B. Kernighan:44.25:12
+SW07:Software:Programming C#:J. Liberty:44.95:0
+SW09:Software:Programming PHP:R. J. Lerdorf:39.95:17
+SW12:Software:Visual Basic.NET Programming:P. Vick:49.99:13
+SY01:Systems:Operating Systems Concepts:A. Silberschatz:95.75:1
+SY02:Systems:The UNIX Operating System:J. D. Peek:19.95:12
+SY03:Systems:Windows Server 2003:W. R. Stanek:29.99:25
+SY04:Systems:Linux in a Nutshell:S. Figgins:44.95:1
+SY05:Systems:Mastering Active Directory:R. R. King:49.99:8
+WB01:Web:Ajax in Action:D. Crane:22.67:14
+WB02:Web:Professional ASP.NET 2.0:B. Evjen:32.99:21
+WB05:Web:Cascading Style Sheets:E. A. Meyer:39.95:6
+WB06:Web:DOM Scripting:J. Keith:23.99:8
+WB07:Web:Microsoft ASP.NET 2.0:D. Esposito:29.99:12
