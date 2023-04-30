@@ -1,7 +1,5 @@
 package practiceNewThings.lambda.Ejemplo1;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Persona implements Comparable<Persona> {
     private String nombre;
     private String apellidos;
@@ -49,14 +47,19 @@ public class Persona implements Comparable<Persona> {
                 '}';
     }
 
-    @Override
-    public int compareTo(@NotNull Persona o) {
-        return this.getNombre().compareTo(o.getNombre());
-    }
+//    @Override
+ //   public int compareTo(@NotNull Persona o) {
+   //     return this.getNombre().compareTo(o.getNombre());
+  //  }
 
     //methodo de una instancia
     public boolean estaJubilado() {
         return this.getEdad() < 65;
 
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return 0;
     }
 }

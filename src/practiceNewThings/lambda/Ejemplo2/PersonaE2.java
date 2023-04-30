@@ -1,6 +1,5 @@
 package practiceNewThings.lambda.Ejemplo2;
 
-import org.jetbrains.annotations.NotNull;
 
 public class PersonaE2 implements Comparable<PersonaE2> {
     private String nombre;
@@ -50,9 +49,16 @@ public class PersonaE2 implements Comparable<PersonaE2> {
     }
 
     @Override
+    public int compareTo(PersonaE2 o) {
+        return 0;
+    }
+
+/*
+    @Override
     public int compareTo(@NotNull PersonaE2 o) {
         return this.getNombre().compareTo(o.getNombre());
     }
+*/
 
 
 }
