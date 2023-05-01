@@ -66,7 +66,7 @@ public class Album {
                 ", titol='" + titol + '\'' +
                 ", idArtista=" + idArtista +
                 ", artist=" + artist +
-                '}';
+                '}' + "\n";
     }
 
     public int creaAlbum(String titol, int idArtista) {

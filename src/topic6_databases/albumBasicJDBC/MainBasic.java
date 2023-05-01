@@ -15,7 +15,7 @@ public class MainBasic {
         );
     }
 
-    public static void main(String args[]) throws SQLException {
+    public static void main(String[] args) throws SQLException {
         Album album = new Album();
         Artist artist = new Artist();
         Scanner sc = new Scanner(System.in);
