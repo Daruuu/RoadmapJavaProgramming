@@ -240,11 +240,3 @@ public class Track {
         return null;
     }
 }
-/*
-tengo 3 tablas en sqlite y quiero hacer una funcion con jdbc para crear un Track pero tiene 3 claves foraneas de otras tablas y son (albumId, mediaTypeID, GenreID),
-Track: int trackId, String name, int idAlbum, int idMediaType, int idGenre, String composer, int milliseconds, int bytes, float unitPrice
-Genre: int genreID, String name
-MediaType: int mediaTpeID, String name
-Album: int idAlbum, String titol
- tengo el siguiente codigo pero no se como avanzar
- */
