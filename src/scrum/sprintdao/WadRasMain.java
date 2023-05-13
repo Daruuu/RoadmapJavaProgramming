@@ -226,15 +226,15 @@ public class WadRasMain {
         System.out.println("Reclusa : " + fichaTecnica.getResultadoArchivo().get(dni));
         int respuesta = 0;
         do {
-            System.out.println("""
-                    Que desea modificar? :
-                    1.Nombre
-                    2.Apellido
-                    3.Edad
-                    4.Grado
-                    5.Dia Visita
-                    6.Volver al menu principal
-                    7.Salir del programa""");
+//            System.out.println("
+//                    Que desea modificar? :
+//                    1.Nombre
+//                    2.Apellido
+//                    3.Edad
+//                    4.Grado
+//                    5.Dia Visita
+//                    6.Volver al menu principal
+//                    7.Salir del programa");
             try {
                 respuesta = read.nextInt();
             } catch (InputMismatchException e) {
@@ -300,6 +300,7 @@ public class WadRasMain {
         System.out.println("Por que parámetro desea usted ordenar la lista de reclusas?");
         System.out.println("1. Id\n2. Nombre\n3. Edad");
         int opcion = read.nextInt();
+/*
         switch (opcion) {
             case 1 -> {
                 try {
@@ -328,6 +329,6 @@ public class WadRasMain {
                     System.err.println("Modifique las edades sin valor" + e.getMessage());
                 }
             }
-        }
+*/
     }
 }

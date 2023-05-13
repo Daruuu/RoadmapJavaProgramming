@@ -8,7 +8,7 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Chinook_Sqlite.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="wadras" uuid="65a23b13-c925-44b3-ab8c-1a6547d5b90e">
+    <data-source source="LOCAL" name="wadras" uuid="da82aebc-0f15-4452-81f7-3e1b9ee80d00">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>

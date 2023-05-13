@@ -12,7 +12,6 @@ abstract class Control {
     public Control(String horaEntrada, String horaSalida) {
         this.horaEntrada = horaEntrada;
         this.horaSalida = horaSalida;
-
     }
 
     public String getHoraEntrada() {
