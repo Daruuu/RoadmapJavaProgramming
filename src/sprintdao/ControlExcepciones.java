@@ -1,4 +1,4 @@
-package scrum.sprintdao;
+package sprintdao;
 
 public class ControlExcepciones extends Exception{
 

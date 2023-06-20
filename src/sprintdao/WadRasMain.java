@@ -1,5 +1,7 @@
 package scrum.sprintdao;
 
+import scrum.sprintdao.proyectofinal.modelo.Reclusa;
+
 import java.io.IOException;
 import java.util.*;
 

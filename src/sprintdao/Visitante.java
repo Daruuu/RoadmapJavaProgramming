@@ -1,5 +1,7 @@
 package scrum.sprintdao;
 
+import scrum.sprintdao.proyectofinal.modelo.Persona;
+
 public class Visitante extends Persona {
 
     private String dni;

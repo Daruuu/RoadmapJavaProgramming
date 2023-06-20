@@ -1,4 +1,4 @@
-package scrum.sprintdao;
+package sprintdao;
 
 abstract class Control {
 

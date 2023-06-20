@@ -1,5 +1,7 @@
 package scrum.sprintdao;
 
+import scrum.sprintdao.proyectofinal.modelo.Reclusa;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.InputMismatchException;

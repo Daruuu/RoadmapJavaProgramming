@@ -1,4 +1,4 @@
-package scrum.sprintdao;
+package sprintdao.proyectofinal.modelo;
 
 public class Persona {
 
@@ -14,6 +14,9 @@ public class Persona {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+    }
+
+    public Persona(int i, String nombre, String apellido, int edad) {
     }
 
     public String getNombre() {

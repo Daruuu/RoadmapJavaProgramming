@@ -1,4 +1,4 @@
-package scrum.sprintdao;
+package sprintdao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
