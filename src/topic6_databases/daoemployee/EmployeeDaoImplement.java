@@ -1,6 +1,7 @@
 package topic6_databases.daoemployee;
 
-import albumBasicJDBC.Connexio;
+
+import topic6_databases.albumDao.Connexio;
 
 import java.sql.*;
 import java.util.ArrayList;

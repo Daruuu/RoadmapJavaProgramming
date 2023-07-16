@@ -20,10 +20,8 @@ public class Excepciones {
             System.out.print("input string: ");
             String str = sc.nextLine();
             System.out.println(nuevoArr[Integer.parseInt(str)]);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
             System.out.println(e.getMessage());
-        } catch (InputMismatchException excepcionInput) {
-            System.out.println(excepcionInput.getMessage());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

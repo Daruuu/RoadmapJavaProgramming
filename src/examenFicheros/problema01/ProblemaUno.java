@@ -19,6 +19,7 @@ public class ProblemaUno {
                 System.out.println("archivo con tamanyo :" + fileInput.length());
             }
             if (fileInput.isDirectory()) {
+                assert listFiles != null;
                 for (File f : listFiles) {
                     contador++;
                 }
